@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo搭建githubpage网站]]></title>
+    <url>%2F2018%2F09%2F05%2FHexo%E6%90%AD%E5%BB%BAgithubpage%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[Hexo环境准备Hexo官网 准备主题一般使用next主题较多。可以到next的github下载。 插件安装##字数统计、阅读时长插件 1npm i --save hexo-wordcount ##aplayer音乐播放插件可以参考aplayer官网 ##local search开启自定义站点内容搜索 安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：$ npm install hexo-generator-searchdb –save编辑 站点配置文件，新增以下内容到任意位置： search: path: search.xml field: post format: html limit: 10000编辑 主题配置文件，启用本地搜索功能： Local searchlocal_search: enable: true Next搜索插件 功能安装按需修改主题文件，比如配置字数统计/阅读时长 githubpage开通在github上 create organization, 创建 repository , 组织/组织.github.io 生成发布1hexo g -d]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[导航]]></title>
     <url>%2F2018%2F09%2F05%2Fdaohang%2F</url>
     <content type="text"><![CDATA[.daohang{} .daohang .label{margin:10px 10px;} .daohang li{float:left;list-style:none;margin-bottom:10px;} .posts-expand .post-body ul li{list-style: none;} .daohang li a{display:block;padding:5px 5px;} .clear{clear:both;} .ctitle{font-size:18px;} 购物京东商城淘宝网天猫亚马逊国美在线苏宁超市当当网1号店聚美优品美团网大众点评团购唯品会百度糯米微信API微信公众平台开发文档测试号微信支付商户平台支付文档微信企业号企业号文档微信开放平台微信硬件微信客服网页版jsapisign验证cardsign验证企业号接口调试企业微信微信开发者社区微信接口调试未分类Maven依赖查询蓝灯翻墙站长工具Jquery谷歌访问助手Echarts-百度AmazeuiDataTableKISSYUIRapid Framework谷歌HKStack Overflow主机屋Eagerseajs腾讯ISUX用户体验设计图片压缩-智图应用内测-蒲公英OpenRestyAndroid DeveloperOpenResty最佳实践麦客表单网站备案IFTTT云服务阿里云腾讯云服务七牛百度云加速百度云腾讯域名注册百度域名注册阿里域名注册生活企查查首都之窗北京居住证平台北京人力资源和社会保障局北京小客车摇号北京社保12360 火车票官网百度百度贴吧全国企业信息查询智联招聘58同城赶集网破晓电影飞马网天津人才绿卡管理系统天津人力资源和社会保障局北京出入境北京积分落户无损音乐学习考试中国计算机职业资格网PMIPMP中文CCRS.PMIProjectManagement.comMyPMI学信网学位网北京市公共图书馆海外考试日本语能力考试东方时尚驾校交通安全管理平台驾考预约计划牡丹交通卡日本文化中心电子技术与软件工程-杂志社日语等级考试样题Japanese Course北京人事考试邮箱网易邮箱腾讯企业邮箱开放平台清华大学开源镜像微博开放平台百度开放平台腾讯开放平台搜狗搜索开放平台支付宝-蚂蚁金服开放平台ngrok内网穿透腾讯验证码腾讯优图腾讯AI视频QQ音乐BTV直播浙江卫视直播豆瓣电影土豆网易音乐搜狐视频爱奇艺乐视优酷腾讯视频追新番SNS美图秀秀微博天涯微信知乎搜索风云榜豆瓣中关村在线360导航头条手机网站Apple中国Apple Beta计划小米华为魅族锤子科技一加 One Plusvivo360奇酷中兴联想oppo三星iphone保修查询微信H5兔展初页135编辑器有赞]]></content>
