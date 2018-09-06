@@ -1948,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff7dc6;
+  background: #83ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2838,7 +2838,7 @@ embed {
 }
 body {
 /*background: url(/images/blogbk.jpg) no-repeat;*/
-  background: url("http://static.yf2017.top/php/upload/image/20160410/1460295410116047.jpg") no-repeat;
+  background: url("/images/1460295410116047.jpg") no-repeat;
 /* 背景图垂直、水平均居中 */
   background-position: center center;
 /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
