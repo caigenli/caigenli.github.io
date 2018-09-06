@@ -120,7 +120,7 @@
 
 
 
-  <meta name="keywords" content="编程,ui," />
+  <meta name="keywords" content="activemq," />
 
 
 
@@ -131,21 +131,18 @@
 
 
 
-<meta name="description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
-<meta name="keywords" content="编程,ui">
+<meta name="description" content="首先介绍下MQ，MQ英文名MessageQueue，中文名也就是大家用的消息队列，干嘛用的呢，说白了就是一个消息的接受和转发的容器，可用于消息推送。 下面介绍主题，就是今天为大家介绍的ActiveMQ：他是Apache出品的一个开源的消息队列软件，运行在JVM下，支持多种语言，如JAVA，C++，C#。 activemq项目地址http://activemq.apache.org/    开始指南">
+<meta name="keywords" content="activemq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于easyui的后台程序开发">
-<meta property="og:url" content="https://caigenli.github.io/2018/08/03/基于easyui的后台程序开发/index.html">
+<meta property="og:title" content="activemq初识">
+<meta property="og:url" content="https://caigenli.github.io/2016/06/18/activemq初识/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
+<meta property="og:description" content="首先介绍下MQ，MQ英文名MessageQueue，中文名也就是大家用的消息队列，干嘛用的呢，说白了就是一个消息的接受和转发的容器，可用于消息推送。 下面介绍主题，就是今天为大家介绍的ActiveMQ：他是Apache出品的一个开源的消息队列软件，运行在JVM下，支持多种语言，如JAVA，C++，C#。 activemq项目地址http://activemq.apache.org/    开始指南">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://static.yf2017.top/153328461200018.png">
-<meta property="og:image" content="http://static.yf2017.top/1533284663000616.png">
-<meta property="og:updated_time" content="2018-09-06T02:59:48.958Z">
+<meta property="og:updated_time" content="2018-09-06T03:35:30.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于easyui的后台程序开发">
-<meta name="twitter:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
-<meta name="twitter:image" content="http://static.yf2017.top/153328461200018.png">
+<meta name="twitter:title" content="activemq初识">
+<meta name="twitter:description" content="首先介绍下MQ，MQ英文名MessageQueue，中文名也就是大家用的消息队列，干嘛用的呢，说白了就是一个消息的接受和转发的容器，可用于消息推送。 下面介绍主题，就是今天为大家介绍的ActiveMQ：他是Apache出品的一个开源的消息队列软件，运行在JVM下，支持多种语言，如JAVA，C++，C#。 activemq项目地址http://activemq.apache.org/    开始指南">
 
 
 
@@ -175,13 +172,13 @@
 
 
 
-  <link rel="canonical" href="https://caigenli.github.io/2018/08/03/基于easyui的后台程序开发/"/>
+  <link rel="canonical" href="https://caigenli.github.io/2016/06/18/activemq初识/"/>
 
 
 
 
 
-  <title>基于easyui的后台程序开发 | 蓝旗子</title>
+  <title>activemq初识 | 蓝旗子</title>
   
 
 
@@ -373,7 +370,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://caigenli.github.io/2018/08/03/基于easyui的后台程序开发/">
+    <link itemprop="mainEntityOfPage" href="https://caigenli.github.io/2016/06/18/activemq初识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caigen Lee">
@@ -390,7 +387,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">基于easyui的后台程序开发</h2>
+          <h2 class="post-title" itemprop="name headline">activemq初识</h2>
         
 
         <div class="post-meta">
@@ -402,8 +399,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-03T16:24:36+08:00">
-                2018-08-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-18T16:07:36+08:00">
+                2016-06-18
               </time>
             
 
@@ -418,7 +415,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-06T10:59:48+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-06T11:35:30+08:00">
                 2018-09-06
               </time>
             
@@ -454,7 +451,7 @@
 
           
           
-             <span id="/2018/08/03/基于easyui的后台程序开发/" class="leancloud_visitors" data-flag-title="基于easyui的后台程序开发">
+             <span id="/2016/06/18/activemq初识/" class="leancloud_visitors" data-flag-title="activemq初识">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -484,7 +481,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.3k
+                  1.1k
                 </span>
               
 
@@ -500,7 +497,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  13
+                  5
                 </span>
               
             </div>
@@ -521,326 +518,173 @@
       
 
       
-        <p>easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。</p>
-<p>最后要实现的效果预览</p>
-<p><img src="http://static.yf2017.top/153328461200018.png" alt="easyui后台程序预览图" title="easyui后台程序预览图"></p>
-<p>主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。</p>
-<p>主页代码 index.html<br><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;EASYUI ADMIN&lt;&#x2F;title&gt;
+        <p>首先介绍下MQ，MQ英文名MessageQueue，中文名也就是大家用的消息队列，干嘛用的呢，说白了就是一个消息的接受和转发的容器，可用于消息推送。</p>
+<p>下面介绍主题，就是今天为大家介绍的ActiveMQ：他是Apache出品的一个开源的消息队列软件，运行在JVM下，支持多种语言，如JAVA，C++，C#。</p>
+<p>activemq项目地址<a href="http://activemq.apache.org/" target="_blank" rel="noopener">http://activemq.apache.org/</a>   </p>
+<p>开始指南 <a href="http://activemq.apache.org/getting-started.html" target="_blank" rel="noopener">http://activemq.apache.org/getting-started.html</a> </p>
+<p>下载activemq的zip包（windows下运行）解压，在bin的目录下看到有win32和win64的文件夹，里面是对应系统的运行命令。</p>
+<p>我的是64位windows, 所以进入wind64文件夹下，双击activemq.bat, 程序启动。</p>
+<p>在浏览器中输入地址：<a href="http://localhost:8161/admin" target="_blank" rel="noopener">http://localhost:8161/admin</a> 输入用户名：admin 密码：admin 后即可进入控制台。</p>
+<p>通过以上步骤服务端就启动好了。下面开始测试。</p>
+<p>新建maven项目：demo</p>
+<p>pom.xml<br><pre><code>&lt;project xmlns=&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0&quot; xmlns:xsi=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2001&#x2F;XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http:&#x2F;&#x2F;maven.apache.org&#x2F;POM&#x2F;4.0.0 http:&#x2F;&#x2F;maven.apache.org&#x2F;xsd&#x2F;maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;&#x2F;modelVersion&gt;
 
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;default&#x2F;easyui.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;icon.css&quot;&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.easyui.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;locale&#x2F;easyui-lang-zh_CN.js&quot;&gt;&lt;&#x2F;script&gt;
+  &lt;groupId&gt;com.lcg&lt;&#x2F;groupId&gt;
+  &lt;artifactId&gt;demo&lt;&#x2F;artifactId&gt;
+  &lt;version&gt;1.0&lt;&#x2F;version&gt;
+  &lt;packaging&gt;jar&lt;&#x2F;packaging&gt;
 
-    &lt;style&gt;
-        .header{
-            background: #2d3e50;
-            color: #fff;
-            direction: ltr;
-        }
-        .header .navbar{
-            margin-bottom: 0;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .header a,.header a:hover{
-            color: #fff;
-            line-height: 50px;
-        }
-        .header .content{
-            padding: 0.5em 4.5%;
-        }
-        .content{
-            padding: 2em;
-            padding-left: 5%;
-            padding-right: 5%;
-            max-width: 1230px;
-            margin: 0 auto;
-        }
-        .hmenu{width:900px;margin:0 auto;font-size:22px;margin-top:20px;}
-        .foot{text-align:center;font-size:12px;height:20px;padding:5px;}
+  &lt;name&gt;demo&lt;&#x2F;name&gt;
+  &lt;url&gt;http:&#x2F;&#x2F;maven.apache.org&lt;&#x2F;url&gt;
 
-        .left{padding:10px;}
-    &lt;&#x2F;style&gt;
+  &lt;properties&gt;
+    &lt;project.build.sourceEncoding&gt;UTF-8&lt;&#x2F;project.build.sourceEncoding&gt;
+  &lt;&#x2F;properties&gt;
 
-    &lt;script&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;junit&lt;&#x2F;groupId&gt;
+      &lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;
+      &lt;version&gt;3.8.1&lt;&#x2F;version&gt;
+      &lt;scope&gt;test&lt;&#x2F;scope&gt;
+    &lt;&#x2F;dependency&gt;
+    
+    &lt;dependency&gt;
+  &lt;groupId&gt;org.apache.activemq&lt;&#x2F;groupId&gt;
+  &lt;artifactId&gt;activemq-core&lt;&#x2F;artifactId&gt;
+  &lt;version&gt;5.1.0&lt;&#x2F;version&gt;
+&lt;&#x2F;dependency&gt;
+  &lt;&#x2F;dependencies&gt;
+&lt;&#x2F;project&gt;</code></pre><br>接收者：<br><pre><code>package com.lcg.demo;
 
-$(function(){
-    $(&#39;#menu&#39;).tree({
-        url: &#39;tree.json&#39;,
-        loadFilter: function(data){
-            if (data.d){
-                return data.d;
-            } else {
-                return data;
-            }
-        },
-        onClick: function(node){
-           &#x2F;&#x2F; alert(node.url);
-            openTab(node);
-           &#x2F;&#x2F; alert(node.attributes.url);  &#x2F;&#x2F; alert node text property when clicked
-        }
-    });
-})
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
+import javax.jms.MessageConsumer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import org.apache.activemq.ActiveMQConnection;
+import org.apache.activemq.ActiveMQConnectionFactory;
 
-
-function openTab(node){
-    if(node.url==undefined){
-        return;
-    }
-    if($(&quot;#tabs&quot;).tabs(&quot;exists&quot;,node.text)){
-        $(&quot;#tabs&quot;).tabs(&quot;select&quot;,node.text);
-    }else{
-        var content=&quot;&lt;iframe frameborder=0 scrolling=&#39;no&#39; style=&#39;width:100%;height:100%&#39; src=&#39;&quot;+node.url+&quot;&#39;&gt;&lt;&#x2F;iframe&gt;&quot;
-        $(&quot;#tabs&quot;).tabs(&quot;add&quot;,{
-            title:node.text,
-            iconCls:node.iconCls,
-            closable:true,
-            content:content
-        });
-    }
-}
-
-function collapseAll(){
-    $(&#39;#menu&#39;).tree(&#39;collapseAll&#39;);
-}
-function expandAll(){
-    $(&#39;#menu&#39;).tree(&#39;expandAll&#39;);
-}
-    &lt;&#x2F;script&gt;
-&lt;&#x2F;head&gt;
-&lt;body&gt;
-&lt;div data-options=&quot;region:&#39;north&#39;,border:false&quot; style=&quot;height:100px;&quot;&gt;
-
-    &lt;div &gt;
-
-        欢迎你,&lt;a href=&quot;ss&quot;&gt;Admin&lt;&#x2F;a&gt;&amp;nbsp;&lt;a href=&quot;ss&quot;&gt;退出&lt;&#x2F;a&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-&lt;div data-options=&quot;region:&#39;south&#39;,split:true&quot;  &gt;
-   &lt;div&gt; &amp;copy; 2016 All Rights Reserved &lt;&#x2F;div&gt;
-
-&lt;&#x2F;div&gt;
-&lt;div data-options=&quot;region:&#39;center&#39;&quot;&gt;
-    &lt;div data-options=&quot;fit:true&quot;&gt;
-        &lt;div data-options=&quot;region:&#39;west&#39;,collapsed:false&quot; style=&quot;width:180px&quot;&gt;
-            &lt;div &gt;
-            &lt;div&gt;
-                &lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;collapseAll()&quot; &gt;折叠所有&lt;&#x2F;a&gt;
-
-                &lt;a href=&quot;javascript:void(0)&quot;  onclick=&quot;expandAll()&quot;  &gt;展开所有&lt;&#x2F;a&gt;
-
-            &lt;&#x2F;div&gt;
-            &lt;div id=&quot;menu&quot;&gt;&lt;&#x2F;div&gt;
-            &lt;&#x2F;div&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div data-options=&quot;region:&#39;center&#39;&quot; &gt;
-
-         &lt;div   id=&quot;tabs&quot; style=&quot;width:100%;height:100%&quot;&gt;
-
-             &lt;div title=&quot;主页&quot; style=&quot;padding:10px;&quot;&gt;&lt;h3&gt;hello&lt;&#x2F;h3&gt;&lt;&#x2F;div&gt;
-         &lt;&#x2F;div&gt;
-        &lt;&#x2F;div&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;</code></pre><br>菜单加载部分,tree.json ，后台需要根据登录管理员的角色，加载不同的tree 。这个一个简单tree的例子。<br><pre><code>\[{
-  &quot;id&quot;:1,
-  &quot;text&quot;:&quot;管理系统&quot;,
-  &quot;iconCls&quot;:&quot;icon-book&quot;,
-  &quot;children&quot;:\[{
-    &quot;text&quot;:&quot;人员管理&quot;,
-    &quot;checked&quot;:true,
-    &quot;url&quot;:&quot;list.html&quot;
-  }\]
-},{
-  &quot;text&quot;:&quot;其他&quot;,
-  &quot;state&quot;:&quot;closed&quot;,
-  &quot;children&quot;:\[{
-    &quot;text&quot;:&quot;Easyui官网&quot;,
-    &quot;url&quot;:&quot;http:&#x2F;&#x2F;www.jeasyui.com&#x2F;&quot;
-  },
-    {
-      &quot;text&quot;:&quot;蓝旗子&quot;,
-      &quot;url&quot;:&quot;http:&#x2F;&#x2F;www.yf2017.top&#x2F;&quot;
-    }
-  \]
-}\]</code></pre><br>列表页 list.html， 主要是表头信息，及数据的格式化处理。<br><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;&lt;&#x2F;title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;default&#x2F;easyui.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;icon.css&quot;&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.easyui.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;locale&#x2F;easyui-lang-zh_CN.js&quot;&gt;&lt;&#x2F;script&gt;
-
-&lt;&#x2F;head&gt;
-&lt;body&gt;
-&lt;table id=&quot;dg&quot; title=&quot;&quot; style=&quot;width:100%;height:100%&quot;
-       url=&quot;api.json&quot;
-       toolbar=&quot;#toolbar&quot; pagination=&quot;true&quot;
-       rownumbers=&quot;true&quot; fitColumns=&quot;true&quot; singleSelect=&quot;true&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-        &lt;th field=&quot;name&quot; width=&quot;50&quot;&gt;姓名&lt;&#x2F;th&gt;
-        &lt;th field=&quot;account&quot; width=&quot;50&quot;&gt;账号&lt;&#x2F;th&gt;
-        &lt;th field=&quot;sex&quot; width=&quot;50&quot;&gt;性别&lt;&#x2F;th&gt;
-        &lt;th field=&quot;tel&quot; width=&quot;50&quot;&gt;电话&lt;&#x2F;th&gt;
-        &lt;th field=&quot;dept&quot; width=&quot;50&quot;&gt;部门&lt;&#x2F;th&gt;
-        &lt;th field=&quot;job&quot; width=&quot;50&quot;&gt;岗位&lt;&#x2F;th&gt;
-    &lt;&#x2F;tr&gt;
-    &lt;&#x2F;thead&gt;
-&lt;&#x2F;table&gt;
-&lt;div id=&quot;toolbar&quot;&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-add&quot; plain=&quot;true&quot; onclick=&quot;newUser()&quot;&gt;新建&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-edit&quot; plain=&quot;true&quot; onclick=&quot;editUser()&quot;&gt;编辑&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-remove&quot; plain=&quot;true&quot; onclick=&quot;destroyUser()&quot;&gt;移除&lt;&#x2F;a&gt;
-    &lt;div&gt;
-
-        姓名 &lt;input type=&quot;text&quot; name=&quot;qname&quot; id=&quot;qname&quot;  &#x2F;&gt;
-       性别 &lt;select id=&quot;qsex&quot; name=&quot;qsex&quot; style=&quot;width:60px;&quot;&gt;
-        &lt;option value=&quot;&quot;&gt;全部&lt;&#x2F;option&gt;
-            &lt;option value=&quot;男&quot;&gt;男&lt;&#x2F;option&gt;
-            &lt;option value=&quot;女&quot;&gt;女&lt;&#x2F;option&gt;
-        &lt;&#x2F;select&gt;
-        部门 &lt;input type=&quot;text&quot; name=&quot;qdept&quot; id=&quot;qdept&quot;  &#x2F;&gt;
-        职位 &lt;input type=&quot;text&quot; name=&quot;qjob&quot; id=&quot;qjob&quot;  &#x2F;&gt;
-        &lt;a href=&quot;javascript:void(0);&quot; iconCls=&quot;icon-search&quot;  onclick=&quot;doSearch();&quot;&gt;查询&lt;&#x2F;a&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-
-&lt;div id=&quot;dlg&quot; style=&quot;width:400px;height:380px;padding:10px 20px&quot;
-     closed=&quot;true&quot; buttons=&quot;#dlg-buttons&quot;&gt;
-    &lt;div&gt;用户信息&lt;&#x2F;div&gt;
-    &lt;form id=&quot;fm&quot; method=&quot;post&quot; novalidate&gt;
-        &lt;div&gt;
-            &lt;label&gt;姓名:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;name&quot; required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;账号:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;account&quot; required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;性别:&lt;&#x2F;label&gt;
-            &lt;select id=&quot;sex&quot; name=&quot;sex&quot; style=&quot;width:60px;&quot;  required=&quot;true&quot;&gt;
-                &lt;option value=&quot;男&quot;&gt;男&lt;&#x2F;option&gt;
-                &lt;option value=&quot;女&quot;&gt;女&lt;&#x2F;option&gt;
-            &lt;&#x2F;select&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;电话:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;tel&quot; validType=&quot;phone&quot;  required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;部门:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;dept&quot;   required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;职位:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;job&quot;   required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-    &lt;&#x2F;form&gt;
-&lt;&#x2F;div&gt;
-&lt;div id=&quot;dlg-buttons&quot;&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;easyui-linkbutton c6&quot; iconCls=&quot;icon-ok&quot; onclick=&quot;saveUser()&quot; style=&quot;width:90px&quot;&gt;保存&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-cancel&quot; onclick=&quot;javascript:$(&#39;#dlg&#39;).dialog(&#39;close&#39;)&quot; style=&quot;width:90px&quot;&gt;取消&lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;
-&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
-    var url;
-    function newUser(){
-        $(&#39;#dlg&#39;).dialog(&#39;open&#39;).dialog(&#39;setTitle&#39;,&#39;新建用户&#39;);
-        $(&#39;#fm&#39;).form(&#39;clear&#39;);
-        url = &#39;saveU.json&#39;;
-    }
-    function editUser(){
-        var row = $(&#39;#dg&#39;).datagrid(&#39;getSelected&#39;);
-        if (row){
-            $(&#39;#dlg&#39;).dialog(&#39;open&#39;).dialog(&#39;setTitle&#39;,&#39;编辑用户&#39;);
-            $(&#39;#fm&#39;).form(&#39;load&#39;,row);
-            url = &#39;updateU.json?id=&#39;+row.id;
-        }
-    }
-    function saveUser(){
-        $(&#39;#fm&#39;).form(&#39;submit&#39;,{
-            url: url,
-            onSubmit: function(){
-                return $(this).form(&#39;validate&#39;);
-            },
-            success: function(result){
-                var result = eval(&#39;(&#39;+result+&#39;)&#39;);
-                if (result.errorMsg){
-                    $.messager.show({
-                        title: &#39;Error&#39;,
-                        msg: result.errorMsg
-                    });
+public class Receiver {
+    public static void main(String\[\] args) {
+        &#x2F;&#x2F; ConnectionFactory ：连接工厂，JMS 用它创建连接
+        ConnectionFactory connectionFactory;
+        &#x2F;&#x2F; Connection ：JMS 客户端到JMS Provider 的连接
+        Connection connection = null;
+        &#x2F;&#x2F; Session： 一个发送或接收消息的线程
+        Session session;
+        &#x2F;&#x2F; Destination ：消息的目的地;消息发送给谁.
+        Destination destination;
+        &#x2F;&#x2F; 消费者，消息接收者
+        MessageConsumer consumer;
+        connectionFactory = new ActiveMQConnectionFactory(
+                ActiveMQConnection.DEFAULT_USER,
+                ActiveMQConnection.DEFAULT_PASSWORD,
+                &quot;tcp:&#x2F;&#x2F;localhost:61616&quot;);
+        try {
+            &#x2F;&#x2F; 构造从工厂得到连接对象
+            connection = connectionFactory.createConnection();
+            &#x2F;&#x2F; 启动
+            connection.start();
+            &#x2F;&#x2F; 获取操作连接
+            session = connection.createSession(Boolean.FALSE,
+                    Session.AUTO_ACKNOWLEDGE);
+            &#x2F;&#x2F; 获取session注意参数值xingbo.xu-queue是一个服务器的queue，须在在ActiveMq的console配置
+            destination = session.createQueue(&quot;FirstQueue&quot;);
+            consumer = session.createConsumer(destination);
+            while (true) {
+                &#x2F;&#x2F;设置接收者接收消息的时间，为了便于测试，这里谁定为100s
+                TextMessage message = (TextMessage) consumer.receive(100000);
+                if (null != message) {
+                    System.out.println(&quot;收到消息&quot; + message.getText());
                 } else {
-                    $(&#39;#dlg&#39;).dialog(&#39;close&#39;); &#x2F;&#x2F; close the dialog
-                    $(&#39;#dg&#39;).datagrid(&#39;reload&#39;); &#x2F;&#x2F; reload the user data
+                    break;
                 }
             }
-        });
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (null != connection)
+                    connection.close();
+            } catch (Throwable ignore) {
+            }
+        }
     }
-    function destroyUser(){
-        var row = $(&#39;#dg&#39;).datagrid(&#39;getSelected&#39;);
-        if (row){
-            $.messager.confirm(&#39;确认&#39;,&#39;你确定要删除该用户吗?&#39;,function(r){
-                if (r){
-                    $.post(&#39;deleteU.json&#39;,{id:row.id},function(result){
-                        if (result.success){
-                            $(&#39;#dg&#39;).datagrid(&#39;reload&#39;); &#x2F;&#x2F; reload the user data
-                        } else {
-                            $.messager.show({ &#x2F;&#x2F; show error message
-                                title: &#39;Error&#39;,
-                                msg: result.errorMsg
-                            });
-                        }
-                    },&#39;json&#39;);
-                }
-            });
+}</code></pre><br>发送者：<br><pre><code>package com.lcg.demo;
+
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.DeliveryMode;
+import javax.jms.Destination;
+import javax.jms.MessageProducer;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+import org.apache.activemq.ActiveMQConnection;
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+public class Sender {
+    private static final int SEND_NUMBER = 5;
+
+    public static void main(String\[\] args) {
+        &#x2F;&#x2F; ConnectionFactory ：连接工厂，JMS 用它创建连接
+        ConnectionFactory connectionFactory;
+        &#x2F;&#x2F; Connection ：JMS 客户端到JMS Provider 的连接
+        Connection connection = null;
+        &#x2F;&#x2F; Session： 一个发送或接收消息的线程
+        Session session;
+        &#x2F;&#x2F; Destination ：消息的目的地;消息发送给谁.
+        Destination destination;
+        &#x2F;&#x2F; MessageProducer：消息发送者
+        MessageProducer producer;
+        &#x2F;&#x2F; TextMessage message;
+        &#x2F;&#x2F; 构造ConnectionFactory实例对象，此处采用ActiveMq的实现jar
+        connectionFactory = new ActiveMQConnectionFactory(
+                ActiveMQConnection.DEFAULT_USER,
+                ActiveMQConnection.DEFAULT_PASSWORD,
+                &quot;tcp:&#x2F;&#x2F;localhost:61616&quot;);
+        try {
+            &#x2F;&#x2F; 构造从工厂得到连接对象
+            connection = connectionFactory.createConnection();
+            &#x2F;&#x2F; 启动
+            connection.start();
+            &#x2F;&#x2F; 获取操作连接
+            session = connection.createSession(Boolean.TRUE,
+                    Session.AUTO_ACKNOWLEDGE);
+            &#x2F;&#x2F; 获取session注意参数值xingbo.xu-queue是一个服务器的queue，须在在ActiveMq的console配置
+            destination = session.createQueue(&quot;FirstQueue&quot;);
+            &#x2F;&#x2F; 得到消息生成者【发送者】
+            producer = session.createProducer(destination);
+            &#x2F;&#x2F; 设置不持久化，此处学习，实际根据项目决定
+            producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+            &#x2F;&#x2F; 构造消息，此处写死，项目就是参数，或者方法获取
+            sendMessage(session, producer);
+            session.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (null != connection)
+                    connection.close();
+            } catch (Throwable ignore) {
+            }
         }
     }
 
-    function doSearch(){
-        $(&#39;#dg&#39;).datagrid({url:&#39;api.json?name=&#39;+$(&quot;#qname&quot;).val()});
+    public static void sendMessage(Session session, MessageProducer producer)
+            throws Exception {
+        for (int i = 1; i &lt;= SEND_NUMBER; i++) {
+            TextMessage message = session
+                    .createTextMessage(&quot;ActiveMq 发送的消息&quot; + i);
+            &#x2F;&#x2F; 发送消息到目的地方
+            System.out.println(&quot;发送消息：&quot; + &quot;ActiveMq 发送的消息&quot; + i);
+            producer.send(message);
+        }
     }
-&lt;&#x2F;script&gt;
-&lt;style type=&quot;text&#x2F;css&quot;&gt;
-    #fm{
-        margin:0;
-        padding:10px 30px;
-    }
-    .ftitle{
-        font-size:14px;
-        font-weight:bold;
-        padding:5px 0;
-        margin-bottom:10px;
-        border-bottom:1px solid #ccc;
-    }
-    .fitem{
-        margin-bottom:5px;
-    }
-    .fitem label{
-        display:inline-block;
-        width:80px;
-    }
-    .fitem input{
-        width:160px;
-    }
-&lt;&#x2F;style&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;</code></pre></p>
-<p>列表页数据-api.json，必须包含easyui定义的一些数据项，如 lastPage, pageSize, pageNumber, firstPage, rows等。下面是一个简单的例子。<br><pre><code>{&quot;lastPage&quot;:true,&quot;pageSize&quot;:10,&quot;pageNumber&quot;:1,&quot;firstPage&quot;:true,&quot;rows&quot;:\[{&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部&#x2F;技术&quot;,&quot;wechat&quot;:null}\],&quot;total&quot;:1,&quot;totalPage&quot;:1}</code></pre></p>
-<p>新增数据在当前页弹出一个dialog, 填写完相关数据元素后，保存，系统ajax反馈。</p>
-<p><img src="http://static.yf2017.top/1533284663000616.png" alt="easyui新增数据" title="easyui新增数据"></p>
-<p>保存反馈 saveU.json<br><pre><code>{&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部&#x2F;技术&quot;,&quot;wechat&quot;:null}</code></pre><br>删除反馈 deleteU.json<br><pre><code>{&quot;success&quot;:&quot;true&quot;}</code></pre></p>
+}</code></pre></p>
 
       
     </div>
@@ -861,7 +705,7 @@ function expandAll(){
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="577.html" title="基于easyui的后台程序开发">https://caigenli.github.io/2018/08/03/基于easyui的后台程序开发/</a>
+    <a href="448.html" title="activemq初识">https://caigenli.github.io/2016/06/18/activemq初识/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -876,9 +720,7 @@ function expandAll(){
       
         <div class="post-tags">
           
-            <a href="/tags/编程/" rel="tag"># 编程</a>
-          
-            <a href="/tags/ui/" rel="tag"># ui</a>
+            <a href="/tags/activemq/" rel="tag"># activemq</a>
           
         </div>
       
@@ -906,18 +748,14 @@ function expandAll(){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/02/Zabbix报警用企业微信通知的功能实现/" rel="next" title="Zabbix报警用企业微信通知的功能实现">
-                <i class="fa fa-chevron-left"></i> Zabbix报警用企业微信通知的功能实现
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/06/介绍一套后台UI-aceadmin/" rel="prev" title="介绍一套后台UI-aceadmin">
-                介绍一套后台UI-aceadmin <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/01/微信分享模块集成开发/" rel="prev" title="微信分享模块集成开发">
+                微信分享模块集成开发 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

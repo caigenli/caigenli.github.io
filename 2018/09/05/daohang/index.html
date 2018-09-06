@@ -197,6 +197,8 @@
 
 
 
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -462,6 +464,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -587,8 +594,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/29/第一篇文章/" rel="next" title="第一篇文章">
-                <i class="fa fa-chevron-left"></i> 第一篇文章
+              <a href="/2018/08/06/介绍一套后台UI-aceadmin/" rel="next" title="介绍一套后台UI-aceadmin">
+                <i class="fa fa-chevron-left"></i> 介绍一套后台UI-aceadmin
               </a>
             
           </div>
@@ -697,7 +704,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -708,7 +715,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -846,7 +853,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14.2k</span>
+    <span title="Site words total count">16.3k</span>
   
 </div>
 
@@ -861,6 +868,26 @@ var ap = new APlayer({
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
@@ -1532,8 +1559,19 @@ var myapc=new APlayer_Controler({
 
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-
-
-
+<script type="text/javascript">
+    var hljs_labels = {
+        left: "hljs.left",
+        right: "hljs.right",
+        copy: "hljs.copy"
+    }
+    </script>
+ <script type="text/javascript" src="/js/src/hljs.js"></script>
+ <script>
+  // highlight
+$(document).ready(function(){
+    hljs.initHighlightingOnLoad();
+});
+</script>
 </body>
 </html>

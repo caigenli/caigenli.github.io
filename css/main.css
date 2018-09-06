@@ -1255,11 +1255,10 @@ pre .javascript .function {
   margin-top: 20px;
   padding-left: 0;
   text-align: center;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.9);
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
-  border-radius: initial;
+  border-radius: 20px;
 }
 .menu .menu-item {
   display: inline-block;
@@ -1949,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff5d1b;
+  background: #9c69f6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2103,6 +2102,8 @@ pre .javascript .function {
 }
 .footer-inner {
   text-align: center;
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
 }
 .with-love {
   display: inline-block;
@@ -2836,7 +2837,8 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("/images/blogbk.jpg") no-repeat;
+/*background: url(/images/blogbk.jpg) no-repeat;*/
+  background: url("http://static.yf2017.top/php/upload/image/20160410/1460295410116047.jpg") no-repeat;
 /* 背景图垂直、水平均居中 */
   background-position: center center;
 /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
@@ -2844,12 +2846,15 @@ body {
 /* 让背景图基于容器大小伸缩 */
   background-size: cover;
 /* 设置背景颜色，背景图加载过程中会显示背景色 */
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.9);
+}
+.container {
+  background: rgba(44,62,80,0.62);
 }
 .content {
   border-radius: 20px;
   padding: 30px 60px 30px 60px;
-  background: rgba(255,255,255,0.8) none repeat scroll !important;
+  background: rgba(255,255,255,0.9) none repeat scroll !important;
 }
 .aplayer-list ol li:hover {
 /*列表悬停颜色*/
