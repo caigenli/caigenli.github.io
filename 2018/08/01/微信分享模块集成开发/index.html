@@ -131,13 +131,13 @@
 
 
 
-<meta name="description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置&amp;lt;script src=&amp;quot;  &amp;lt;script&amp;gt;        var shareTitle=&amp;#39;网址导航_新一代安全上网导航--">
+<meta name="description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置123456789101112131415161718192021222324252627282930313233343536373839404142434445">
 <meta name="keywords" content="编程,微信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信分享模块集成开发">
 <meta property="og:url" content="https://www.yf2017.top/2018/08/01/微信分享模块集成开发/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置&amp;lt;script src=&amp;quot;  &amp;lt;script&amp;gt;        var shareTitle=&amp;#39;网址导航_新一代安全上网导航--">
+<meta property="og:description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置123456789101112131415161718192021222324252627282930313233343536373839404142434445">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://static.yf2017.top/153310303000007.png">
 <meta property="og:image" content="http://static.yf2017.top/153310388200091.png">
@@ -146,7 +146,7 @@
 <meta property="og:updated_time" content="2018-09-06T02:58:30.835Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信分享模块集成开发">
-<meta name="twitter:description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置&amp;lt;script src=&amp;quot;  &amp;lt;script&amp;gt;        var shareTitle=&amp;#39;网址导航_新一代安全上网导航--">
+<meta name="twitter:description" content="本文主要介绍集成微信jssdk, 实现在微信中打开网页，能够分享到朋友圈，发送给朋友，并正确显示分享内容的实现。 安全域名设置 首先我们准备一个微信测试号或认证的微信订阅号或服务号。 在公众平台设置js接口安全域名   页面js引入及设置123456789101112131415161718192021222324252627282930313233343536373839404142434445">
 <meta name="twitter:image" content="http://static.yf2017.top/153310303000007.png">
 
 
@@ -490,7 +490,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  892
                 </span>
               
 
@@ -506,7 +506,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  4
                 </span>
               
             </div>
@@ -531,164 +531,13 @@
 <p><strong>安全域名设置</strong></p>
 <p>首先我们准备一个微信测试号或认证的微信订阅号或服务号。</p>
 <p>在公众平台设置js接口安全域名  </p>
-<p><img src="http://static.yf2017.top/153310303000007.png" alt="js接口安全域名设置" title="js接口安全域名设置"><strong>页面js引入及设置</strong><br><pre><code>&lt;script src=&quot; 
-&lt;script&gt;        var shareTitle=&#39;网址导航_新一代安全上网导航--蓝旗子&#39;;    
-var descContent=&#39;为用户提供微信API、购物、手机网站、视频、开放平台等分类的优秀内容和网站入口，提供简单便捷的上网导航服务。安全上网。&#39;;    
-var img_Url=&#39;http:&#x2F;&#x2F;static.yf2017.top&#x2F;image&#x2F;logo&#x2F;lqz.jpg&#39;;    
-   
-url=location.href+&#39;&#39;;    
-var lineLink=url; &#x2F;&#x2F; encodeURIComponent(&#39;&#39;)    
-$.post(&#39;home\_wxShare\_getSign.html&#39;,{&#39;url&#39;: lineLink},function(data){    
-console.log(data);    
-var json=eval(&#39;(&#39;+data+&#39;)&#39;);    
-lineLink=json.url;    
-&#x2F;&#x2F;console.log(json.appId);    
-&#x2F;&#x2F;var json=data;    
-wx.config({    
-debug: false,    
-appId: json.appId,    
-timestamp: json.timestamp ,    
-nonceStr: json.nonceStr,    
-signature: json.signature,    
-jsApiList: \[    
-&#39;checkJsApi&#39;,    
-&#39;onMenuShareTimeline&#39;,    
-&#39;onMenuShareAppMessage&#39;,    
-&#39;onMenuShareQQ&#39;,    
-&#39;onMenuShareWeibo&#39;,    
-&#39;onMenuShareQZone&#39;,    
-&#39;hideMenuItems&#39;,    
-&#39;showMenuItems&#39;,    
-&#39;hideAllNonBaseMenuItem&#39;,    
-&#39;showAllNonBaseMenuItem&#39;,    
-&#39;translateVoice&#39;,    
-&#39;startRecord&#39;,    
-&#39;stopRecord&#39;,    
-&#39;onVoiceRecordEnd&#39;,    
-&#39;playVoice&#39;,    
-&#39;onVoicePlayEnd&#39;,    
-&#39;pauseVoice&#39;,    
-&#39;stopVoice&#39;,    
-&#39;uploadVoice&#39;,    
-&#39;downloadVoice&#39;,    
-&#39;chooseImage&#39;,    
-&#39;previewImage&#39;,    
-&#39;uploadImage&#39;,    
-&#39;downloadImage&#39;,    
-&#39;getNetworkType&#39;,    
-&#39;openLocation&#39;,    
-&#39;getLocation&#39;,    
-&#39;hideOptionMenu&#39;,    
-&#39;showOptionMenu&#39;,    
-&#39;closeWindow&#39;,    
-&#39;scanQRCode&#39;,    
-&#39;chooseWXPay&#39;,    
-&#39;openProductSpecificView&#39;,    
-&#39;addCard&#39;,    
-&#39;chooseCard&#39;,    
-&#39;openCard&#39;    
-\]    
-});    
-wx.ready(function() {    
-wx.checkJsApi({    
-jsApiList: \[&#39;onMenuShareTimeline&#39;,&#39;onMenuShareQQ&#39;\], &#x2F;&#x2F; 需要检测的JS接口列表，所有JS接口列表见附录2,    
-success: function(res) {    
-&#x2F;&#x2F; 以键值对的形式返回，可用的api值true，不可用为false    
-&#x2F;&#x2F; 如：{&quot;checkResult&quot;:{&quot;chooseImage&quot;:true},&quot;errMsg&quot;:&quot;checkJsApi:ok&quot;}    
-}    
-});    
-&#x2F;&#x2F; friends    
-wx.onMenuShareAppMessage({    
-title: shareTitle,    
-desc: descContent,    
-link: lineLink,    
-imgUrl: img_Url,    
-trigger: function (res) {    
-&#x2F;&#x2F;alert(&#39;用户点击发送给朋友&#39;);    
-},    
-success: function (res) {    
-&#x2F;&#x2F;alert(&#39;分享成功&#39;);    
-},    
-cancel: function (res) {    
-&#x2F;&#x2F;alert(&#39;已取消&#39;);    
-},    
-fail: function (res) {    
-&#x2F;&#x2F;alert(&quot;失败&quot;);    
-&#x2F;&#x2F;alert(JSON.stringify(res));    
-}    
-});    
-&#x2F;&#x2F; 朋友圈    
-wx.onMenuShareTimeline({    
-title: shareTitle+&quot; &quot;+descContent,    
-link: lineLink,    
-imgUrl: img_Url,    
-success: function () {    
-&#x2F;&#x2F;alert(&quot;分享成功&quot;);    
-},    
-cancel: function () {    
-&#x2F;&#x2F; alert(&quot;取消分享&quot;);    
-}    
-});    
-wx.onMenuShareQQ({    
-title: shareTitle,    
-desc: descContent,    
-link: lineLink,    
-imgUrl: img_Url,    
-success: function (res) {    
-&#x2F;&#x2F;alert(&#39;分享成功&#39;);    
-},    
-cancel: function (res) {    
-&#x2F;&#x2F; alert(&#39;已取消&#39;);    
-}    
-});    
-wx.onMenuShareQZone({    
-title: shareTitle,    
-desc: descContent,    
-link: lineLink,    
-imgUrl: img_Url,    
-trigger: function (res) {    
-&#x2F;&#x2F;alert(&#39;用户点击发送给朋友&#39;);    
-},    
-success: function (res) {    
-&#x2F;&#x2F;alert(&#39;分享成功&#39;);    
-},    
-cancel: function (res) {    
-&#x2F;&#x2F;alert(&#39;已取消&#39;);    
-},    
-fail: function (res) {    
-&#x2F;&#x2F;alert(&quot;失败&quot;);    
-&#x2F;&#x2F;alert(JSON.stringify(res));    
-}    
-});    
-wx.error(function(res){    
-&#x2F;&#x2F; config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。    
-});    
-});    
-})    
-&lt;&#x2F;script&gt;</code></pre><br><strong>定时生成ticket</strong></p>
+<p><img src="http://static.yf2017.top/153310303000007.png" alt="js接口安全域名设置" title="js接口安全域名设置"><strong>页面js引入及设置</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">" </span></span><br><span class="line"><span class="string">&lt;script&gt;        var shareTitle='网址导航_新一代安全上网导航--蓝旗子';    </span></span><br><span class="line"><span class="string">var descContent='为用户提供微信API、购物、手机网站、视频、开放平台等分类的优秀内容和网站入口，提供简单便捷的上网导航服务。安全上网。';    </span></span><br><span class="line"><span class="string">var img_Url='http://static.yf2017.top/image/logo/lqz.jpg';    </span></span><br><span class="line"><span class="string">   </span></span><br><span class="line"><span class="string">url=location.href+'';    </span></span><br><span class="line"><span class="string">var lineLink=url; // encodeURIComponent('')    </span></span><br><span class="line"><span class="string">$.post('home\_wxShare\_getSign.html',&#123;'url': lineLink&#125;,function(data)&#123;    </span></span><br><span class="line"><span class="string">console.log(data);    </span></span><br><span class="line"><span class="string">var json=eval('('+data+')');    </span></span><br><span class="line"><span class="string">lineLink=json.url;    </span></span><br><span class="line"><span class="string">//console.log(json.appId);    </span></span><br><span class="line"><span class="string">//var json=data;    </span></span><br><span class="line"><span class="string">wx.config(&#123;    </span></span><br><span class="line"><span class="string">debug: false,    </span></span><br><span class="line"><span class="string">appId: json.appId,    </span></span><br><span class="line"><span class="string">timestamp: json.timestamp ,    </span></span><br><span class="line"><span class="string">nonceStr: json.nonceStr,    </span></span><br><span class="line"><span class="string">signature: json.signature,    </span></span><br><span class="line"><span class="string">jsApiList: \[    </span></span><br><span class="line"><span class="string">'checkJsApi',    </span></span><br><span class="line"><span class="string">'onMenuShareTimeline',    </span></span><br><span class="line"><span class="string">'onMenuShareAppMessage',    </span></span><br><span class="line"><span class="string">'onMenuShareQQ',    </span></span><br><span class="line"><span class="string">'onMenuShareWeibo',    </span></span><br><span class="line"><span class="string">'onMenuShareQZone',    </span></span><br><span class="line"><span class="string">'hideMenuItems',    </span></span><br><span class="line"><span class="string">'showMenuItems',    </span></span><br><span class="line"><span class="string">'hideAllNonBaseMenuItem',    </span></span><br><span class="line"><span class="string">'showAllNonBaseMenuItem',    </span></span><br><span class="line"><span class="string">'translateVoice',    </span></span><br><span class="line"><span class="string">'startRecord',    </span></span><br><span class="line"><span class="string">'stopRecord',    </span></span><br><span class="line"><span class="string">'onVoiceRecordEnd',    </span></span><br><span class="line"><span class="string">'playVoice',    </span></span><br><span class="line"><span class="string">'onVoicePlayEnd',    </span></span><br><span class="line"><span class="string">'pauseVoice',    </span></span><br><span class="line"><span class="string">'stopVoice',    </span></span><br><span class="line"><span class="string">'uploadVoice',    </span></span><br><span class="line"><span class="string">'downloadVoice',    </span></span><br><span class="line"><span class="string">'chooseImage',    </span></span><br><span class="line"><span class="string">'previewImage',    </span></span><br><span class="line"><span class="string">'uploadImage',    </span></span><br><span class="line"><span class="string">'downloadImage',    </span></span><br><span class="line"><span class="string">'getNetworkType',    </span></span><br><span class="line"><span class="string">'openLocation',    </span></span><br><span class="line"><span class="string">'getLocation',    </span></span><br><span class="line"><span class="string">'hideOptionMenu',    </span></span><br><span class="line"><span class="string">'showOptionMenu',    </span></span><br><span class="line"><span class="string">'closeWindow',    </span></span><br><span class="line"><span class="string">'scanQRCode',    </span></span><br><span class="line"><span class="string">'chooseWXPay',    </span></span><br><span class="line"><span class="string">'openProductSpecificView',    </span></span><br><span class="line"><span class="string">'addCard',    </span></span><br><span class="line"><span class="string">'chooseCard',    </span></span><br><span class="line"><span class="string">'openCard'    </span></span><br><span class="line"><span class="string">\]    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">wx.ready(function() &#123;    </span></span><br><span class="line"><span class="string">wx.checkJsApi(&#123;    </span></span><br><span class="line"><span class="string">jsApiList: \['onMenuShareTimeline','onMenuShareQQ'\], // 需要检测的JS接口列表，所有JS接口列表见附录2,    </span></span><br><span class="line"><span class="string">success: function(res) &#123;    </span></span><br><span class="line"><span class="string">// 以键值对的形式返回，可用的api值true，不可用为false    </span></span><br><span class="line"><span class="string">// 如：&#123;"</span>checkResult<span class="string">":&#123;"</span>chooseImage<span class="string">":true&#125;,"</span>errMsg<span class="string">":"</span>checkJsApi:ok<span class="string">"&#125;    </span></span><br><span class="line"><span class="string">&#125;    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">// friends    </span></span><br><span class="line"><span class="string">wx.onMenuShareAppMessage(&#123;    </span></span><br><span class="line"><span class="string">title: shareTitle,    </span></span><br><span class="line"><span class="string">desc: descContent,    </span></span><br><span class="line"><span class="string">link: lineLink,    </span></span><br><span class="line"><span class="string">imgUrl: img_Url,    </span></span><br><span class="line"><span class="string">trigger: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('用户点击发送给朋友');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">success: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('分享成功');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">cancel: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('已取消');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">fail: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert("</span>失败<span class="string">");    </span></span><br><span class="line"><span class="string">//alert(JSON.stringify(res));    </span></span><br><span class="line"><span class="string">&#125;    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">// 朋友圈    </span></span><br><span class="line"><span class="string">wx.onMenuShareTimeline(&#123;    </span></span><br><span class="line"><span class="string">title: shareTitle+"</span> <span class="string">"+descContent,    </span></span><br><span class="line"><span class="string">link: lineLink,    </span></span><br><span class="line"><span class="string">imgUrl: img_Url,    </span></span><br><span class="line"><span class="string">success: function () &#123;    </span></span><br><span class="line"><span class="string">//alert("</span>分享成功<span class="string">");    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">cancel: function () &#123;    </span></span><br><span class="line"><span class="string">// alert("</span>取消分享<span class="string">");    </span></span><br><span class="line"><span class="string">&#125;    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">wx.onMenuShareQQ(&#123;    </span></span><br><span class="line"><span class="string">title: shareTitle,    </span></span><br><span class="line"><span class="string">desc: descContent,    </span></span><br><span class="line"><span class="string">link: lineLink,    </span></span><br><span class="line"><span class="string">imgUrl: img_Url,    </span></span><br><span class="line"><span class="string">success: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('分享成功');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">cancel: function (res) &#123;    </span></span><br><span class="line"><span class="string">// alert('已取消');    </span></span><br><span class="line"><span class="string">&#125;    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">wx.onMenuShareQZone(&#123;    </span></span><br><span class="line"><span class="string">title: shareTitle,    </span></span><br><span class="line"><span class="string">desc: descContent,    </span></span><br><span class="line"><span class="string">link: lineLink,    </span></span><br><span class="line"><span class="string">imgUrl: img_Url,    </span></span><br><span class="line"><span class="string">trigger: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('用户点击发送给朋友');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">success: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('分享成功');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">cancel: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert('已取消');    </span></span><br><span class="line"><span class="string">&#125;,    </span></span><br><span class="line"><span class="string">fail: function (res) &#123;    </span></span><br><span class="line"><span class="string">//alert("</span>失败<span class="string">");    </span></span><br><span class="line"><span class="string">//alert(JSON.stringify(res));    </span></span><br><span class="line"><span class="string">&#125;    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">wx.error(function(res)&#123;    </span></span><br><span class="line"><span class="string">// config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">&#125;);    </span></span><br><span class="line"><span class="string">&#125;)    </span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure><br><strong>定时生成ticket</strong></p>
 <p>生成签名之前必须先了解一下jsapi_ticket，jsapi_ticket是公众号用于调用微信JS接口的临时票据。正常情况下，jsapi_ticket的有效期为7200秒，通过access_token来获取。由于获取jsapi_ticket的api调用次数非常有限，频繁刷新jsapi_ticket会导致api调用受限，影响自身业务，开发者必须在自己的服务全局缓存jsapi_ticket 。</p>
 <p>1.参考以下文档获取access_token（有效期7200秒，开发者必须在自己的服务全局缓存access_token）：../15/54ce45d8d30b6bf6758f68d2e95bc627.html</p>
 <p>2.用第一步拿到的access_token 采用http GET方式请求获得jsapi_ticket（有效期7200秒，开发者必须在自己的服务全局缓存jsapi_ticket）：<a href="https://api.weixin.qq.com/cgi-bin/ticket/getticket?access\_token=ACCESS_TOKEN&amp;type=jsapi" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/ticket/getticket?access\_token=ACCESS_TOKEN&amp;type=jsapi</a></p>
 <p><strong>后台签名等计算 get_Sign.html</strong></p>
 <p><strong>url处理  
-</strong><br><pre><code>$url=$_POST\[&#39;url&#39;\];
-$jk=$url;
-if(strpos($url,&#39;#&#39;)&gt;0)$url=substr($url,0,strpos($url,&#39;#&#39;));
-$timestamp = time()+&#39;&#39;;
-$nonceStr = $this-&gt;createNonceStr();</code></pre><br><strong>签名信息输出</strong><br><pre><code>$string = &quot;jsapi_ticket=$jsapiTicket&amp;noncestr=$nonceStr&amp;timestamp=$timestamp&amp;url=$url&quot;;
-
-$signature = sha1($string);
-
-$signPackage = array(
-    &quot;appId&quot;     =&gt; $this-&gt;appId,
-    &quot;nonceStr&quot;  =&gt; $nonceStr,
-    &quot;timestamp&quot; =&gt; $timestamp,
-    &quot;url&quot;       =&gt; $url,
-    &quot;signature&quot; =&gt; $signature,
-    &quot;rawString&quot; =&gt; $string,
-    &quot;jk&quot;=&gt;$jk
-);
-echo  json_encode($signPackage);</code></pre><br><strong>调试</strong>  </p>
+</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$url=$_POST\[<span class="string">'url'</span>\];</span><br><span class="line">$jk=$url;</span><br><span class="line"><span class="keyword">if</span>(strpos($url,<span class="string">'#'</span>)&gt;<span class="number">0</span>)$url=substr($url,<span class="number">0</span>,strpos($url,<span class="string">'#'</span>));</span><br><span class="line">$timestamp = time()+<span class="string">''</span>;</span><br><span class="line">$nonceStr = <span class="keyword">$this</span>-&gt;createNonceStr();</span><br></pre></td></tr></table></figure><br><strong>签名信息输出</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$string = <span class="string">"jsapi_ticket=$jsapiTicket&amp;noncestr=$nonceStr&amp;timestamp=$timestamp&amp;url=$url"</span>;</span><br><span class="line"></span><br><span class="line">$signature = sha1($string);</span><br><span class="line"></span><br><span class="line">$signPackage = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">"appId"</span>     =&gt; <span class="keyword">$this</span>-&gt;appId,</span><br><span class="line">    <span class="string">"nonceStr"</span>  =&gt; $nonceStr,</span><br><span class="line">    <span class="string">"timestamp"</span> =&gt; $timestamp,</span><br><span class="line">    <span class="string">"url"</span>       =&gt; $url,</span><br><span class="line">    <span class="string">"signature"</span> =&gt; $signature,</span><br><span class="line">    <span class="string">"rawString"</span> =&gt; $string,</span><br><span class="line">    <span class="string">"jk"</span>=&gt;$jk</span><br><span class="line">);</span><br><span class="line"><span class="keyword">echo</span>  json_encode($signPackage);</span><br></pre></td></tr></table></figure><br><strong>调试</strong>  </p>
 <p>wx.config({</p>
 <p>debug: true, </p>
 <p><strong>最后预览</strong></p>
@@ -975,7 +824,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 

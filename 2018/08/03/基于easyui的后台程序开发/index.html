@@ -131,20 +131,20 @@
 
 
 
-<meta name="description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
+<meta name="description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta name="keywords" content="编程,ui">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于easyui的后台程序开发">
 <meta property="og:url" content="https://www.yf2017.top/2018/08/03/基于easyui的后台程序开发/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
+<meta property="og:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://static.yf2017.top/153328461200018.png">
 <meta property="og:image" content="http://static.yf2017.top/1533284663000616.png">
 <meta property="og:updated_time" content="2018-09-06T02:59:48.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于easyui的后台程序开发">
-<meta name="twitter:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;     &amp;lt;meta charset=&amp;quot;UTF-8&amp;qu">
+<meta name="twitter:description" content="easyui是一套非常成熟的ui框架，本文介绍用它来开发一套后台程序。 最后要实现的效果预览  主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。 主页代码 index.html12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta name="twitter:image" content="http://static.yf2017.top/153328461200018.png">
 
 
@@ -529,322 +529,11 @@
 <p>最后要实现的效果预览</p>
 <p><img src="http://static.yf2017.top/153328461200018.png" alt="easyui后台程序预览图" title="easyui后台程序预览图"></p>
 <p>主页分为几个区域，北区显示系统名称，用户登录信息等；西区显示菜单树；东区显示主视图；南区显示版权系统信息。</p>
-<p>主页代码 index.html<br><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;EASYUI ADMIN&lt;&#x2F;title&gt;
-
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;default&#x2F;easyui.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;icon.css&quot;&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.easyui.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;locale&#x2F;easyui-lang-zh_CN.js&quot;&gt;&lt;&#x2F;script&gt;
-
-    &lt;style&gt;
-        .header{
-            background: #2d3e50;
-            color: #fff;
-            direction: ltr;
-        }
-        .header .navbar{
-            margin-bottom: 0;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .header a,.header a:hover{
-            color: #fff;
-            line-height: 50px;
-        }
-        .header .content{
-            padding: 0.5em 4.5%;
-        }
-        .content{
-            padding: 2em;
-            padding-left: 5%;
-            padding-right: 5%;
-            max-width: 1230px;
-            margin: 0 auto;
-        }
-        .hmenu{width:900px;margin:0 auto;font-size:22px;margin-top:20px;}
-        .foot{text-align:center;font-size:12px;height:20px;padding:5px;}
-
-        .left{padding:10px;}
-    &lt;&#x2F;style&gt;
-
-    &lt;script&gt;
-
-$(function(){
-    $(&#39;#menu&#39;).tree({
-        url: &#39;tree.json&#39;,
-        loadFilter: function(data){
-            if (data.d){
-                return data.d;
-            } else {
-                return data;
-            }
-        },
-        onClick: function(node){
-           &#x2F;&#x2F; alert(node.url);
-            openTab(node);
-           &#x2F;&#x2F; alert(node.attributes.url);  &#x2F;&#x2F; alert node text property when clicked
-        }
-    });
-})
-
-
-function openTab(node){
-    if(node.url==undefined){
-        return;
-    }
-    if($(&quot;#tabs&quot;).tabs(&quot;exists&quot;,node.text)){
-        $(&quot;#tabs&quot;).tabs(&quot;select&quot;,node.text);
-    }else{
-        var content=&quot;&lt;iframe frameborder=0 scrolling=&#39;no&#39; style=&#39;width:100%;height:100%&#39; src=&#39;&quot;+node.url+&quot;&#39;&gt;&lt;&#x2F;iframe&gt;&quot;
-        $(&quot;#tabs&quot;).tabs(&quot;add&quot;,{
-            title:node.text,
-            iconCls:node.iconCls,
-            closable:true,
-            content:content
-        });
-    }
-}
-
-function collapseAll(){
-    $(&#39;#menu&#39;).tree(&#39;collapseAll&#39;);
-}
-function expandAll(){
-    $(&#39;#menu&#39;).tree(&#39;expandAll&#39;);
-}
-    &lt;&#x2F;script&gt;
-&lt;&#x2F;head&gt;
-&lt;body&gt;
-&lt;div data-options=&quot;region:&#39;north&#39;,border:false&quot; style=&quot;height:100px;&quot;&gt;
-
-    &lt;div &gt;
-
-        欢迎你,&lt;a href=&quot;ss&quot;&gt;Admin&lt;&#x2F;a&gt;&amp;nbsp;&lt;a href=&quot;ss&quot;&gt;退出&lt;&#x2F;a&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-&lt;div data-options=&quot;region:&#39;south&#39;,split:true&quot;  &gt;
-   &lt;div&gt; &amp;copy; 2016 All Rights Reserved &lt;&#x2F;div&gt;
-
-&lt;&#x2F;div&gt;
-&lt;div data-options=&quot;region:&#39;center&#39;&quot;&gt;
-    &lt;div data-options=&quot;fit:true&quot;&gt;
-        &lt;div data-options=&quot;region:&#39;west&#39;,collapsed:false&quot; style=&quot;width:180px&quot;&gt;
-            &lt;div &gt;
-            &lt;div&gt;
-                &lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;collapseAll()&quot; &gt;折叠所有&lt;&#x2F;a&gt;
-
-                &lt;a href=&quot;javascript:void(0)&quot;  onclick=&quot;expandAll()&quot;  &gt;展开所有&lt;&#x2F;a&gt;
-
-            &lt;&#x2F;div&gt;
-            &lt;div id=&quot;menu&quot;&gt;&lt;&#x2F;div&gt;
-            &lt;&#x2F;div&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div data-options=&quot;region:&#39;center&#39;&quot; &gt;
-
-         &lt;div   id=&quot;tabs&quot; style=&quot;width:100%;height:100%&quot;&gt;
-
-             &lt;div title=&quot;主页&quot; style=&quot;padding:10px;&quot;&gt;&lt;h3&gt;hello&lt;&#x2F;h3&gt;&lt;&#x2F;div&gt;
-         &lt;&#x2F;div&gt;
-        &lt;&#x2F;div&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;</code></pre><br>菜单加载部分,tree.json ，后台需要根据登录管理员的角色，加载不同的tree 。这个一个简单tree的例子。<br><pre><code>\[{
-  &quot;id&quot;:1,
-  &quot;text&quot;:&quot;管理系统&quot;,
-  &quot;iconCls&quot;:&quot;icon-book&quot;,
-  &quot;children&quot;:\[{
-    &quot;text&quot;:&quot;人员管理&quot;,
-    &quot;checked&quot;:true,
-    &quot;url&quot;:&quot;list.html&quot;
-  }\]
-},{
-  &quot;text&quot;:&quot;其他&quot;,
-  &quot;state&quot;:&quot;closed&quot;,
-  &quot;children&quot;:\[{
-    &quot;text&quot;:&quot;Easyui官网&quot;,
-    &quot;url&quot;:&quot;http:&#x2F;&#x2F;www.jeasyui.com&#x2F;&quot;
-  },
-    {
-      &quot;text&quot;:&quot;蓝旗子&quot;,
-      &quot;url&quot;:&quot;http:&#x2F;&#x2F;www.yf2017.top&#x2F;&quot;
-    }
-  \]
-}\]</code></pre><br>列表页 list.html， 主要是表头信息，及数据的格式化处理。<br><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;&lt;&#x2F;title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;default&#x2F;easyui.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text&#x2F;css&quot; href=&quot;easyui&#x2F;themes&#x2F;icon.css&quot;&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;jquery.easyui.min.js&quot;&gt;&lt;&#x2F;script&gt;
-    &lt;script type=&quot;text&#x2F;javascript&quot; src=&quot;easyui&#x2F;locale&#x2F;easyui-lang-zh_CN.js&quot;&gt;&lt;&#x2F;script&gt;
-
-&lt;&#x2F;head&gt;
-&lt;body&gt;
-&lt;table id=&quot;dg&quot; title=&quot;&quot; style=&quot;width:100%;height:100%&quot;
-       url=&quot;api.json&quot;
-       toolbar=&quot;#toolbar&quot; pagination=&quot;true&quot;
-       rownumbers=&quot;true&quot; fitColumns=&quot;true&quot; singleSelect=&quot;true&quot;&gt;
-    &lt;thead&gt;
-    &lt;tr&gt;
-        &lt;th field=&quot;name&quot; width=&quot;50&quot;&gt;姓名&lt;&#x2F;th&gt;
-        &lt;th field=&quot;account&quot; width=&quot;50&quot;&gt;账号&lt;&#x2F;th&gt;
-        &lt;th field=&quot;sex&quot; width=&quot;50&quot;&gt;性别&lt;&#x2F;th&gt;
-        &lt;th field=&quot;tel&quot; width=&quot;50&quot;&gt;电话&lt;&#x2F;th&gt;
-        &lt;th field=&quot;dept&quot; width=&quot;50&quot;&gt;部门&lt;&#x2F;th&gt;
-        &lt;th field=&quot;job&quot; width=&quot;50&quot;&gt;岗位&lt;&#x2F;th&gt;
-    &lt;&#x2F;tr&gt;
-    &lt;&#x2F;thead&gt;
-&lt;&#x2F;table&gt;
-&lt;div id=&quot;toolbar&quot;&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-add&quot; plain=&quot;true&quot; onclick=&quot;newUser()&quot;&gt;新建&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-edit&quot; plain=&quot;true&quot; onclick=&quot;editUser()&quot;&gt;编辑&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-remove&quot; plain=&quot;true&quot; onclick=&quot;destroyUser()&quot;&gt;移除&lt;&#x2F;a&gt;
-    &lt;div&gt;
-
-        姓名 &lt;input type=&quot;text&quot; name=&quot;qname&quot; id=&quot;qname&quot;  &#x2F;&gt;
-       性别 &lt;select id=&quot;qsex&quot; name=&quot;qsex&quot; style=&quot;width:60px;&quot;&gt;
-        &lt;option value=&quot;&quot;&gt;全部&lt;&#x2F;option&gt;
-            &lt;option value=&quot;男&quot;&gt;男&lt;&#x2F;option&gt;
-            &lt;option value=&quot;女&quot;&gt;女&lt;&#x2F;option&gt;
-        &lt;&#x2F;select&gt;
-        部门 &lt;input type=&quot;text&quot; name=&quot;qdept&quot; id=&quot;qdept&quot;  &#x2F;&gt;
-        职位 &lt;input type=&quot;text&quot; name=&quot;qjob&quot; id=&quot;qjob&quot;  &#x2F;&gt;
-        &lt;a href=&quot;javascript:void(0);&quot; iconCls=&quot;icon-search&quot;  onclick=&quot;doSearch();&quot;&gt;查询&lt;&#x2F;a&gt;
-    &lt;&#x2F;div&gt;
-&lt;&#x2F;div&gt;
-
-&lt;div id=&quot;dlg&quot; style=&quot;width:400px;height:380px;padding:10px 20px&quot;
-     closed=&quot;true&quot; buttons=&quot;#dlg-buttons&quot;&gt;
-    &lt;div&gt;用户信息&lt;&#x2F;div&gt;
-    &lt;form id=&quot;fm&quot; method=&quot;post&quot; novalidate&gt;
-        &lt;div&gt;
-            &lt;label&gt;姓名:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;name&quot; required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;账号:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;account&quot; required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;性别:&lt;&#x2F;label&gt;
-            &lt;select id=&quot;sex&quot; name=&quot;sex&quot; style=&quot;width:60px;&quot;  required=&quot;true&quot;&gt;
-                &lt;option value=&quot;男&quot;&gt;男&lt;&#x2F;option&gt;
-                &lt;option value=&quot;女&quot;&gt;女&lt;&#x2F;option&gt;
-            &lt;&#x2F;select&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;电话:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;tel&quot; validType=&quot;phone&quot;  required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;部门:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;dept&quot;   required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-        &lt;div&gt;
-            &lt;label&gt;职位:&lt;&#x2F;label&gt;
-            &lt;input name=&quot;job&quot;   required=&quot;true&quot;&gt;
-        &lt;&#x2F;div&gt;
-    &lt;&#x2F;form&gt;
-&lt;&#x2F;div&gt;
-&lt;div id=&quot;dlg-buttons&quot;&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;easyui-linkbutton c6&quot; iconCls=&quot;icon-ok&quot; onclick=&quot;saveUser()&quot; style=&quot;width:90px&quot;&gt;保存&lt;&#x2F;a&gt;
-    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-cancel&quot; onclick=&quot;javascript:$(&#39;#dlg&#39;).dialog(&#39;close&#39;)&quot; style=&quot;width:90px&quot;&gt;取消&lt;&#x2F;a&gt;
-&lt;&#x2F;div&gt;
-&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
-    var url;
-    function newUser(){
-        $(&#39;#dlg&#39;).dialog(&#39;open&#39;).dialog(&#39;setTitle&#39;,&#39;新建用户&#39;);
-        $(&#39;#fm&#39;).form(&#39;clear&#39;);
-        url = &#39;saveU.json&#39;;
-    }
-    function editUser(){
-        var row = $(&#39;#dg&#39;).datagrid(&#39;getSelected&#39;);
-        if (row){
-            $(&#39;#dlg&#39;).dialog(&#39;open&#39;).dialog(&#39;setTitle&#39;,&#39;编辑用户&#39;);
-            $(&#39;#fm&#39;).form(&#39;load&#39;,row);
-            url = &#39;updateU.json?id=&#39;+row.id;
-        }
-    }
-    function saveUser(){
-        $(&#39;#fm&#39;).form(&#39;submit&#39;,{
-            url: url,
-            onSubmit: function(){
-                return $(this).form(&#39;validate&#39;);
-            },
-            success: function(result){
-                var result = eval(&#39;(&#39;+result+&#39;)&#39;);
-                if (result.errorMsg){
-                    $.messager.show({
-                        title: &#39;Error&#39;,
-                        msg: result.errorMsg
-                    });
-                } else {
-                    $(&#39;#dlg&#39;).dialog(&#39;close&#39;); &#x2F;&#x2F; close the dialog
-                    $(&#39;#dg&#39;).datagrid(&#39;reload&#39;); &#x2F;&#x2F; reload the user data
-                }
-            }
-        });
-    }
-    function destroyUser(){
-        var row = $(&#39;#dg&#39;).datagrid(&#39;getSelected&#39;);
-        if (row){
-            $.messager.confirm(&#39;确认&#39;,&#39;你确定要删除该用户吗?&#39;,function(r){
-                if (r){
-                    $.post(&#39;deleteU.json&#39;,{id:row.id},function(result){
-                        if (result.success){
-                            $(&#39;#dg&#39;).datagrid(&#39;reload&#39;); &#x2F;&#x2F; reload the user data
-                        } else {
-                            $.messager.show({ &#x2F;&#x2F; show error message
-                                title: &#39;Error&#39;,
-                                msg: result.errorMsg
-                            });
-                        }
-                    },&#39;json&#39;);
-                }
-            });
-        }
-    }
-
-    function doSearch(){
-        $(&#39;#dg&#39;).datagrid({url:&#39;api.json?name=&#39;+$(&quot;#qname&quot;).val()});
-    }
-&lt;&#x2F;script&gt;
-&lt;style type=&quot;text&#x2F;css&quot;&gt;
-    #fm{
-        margin:0;
-        padding:10px 30px;
-    }
-    .ftitle{
-        font-size:14px;
-        font-weight:bold;
-        padding:5px 0;
-        margin-bottom:10px;
-        border-bottom:1px solid #ccc;
-    }
-    .fitem{
-        margin-bottom:5px;
-    }
-    .fitem label{
-        display:inline-block;
-        width:80px;
-    }
-    .fitem input{
-        width:160px;
-    }
-&lt;&#x2F;style&gt;
-&lt;&#x2F;body&gt;
-&lt;&#x2F;html&gt;</code></pre></p>
-<p>列表页数据-api.json，必须包含easyui定义的一些数据项，如 lastPage, pageSize, pageNumber, firstPage, rows等。下面是一个简单的例子。<br><pre><code>{&quot;lastPage&quot;:true,&quot;pageSize&quot;:10,&quot;pageNumber&quot;:1,&quot;firstPage&quot;:true,&quot;rows&quot;:\[{&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部&#x2F;技术&quot;,&quot;wechat&quot;:null}\],&quot;total&quot;:1,&quot;totalPage&quot;:1}</code></pre></p>
+<p>主页代码 index.html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;EASYUI ADMIN&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;easyui/themes/default/easyui.css&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;easyui/themes/icon.css&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/jquery.easyui.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/locale/easyui-lang-zh_CN.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        .header&#123;</span><br><span class="line">            background: #2d3e50;</span><br><span class="line">            color: #fff;</span><br><span class="line">            direction: ltr;</span><br><span class="line">        &#125;</span><br><span class="line">        .header .navbar&#123;</span><br><span class="line">            margin-bottom: 0;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            vertical-align: middle;</span><br><span class="line">        &#125;</span><br><span class="line">        .header a,.header a:hover&#123;</span><br><span class="line">            color: #fff;</span><br><span class="line">            line-height: 50px;</span><br><span class="line">        &#125;</span><br><span class="line">        .header .content&#123;</span><br><span class="line">            padding: 0.5em 4.5%;</span><br><span class="line">        &#125;</span><br><span class="line">        .content&#123;</span><br><span class="line">            padding: 2em;</span><br><span class="line">            padding-left: 5%;</span><br><span class="line">            padding-right: 5%;</span><br><span class="line">            max-width: 1230px;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">        &#125;</span><br><span class="line">        .hmenu&#123;width:900px;margin:0 auto;font-size:22px;margin-top:20px;&#125;</span><br><span class="line">        .foot&#123;text-align:center;font-size:12px;height:20px;padding:5px;&#125;</span><br><span class="line"></span><br><span class="line">        .left&#123;padding:10px;&#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line"></span><br><span class="line">$(function()&#123;</span><br><span class="line">    $(&apos;#menu&apos;).tree(&#123;</span><br><span class="line">        url: &apos;tree.json&apos;,</span><br><span class="line">        loadFilter: function(data)&#123;</span><br><span class="line">            if (data.d)&#123;</span><br><span class="line">                return data.d;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return data;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        onClick: function(node)&#123;</span><br><span class="line">           // alert(node.url);</span><br><span class="line">            openTab(node);</span><br><span class="line">           // alert(node.attributes.url);  // alert node text property when clicked</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function openTab(node)&#123;</span><br><span class="line">    if(node.url==undefined)&#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if($(&quot;#tabs&quot;).tabs(&quot;exists&quot;,node.text))&#123;</span><br><span class="line">        $(&quot;#tabs&quot;).tabs(&quot;select&quot;,node.text);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        var content=&quot;&lt;iframe frameborder=0 scrolling=&apos;no&apos; style=&apos;width:100%;height:100%&apos; src=&apos;&quot;+node.url+&quot;&apos;&gt;&lt;/iframe&gt;&quot;</span><br><span class="line">        $(&quot;#tabs&quot;).tabs(&quot;add&quot;,&#123;</span><br><span class="line">            title:node.text,</span><br><span class="line">            iconCls:node.iconCls,</span><br><span class="line">            closable:true,</span><br><span class="line">            content:content</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function collapseAll()&#123;</span><br><span class="line">    $(&apos;#menu&apos;).tree(&apos;collapseAll&apos;);</span><br><span class="line">&#125;</span><br><span class="line">function expandAll()&#123;</span><br><span class="line">    $(&apos;#menu&apos;).tree(&apos;expandAll&apos;);</span><br><span class="line">&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div data-options=&quot;region:&apos;north&apos;,border:false&quot; style=&quot;height:100px;&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div &gt;</span><br><span class="line"></span><br><span class="line">        欢迎你,&lt;a href=&quot;ss&quot;&gt;Admin&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;ss&quot;&gt;退出&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div data-options=&quot;region:&apos;south&apos;,split:true&quot;  &gt;</span><br><span class="line">   &lt;div&gt; &amp;copy; 2016 All Rights Reserved &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div data-options=&quot;region:&apos;center&apos;&quot;&gt;</span><br><span class="line">    &lt;div data-options=&quot;fit:true&quot;&gt;</span><br><span class="line">        &lt;div data-options=&quot;region:&apos;west&apos;,collapsed:false&quot; style=&quot;width:180px&quot;&gt;</span><br><span class="line">            &lt;div &gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;collapseAll()&quot; &gt;折叠所有&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">                &lt;a href=&quot;javascript:void(0)&quot;  onclick=&quot;expandAll()&quot;  &gt;展开所有&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div id=&quot;menu&quot;&gt;&lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div data-options=&quot;region:&apos;center&apos;&quot; &gt;</span><br><span class="line"></span><br><span class="line">         &lt;div   id=&quot;tabs&quot; style=&quot;width:100%;height:100%&quot;&gt;</span><br><span class="line"></span><br><span class="line">             &lt;div title=&quot;主页&quot; style=&quot;padding:10px;&quot;&gt;&lt;h3&gt;hello&lt;/h3&gt;&lt;/div&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure><br>菜单加载部分,tree.json ，后台需要根据登录管理员的角色，加载不同的tree 。这个一个简单tree的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">\[&#123;</span><br><span class="line">  &quot;id&quot;:1,</span><br><span class="line">  &quot;text&quot;:&quot;管理系统&quot;,</span><br><span class="line">  &quot;iconCls&quot;:&quot;icon-book&quot;,</span><br><span class="line">  &quot;children&quot;:\[&#123;</span><br><span class="line">    &quot;text&quot;:&quot;人员管理&quot;,</span><br><span class="line">    &quot;checked&quot;:true,</span><br><span class="line">    &quot;url&quot;:&quot;list.html&quot;</span><br><span class="line">  &#125;\]</span><br><span class="line">&#125;,&#123;</span><br><span class="line">  &quot;text&quot;:&quot;其他&quot;,</span><br><span class="line">  &quot;state&quot;:&quot;closed&quot;,</span><br><span class="line">  &quot;children&quot;:\[&#123;</span><br><span class="line">    &quot;text&quot;:&quot;Easyui官网&quot;,</span><br><span class="line">    &quot;url&quot;:&quot;http://www.jeasyui.com/&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;text&quot;:&quot;蓝旗子&quot;,</span><br><span class="line">      &quot;url&quot;:&quot;http://www.yf2017.top/&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  \]</span><br><span class="line">&#125;\]</span><br></pre></td></tr></table></figure><br>列表页 list.html， 主要是表头信息，及数据的格式化处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;easyui/themes/default/easyui.css&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;easyui/themes/icon.css&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/jquery.easyui.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;easyui/locale/easyui-lang-zh_CN.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;table id=&quot;dg&quot; title=&quot;&quot; style=&quot;width:100%;height:100%&quot;</span><br><span class="line">       url=&quot;api.json&quot;</span><br><span class="line">       toolbar=&quot;#toolbar&quot; pagination=&quot;true&quot;</span><br><span class="line">       rownumbers=&quot;true&quot; fitColumns=&quot;true&quot; singleSelect=&quot;true&quot;&gt;</span><br><span class="line">    &lt;thead&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;th field=&quot;name&quot; width=&quot;50&quot;&gt;姓名&lt;/th&gt;</span><br><span class="line">        &lt;th field=&quot;account&quot; width=&quot;50&quot;&gt;账号&lt;/th&gt;</span><br><span class="line">        &lt;th field=&quot;sex&quot; width=&quot;50&quot;&gt;性别&lt;/th&gt;</span><br><span class="line">        &lt;th field=&quot;tel&quot; width=&quot;50&quot;&gt;电话&lt;/th&gt;</span><br><span class="line">        &lt;th field=&quot;dept&quot; width=&quot;50&quot;&gt;部门&lt;/th&gt;</span><br><span class="line">        &lt;th field=&quot;job&quot; width=&quot;50&quot;&gt;岗位&lt;/th&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;/thead&gt;</span><br><span class="line">&lt;/table&gt;</span><br><span class="line">&lt;div id=&quot;toolbar&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-add&quot; plain=&quot;true&quot; onclick=&quot;newUser()&quot;&gt;新建&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-edit&quot; plain=&quot;true&quot; onclick=&quot;editUser()&quot;&gt;编辑&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-remove&quot; plain=&quot;true&quot; onclick=&quot;destroyUser()&quot;&gt;移除&lt;/a&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line"></span><br><span class="line">        姓名 &lt;input type=&quot;text&quot; name=&quot;qname&quot; id=&quot;qname&quot;  /&gt;</span><br><span class="line">       性别 &lt;select id=&quot;qsex&quot; name=&quot;qsex&quot; style=&quot;width:60px;&quot;&gt;</span><br><span class="line">        &lt;option value=&quot;&quot;&gt;全部&lt;/option&gt;</span><br><span class="line">            &lt;option value=&quot;男&quot;&gt;男&lt;/option&gt;</span><br><span class="line">            &lt;option value=&quot;女&quot;&gt;女&lt;/option&gt;</span><br><span class="line">        &lt;/select&gt;</span><br><span class="line">        部门 &lt;input type=&quot;text&quot; name=&quot;qdept&quot; id=&quot;qdept&quot;  /&gt;</span><br><span class="line">        职位 &lt;input type=&quot;text&quot; name=&quot;qjob&quot; id=&quot;qjob&quot;  /&gt;</span><br><span class="line">        &lt;a href=&quot;javascript:void(0);&quot; iconCls=&quot;icon-search&quot;  onclick=&quot;doSearch();&quot;&gt;查询&lt;/a&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;dlg&quot; style=&quot;width:400px;height:380px;padding:10px 20px&quot;</span><br><span class="line">     closed=&quot;true&quot; buttons=&quot;#dlg-buttons&quot;&gt;</span><br><span class="line">    &lt;div&gt;用户信息&lt;/div&gt;</span><br><span class="line">    &lt;form id=&quot;fm&quot; method=&quot;post&quot; novalidate&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;姓名:&lt;/label&gt;</span><br><span class="line">            &lt;input name=&quot;name&quot; required=&quot;true&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;账号:&lt;/label&gt;</span><br><span class="line">            &lt;input name=&quot;account&quot; required=&quot;true&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;性别:&lt;/label&gt;</span><br><span class="line">            &lt;select id=&quot;sex&quot; name=&quot;sex&quot; style=&quot;width:60px;&quot;  required=&quot;true&quot;&gt;</span><br><span class="line">                &lt;option value=&quot;男&quot;&gt;男&lt;/option&gt;</span><br><span class="line">                &lt;option value=&quot;女&quot;&gt;女&lt;/option&gt;</span><br><span class="line">            &lt;/select&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;电话:&lt;/label&gt;</span><br><span class="line">            &lt;input name=&quot;tel&quot; validType=&quot;phone&quot;  required=&quot;true&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;部门:&lt;/label&gt;</span><br><span class="line">            &lt;input name=&quot;dept&quot;   required=&quot;true&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;label&gt;职位:&lt;/label&gt;</span><br><span class="line">            &lt;input name=&quot;job&quot;   required=&quot;true&quot;&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/form&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;dlg-buttons&quot;&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0)&quot; class=&quot;easyui-linkbutton c6&quot; iconCls=&quot;icon-ok&quot; onclick=&quot;saveUser()&quot; style=&quot;width:90px&quot;&gt;保存&lt;/a&gt;</span><br><span class="line">    &lt;a href=&quot;javascript:void(0)&quot; iconCls=&quot;icon-cancel&quot; onclick=&quot;javascript:$(&apos;#dlg&apos;).dialog(&apos;close&apos;)&quot; style=&quot;width:90px&quot;&gt;取消&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var url;</span><br><span class="line">    function newUser()&#123;</span><br><span class="line">        $(&apos;#dlg&apos;).dialog(&apos;open&apos;).dialog(&apos;setTitle&apos;,&apos;新建用户&apos;);</span><br><span class="line">        $(&apos;#fm&apos;).form(&apos;clear&apos;);</span><br><span class="line">        url = &apos;saveU.json&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    function editUser()&#123;</span><br><span class="line">        var row = $(&apos;#dg&apos;).datagrid(&apos;getSelected&apos;);</span><br><span class="line">        if (row)&#123;</span><br><span class="line">            $(&apos;#dlg&apos;).dialog(&apos;open&apos;).dialog(&apos;setTitle&apos;,&apos;编辑用户&apos;);</span><br><span class="line">            $(&apos;#fm&apos;).form(&apos;load&apos;,row);</span><br><span class="line">            url = &apos;updateU.json?id=&apos;+row.id;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    function saveUser()&#123;</span><br><span class="line">        $(&apos;#fm&apos;).form(&apos;submit&apos;,&#123;</span><br><span class="line">            url: url,</span><br><span class="line">            onSubmit: function()&#123;</span><br><span class="line">                return $(this).form(&apos;validate&apos;);</span><br><span class="line">            &#125;,</span><br><span class="line">            success: function(result)&#123;</span><br><span class="line">                var result = eval(&apos;(&apos;+result+&apos;)&apos;);</span><br><span class="line">                if (result.errorMsg)&#123;</span><br><span class="line">                    $.messager.show(&#123;</span><br><span class="line">                        title: &apos;Error&apos;,</span><br><span class="line">                        msg: result.errorMsg</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    $(&apos;#dlg&apos;).dialog(&apos;close&apos;); // close the dialog</span><br><span class="line">                    $(&apos;#dg&apos;).datagrid(&apos;reload&apos;); // reload the user data</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    function destroyUser()&#123;</span><br><span class="line">        var row = $(&apos;#dg&apos;).datagrid(&apos;getSelected&apos;);</span><br><span class="line">        if (row)&#123;</span><br><span class="line">            $.messager.confirm(&apos;确认&apos;,&apos;你确定要删除该用户吗?&apos;,function(r)&#123;</span><br><span class="line">                if (r)&#123;</span><br><span class="line">                    $.post(&apos;deleteU.json&apos;,&#123;id:row.id&#125;,function(result)&#123;</span><br><span class="line">                        if (result.success)&#123;</span><br><span class="line">                            $(&apos;#dg&apos;).datagrid(&apos;reload&apos;); // reload the user data</span><br><span class="line">                        &#125; else &#123;</span><br><span class="line">                            $.messager.show(&#123; // show error message</span><br><span class="line">                                title: &apos;Error&apos;,</span><br><span class="line">                                msg: result.errorMsg</span><br><span class="line">                            &#125;);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;,&apos;json&apos;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    function doSearch()&#123;</span><br><span class="line">        $(&apos;#dg&apos;).datagrid(&#123;url:&apos;api.json?name=&apos;+$(&quot;#qname&quot;).val()&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    #fm&#123;</span><br><span class="line">        margin:0;</span><br><span class="line">        padding:10px 30px;</span><br><span class="line">    &#125;</span><br><span class="line">    .ftitle&#123;</span><br><span class="line">        font-size:14px;</span><br><span class="line">        font-weight:bold;</span><br><span class="line">        padding:5px 0;</span><br><span class="line">        margin-bottom:10px;</span><br><span class="line">        border-bottom:1px solid #ccc;</span><br><span class="line">    &#125;</span><br><span class="line">    .fitem&#123;</span><br><span class="line">        margin-bottom:5px;</span><br><span class="line">    &#125;</span><br><span class="line">    .fitem label&#123;</span><br><span class="line">        display:inline-block;</span><br><span class="line">        width:80px;</span><br><span class="line">    &#125;</span><br><span class="line">    .fitem input&#123;</span><br><span class="line">        width:160px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>列表页数据-api.json，必须包含easyui定义的一些数据项，如 lastPage, pageSize, pageNumber, firstPage, rows等。下面是一个简单的例子。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;lastPage&quot;:true,&quot;pageSize&quot;:10,&quot;pageNumber&quot;:1,&quot;firstPage&quot;:true,&quot;rows&quot;:\[&#123;&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部/技术&quot;,&quot;wechat&quot;:null&#125;\],&quot;total&quot;:1,&quot;totalPage&quot;:1&#125;</span><br></pre></td></tr></table></figure></p>
 <p>新增数据在当前页弹出一个dialog, 填写完相关数据元素后，保存，系统ajax反馈。</p>
 <p><img src="http://static.yf2017.top/1533284663000616.png" alt="easyui新增数据" title="easyui新增数据"></p>
-<p>保存反馈 saveU.json<br><pre><code>{&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部&#x2F;技术&quot;,&quot;wechat&quot;:null}</code></pre><br>删除反馈 deleteU.json<br><pre><code>{&quot;success&quot;:&quot;true&quot;}</code></pre></p>
+<p>保存反馈 saveU.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;id&quot;:75,&quot;sex&quot;:&quot;男&quot;,&quot;email&quot;:null,&quot;tel&quot;:&quot;1856666666&quot;,&quot;name&quot;:&quot;多米多&quot;,&quot;modify&quot;:&quot;0&quot;,&quot;job&quot;:&quot;开发&quot;,&quot;account&quot;:&quot;duomiduo&quot;,&quot;dept&quot;:&quot;研发部/技术&quot;,&quot;wechat&quot;:null&#125;</span><br></pre></td></tr></table></figure><br>删除反馈 deleteU.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;success&quot;:&quot;true&quot;&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -1124,7 +813,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 

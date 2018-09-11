@@ -503,7 +503,7 @@
 <p>在某网站看到有使用腾讯验证码的，顺便研究了一下。</p>
 <p>从接入指引进入 <a href="https://open.captcha.qq.com/cap_web/experience-slidepass.html" target="_blank" rel="noopener">腾讯验证码</a> </p>
 <p>首先创建场景。得到分配的appid, 和secret。</p>
-<p>在你的网页引入js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://ssl.captcha.qq.com/TCaptcha.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><br>在你页面需要点击验证的元素加入</p>
+<p>在你的网页引入js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://ssl.captcha.qq.com/TCaptcha.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br>在你页面需要点击验证的元素加入</p>
 <p> id=”TencentCaptcha”<br>        data-appid=”你的appid”<br>        data-cbfn=”callback”</p>
 <p>比如  </p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"TencentCaptcha"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-appid</span>=<span class="string">"你的appid"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-cbfn</span>=<span class="string">"callback"</span>&gt;</span>验证<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -782,7 +782,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 

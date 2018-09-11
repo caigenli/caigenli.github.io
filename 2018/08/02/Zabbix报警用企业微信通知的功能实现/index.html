@@ -120,7 +120,7 @@
 
 
 
-  <meta name="keywords" content="编程,zabbix,运维," />
+  <meta name="keywords" content="zabbix,编程,运维," />
 
 
 
@@ -132,7 +132,7 @@
 
 
 <meta name="description" content="版本：zabbix3.4 企业微信 准备材料：企业微信corpid 【打开企业微信-》我的企业，最后一行企业ID就是】  企业微信corpsecret 【打开企业微信-》企业应用-》创建的应用，Secret就是】 企业微信应用ID( agentid )【打开企业微信-》企业应用-》创建的应用，AgentId就是】  zabbix安装后，装好zabbix-agent, 并在zabbix监控界面能看到">
-<meta name="keywords" content="编程,zabbix,运维">
+<meta name="keywords" content="zabbix,编程,运维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Zabbix报警用企业微信通知的功能实现">
 <meta property="og:url" content="https://www.yf2017.top/2018/08/02/Zabbix报警用企业微信通知的功能实现/index.html">
@@ -499,7 +499,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  644
+                  635
                 </span>
               
 
@@ -515,7 +515,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -558,49 +558,8 @@
 <p>cd /usr/lib/zabbix/alertscripts</p>
 <p>创建 wechat.sh</p>
 <p>vi wechat.sh</p>
-<p>插入<br><pre><code>#!&#x2F;bin&#x2F;bash
-###SCRIPT_NAME:wechat.sh###
-###send message from weixin for zabbix monitor###
-
-CropID=&#39;替换你的cropid&#39;
-Secret=&#39;替换你的corpsecret&#39;
-GURL=&quot;https:&#x2F;&#x2F;qyapi.weixin.qq.com&#x2F;cgi-bin&#x2F;gettoken?corpid=$CropID&amp;corpsecret=$Secret&quot;
-Gtoken=$(&#x2F;usr&#x2F;bin&#x2F;curl -s -G $GURL | awk -F&quot; &#39;{print $10}&#39;)
-
-PURL=&quot;https:&#x2F;&#x2F;qyapi.weixin.qq.com&#x2F;cgi-bin&#x2F;message&#x2F;send?access_token=$Gtoken&quot;
-echo $PURL
-function body() {
-        #企业号中的应用id
-        local int AppID=你的应用ID
-        #部门成员id，zabbix中定义的微信接收者
-        local UserID=$1
-        #部门id，定义了范围，组内成员都可接收到消息
-        #local PartyID=2     
-        #过滤出zabbix传递的第三个参数
-        local Msg=$(echo &quot;$@&quot; | cut -d&quot; &quot; -f3-)
-        printf &#39;{
-&#39;
-        printf &#39;	&quot;touser&quot;: &quot;&#39;&quot;$UserID&quot;&quot;&quot;,
-&quot;
-        #printf &#39;	&quot;toparty&quot;: &quot;&#39;&quot;$PartyID&quot;&quot;&quot;,
-&quot;
-        printf &#39;	&quot;msgtype&quot;: &quot;text&quot;,
-&#39;
-        printf &#39;	&quot;agentid&quot;: &quot;&#39;&quot; $AppID &quot;&quot;&quot;,
-&quot;
-        printf &#39;	&quot;text&quot;: {
-&#39;
-        printf &#39;		&quot;content&quot;: &quot;&#39;&quot;$Msg&quot;&quot;&quot;
-&quot;
-        printf &#39;	},
-&#39;
-        printf &#39;	&quot;safe&quot;:&quot;0&quot;
-&#39;
-        printf &#39;}
-&#39;
-}
-&#x2F;usr&#x2F;bin&#x2F;curl --data-ascii &quot;$(body $1 $2 $3)&quot; $PURL</code></pre><br>保存。</p>
-<p>执行测试脚本是否正确<br><pre><code>.&#x2F;wechat --corpid=你的corpid  --corpsecret=你的corpsecret   --msg=&quot;您好,告警测试&quot; --user=测试用户【企业微信里的】  --agentid=应用ID</code></pre><br>看到输出  </p>
+<p>插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">###SCRIPT_NAME:wechat.sh###</span><br><span class="line">###send message from weixin for zabbix monitor###</span><br><span class="line"></span><br><span class="line">CropID=&apos;替换你的cropid&apos;</span><br><span class="line">Secret=&apos;替换你的corpsecret&apos;</span><br><span class="line">GURL=&quot;https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=$CropID&amp;corpsecret=$Secret&quot;</span><br><span class="line">Gtoken=$(/usr/bin/curl -s -G $GURL | awk -F&quot; &apos;&#123;print $10&#125;&apos;)</span><br><span class="line"></span><br><span class="line">PURL=&quot;https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=$Gtoken&quot;</span><br><span class="line">echo $PURL</span><br><span class="line">function body() &#123;</span><br><span class="line">        #企业号中的应用id</span><br><span class="line">        local int AppID=你的应用ID</span><br><span class="line">        #部门成员id，zabbix中定义的微信接收者</span><br><span class="line">        local UserID=$1</span><br><span class="line">        #部门id，定义了范围，组内成员都可接收到消息</span><br><span class="line">        #local PartyID=2     </span><br><span class="line">        #过滤出zabbix传递的第三个参数</span><br><span class="line">        local Msg=$(echo &quot;$@&quot; | cut -d&quot; &quot; -f3-)</span><br><span class="line">        printf &apos;&#123;</span><br><span class="line">&apos;</span><br><span class="line">        printf &apos;	&quot;touser&quot;: &quot;&apos;&quot;$UserID&quot;&quot;&quot;,</span><br><span class="line">&quot;</span><br><span class="line">        #printf &apos;	&quot;toparty&quot;: &quot;&apos;&quot;$PartyID&quot;&quot;&quot;,</span><br><span class="line">&quot;</span><br><span class="line">        printf &apos;	&quot;msgtype&quot;: &quot;text&quot;,</span><br><span class="line">&apos;</span><br><span class="line">        printf &apos;	&quot;agentid&quot;: &quot;&apos;&quot; $AppID &quot;&quot;&quot;,</span><br><span class="line">&quot;</span><br><span class="line">        printf &apos;	&quot;text&quot;: &#123;</span><br><span class="line">&apos;</span><br><span class="line">        printf &apos;		&quot;content&quot;: &quot;&apos;&quot;$Msg&quot;&quot;&quot;</span><br><span class="line">&quot;</span><br><span class="line">        printf &apos;	&#125;,</span><br><span class="line">&apos;</span><br><span class="line">        printf &apos;	&quot;safe&quot;:&quot;0&quot;</span><br><span class="line">&apos;</span><br><span class="line">        printf &apos;&#125;</span><br><span class="line">&apos;</span><br><span class="line">&#125;</span><br><span class="line">/usr/bin/curl --data-ascii &quot;$(body $1 $2 $3)&quot; $PURL</span><br></pre></td></tr></table></figure><br>保存。</p>
+<p>执行测试脚本是否正确<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./wechat --corpid=你的corpid  --corpsecret=你的corpsecret   --msg=&quot;您好,告警测试&quot; --user=测试用户【企业微信里的】  --agentid=应用ID</span><br></pre></td></tr></table></figure><br>看到输出  </p>
 <p>{“errcode”:0,”errmsg”:”ok”,”invaliduser”:””}</p>
 <p>表示成功，而且你的微信会收到一条消息。</p>
 <p>下面是zabbix的配置。</p>
@@ -664,9 +623,9 @@ function body() {
       
         <div class="post-tags">
           
-            <a href="/tags/编程/" rel="tag"># 编程</a>
-          
             <a href="/tags/zabbix/" rel="tag"># zabbix</a>
+          
+            <a href="/tags/编程/" rel="tag"># 编程</a>
           
             <a href="/tags/运维/" rel="tag"># 运维</a>
           
@@ -935,7 +894,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">19.3k</span>
+    <span title="Site words total count">19k</span>
   
 </div>
 
