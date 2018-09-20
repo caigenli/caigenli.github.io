@@ -138,19 +138,19 @@
 <meta property="og:site_name" content="蓝旗子">
 <meta property="og:description" content="并发问题是每个程序员都要考虑的。 并发，简单的说，就是当多人一同访问你的系统，你的系统能否正常运行。   1.并发实例 下面我们来看一个数据库并发实例。  a) 如果我们程序中以name查找，比如 select * from testbatch where name is null 能查出多条记录，而且比较明显，在16:00:59分有2条记录，16:02:36也是。 这样来看该程序在并发上没控制好">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://static.yf2017.top/151738633700002.png">
-<meta property="og:image" content="http://static.yf2017.top/1517387235000319.png">
-<meta property="og:image" content="http://static.yf2017.top/151738740500001.png">
-<meta property="og:image" content="http://static.yf2017.top/1517387459000716.png">
-<meta property="og:image" content="http://static.yf2017.top/1517387578000410.png">
-<meta property="og:image" content="http://static.yf2017.top/1517388408000916.png">
-<meta property="og:image" content="http://static.yf2017.top/151738849600033.png">
-<meta property="og:image" content="http://static.yf2017.top/151738855800003.png">
-<meta property="og:updated_time" content="2018-09-14T09:24:06.778Z">
+<meta property="og:image" content="https://www.yf2017.top/files/151738633700002.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1517387235000319.png">
+<meta property="og:image" content="https://www.yf2017.top/files/151738740500001.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1517387459000716.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1517387578000410.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1517388408000916.png">
+<meta property="og:image" content="https://www.yf2017.top/files/151738849600033.png">
+<meta property="og:image" content="https://www.yf2017.top/files/151738855800003.png">
+<meta property="og:updated_time" content="2018-09-20T03:12:18.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你的并发控制好了吗？">
 <meta name="twitter:description" content="并发问题是每个程序员都要考虑的。 并发，简单的说，就是当多人一同访问你的系统，你的系统能否正常运行。   1.并发实例 下面我们来看一个数据库并发实例。  a) 如果我们程序中以name查找，比如 select * from testbatch where name is null 能查出多条记录，而且比较明显，在16:00:59分有2条记录，16:02:36也是。 这样来看该程序在并发上没控制好">
-<meta name="twitter:image" content="http://static.yf2017.top/151738633700002.png">
+<meta name="twitter:image" content="https://www.yf2017.top/files/151738633700002.png">
 
 
 
@@ -427,8 +427,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-14T17:24:06+08:00">
-                2018-09-14
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T11:12:18+08:00">
+                2018-09-20
               </time>
             
           </span>
@@ -512,7 +512,7 @@
 <p>并发，简单的说，就是当多人一同访问你的系统，你的系统能否正常运行。  </p>
 <p>1.并发实例</p>
 <p>下面我们来看一个数据库并发实例。</p>
-<p><img src="http://static.yf2017.top/151738633700002.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/151738633700002.png" alt=""></p>
 <p>a) 如果我们程序中以name查找，比如 select * from testbatch where name is null</p>
 <p>能查出多条记录，而且比较明显，在16:00:59分有2条记录，16:02:36也是。</p>
 <p>这样来看该程序在并发上没控制好。</p>
@@ -524,18 +524,18 @@
 </ol>
 <p>jmeter是apache的一个开源项目，我们可以用他来进行简单的并发测试。</p>
 <p>首先从jmeter官网下载bin文件，然后双击 jmeter.bat来启动jmeter。</p>
-<p><img src="http://static.yf2017.top/1517387235000319.png" alt="">首先，修改测试计划名称，保存路径。</p>
+<p><img src="https://www.yf2017.top/files/1517387235000319.png" alt="">首先，修改测试计划名称，保存路径。</p>
 <p>创建线程组。右键，添加-&gt; Threads(Users)-&gt;线程组</p>
 <p>设置线程数量</p>
-<p><img src="http://static.yf2017.top/151738740500001.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/151738740500001.png" alt=""></p>
 <p>然后，创建http请求</p>
-<p><img src="http://static.yf2017.top/1517387459000716.png" alt="">添加响应断言。（添加-&gt;断言-&gt;响应断言）</p>
-<p><img src="http://static.yf2017.top/1517387578000410.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/1517387459000716.png" alt="">添加响应断言。（添加-&gt;断言-&gt;响应断言）</p>
+<p><img src="https://www.yf2017.top/files/1517387578000410.png" alt=""></p>
 <p>上面的断言意思是，只要结果的字符中包含data则表示正确响应。</p>
 <p>接着添加监听。（添加-&gt;监听器-&gt;察看结果树）</p>
-<p><img src="http://static.yf2017.top/1517388408000916.png" alt="">接着添加监听-Aggregate Graph</p>
-<p><img src="http://static.yf2017.top/151738849600033.png" alt="">接着添加定时器 Synchronizing Timer.</p>
-<p><img src="http://static.yf2017.top/151738855800003.png" alt="">接着启动测试。</p>
+<p><img src="https://www.yf2017.top/files/1517388408000916.png" alt="">接着添加监听-Aggregate Graph</p>
+<p><img src="https://www.yf2017.top/files/151738849600033.png" alt="">接着添加定时器 Synchronizing Timer.</p>
+<p><img src="https://www.yf2017.top/files/151738855800003.png" alt="">接着启动测试。</p>
 
       
     </div>
@@ -692,7 +692,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -807,7 +807,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">34.6k</span>
+    <span title="Site words total count">34.7k</span>
   
 </div>
 

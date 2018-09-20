@@ -138,15 +138,15 @@
 <meta property="og:site_name" content="蓝旗子">
 <meta property="og:description" content="先从注册说起。 注册微信开放平台账号，进行资质认证。企业需要提交营业执照、公函（个人无法进行资质认证，腾讯认为个人是无法完成一个公众号第三方平台搭建的）。 公众号第三方平台是什么？ – 为公众号提供便捷的服务，基于微信公众号，微信提供的第三方API进行开发，为微信公众号的使用者提供便捷服务。  进行完资质认证后，可以创建公众号第三方平台了，一个账号最多创建5个公众平台。 比较便捷的是，填完第三方平">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://static.yf2017.top/1479965752000911.png">
-<meta property="og:image" content="http://static.yf2017.top/147996575200093.png">
-<meta property="og:image" content="http://static.yf2017.top/1479965752000115.png">
-<meta property="og:image" content="http://static.yf2017.top/147996575200007.png">
-<meta property="og:updated_time" content="2018-09-14T09:30:19.017Z">
+<meta property="og:image" content="https://www.yf2017.top/files/1479965752000911.png">
+<meta property="og:image" content="https://www.yf2017.top/files/147996575200093.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1479965752000115.png">
+<meta property="og:image" content="https://www.yf2017.top/files/147996575200007.png">
+<meta property="og:updated_time" content="2018-09-20T03:11:57.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信第三方平台开发攻略">
 <meta name="twitter:description" content="先从注册说起。 注册微信开放平台账号，进行资质认证。企业需要提交营业执照、公函（个人无法进行资质认证，腾讯认为个人是无法完成一个公众号第三方平台搭建的）。 公众号第三方平台是什么？ – 为公众号提供便捷的服务，基于微信公众号，微信提供的第三方API进行开发，为微信公众号的使用者提供便捷服务。  进行完资质认证后，可以创建公众号第三方平台了，一个账号最多创建5个公众平台。 比较便捷的是，填完第三方平">
-<meta name="twitter:image" content="http://static.yf2017.top/1479965752000911.png">
+<meta name="twitter:image" content="https://www.yf2017.top/files/1479965752000911.png">
 
 
 
@@ -423,8 +423,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-14T17:30:19+08:00">
-                2018-09-14
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T11:11:57+08:00">
+                2018-09-20
               </time>
             
           </span>
@@ -508,7 +508,7 @@
 <p>注册微信开放平台账号，进行资质认证。企业需要提交营业执照、公函（个人无法进行资质认证，腾讯认为个人是无法完成一个公众号第三方平台搭建的）。</p>
 <p>公众号第三方平台是什么？</p>
 <p>– 为公众号提供便捷的服务，基于微信公众号，微信提供的第三方API进行开发，为微信公众号的使用者提供便捷服务。</p>
-<p><img src="http://static.yf2017.top/1479965752000911.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/1479965752000911.png" alt=""></p>
 <p>进行完资质认证后，可以创建公众号第三方平台了，一个账号最多创建5个公众平台。</p>
 <p>比较便捷的是，填完第三方平台的资料（地址url, token等信息）后，便是审核通过的状态，也就可以开始调试了。</p>
 <p>一步步按照文档来。</p>
@@ -526,14 +526,14 @@
 <p>返回结果示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;pre_auth_code&quot;:&quot;Cx_Dk6qiBE0Dmx4EmlT3oRfArPvwSQ-oa3NL_fwHM7VI08r52wazoZX2Rhpz1dEw&quot;,</span><br><span class="line"></span><br><span class="line">&quot;expires_in&quot;:3600</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>我将pre_auth_code保存到redis, 命名为 $APPID$_preauth.</p>
 <p>注意 1，2，3 都有一定的时效，发布时要做成定时任务。</p>
 <p>4.生成授权链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String url=String.format(&quot;https://mp.weixin.qq.com/cgi-bin/componentloginpage?component_appid=%s&amp;pre_auth_code=%s&amp;redirect_uri=%s&quot;,</span><br><span class="line"></span><br><span class="line">    APPID, RedisUtil.getData(APPID+&quot;_preauth&quot;), &quot;你的平台地址&quot;);</span><br><span class="line"></span><br><span class="line">    System.out.println(url);</span><br></pre></td></tr></table></figure><br>在浏览器中访问，效果如下</p>
-<p><img src="http://static.yf2017.top/147996575200093.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/147996575200093.png" alt=""></p>
 <p>用微信扫码后，点确认，完成授权。</p>
 <p>【小结一下】</p>
 <p>以上步骤完成后，要完成发布前的验证。</p>
 <p>进入微信开放平台，管理中心，点全网发布，会自动进入检测。</p>
-<p><img src="http://static.yf2017.top/1479965752000115.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/1479965752000115.png" alt=""></p>
 <p>检测完成，全部成功后，可以提交审核。</p>
-<p><img src="http://static.yf2017.top/147996575200007.png" alt=""></p>
+<p><img src="https://www.yf2017.top/files/147996575200007.png" alt=""></p>
 <p>检测包含自动回复，api的检查。</p>
 <p>其中自动回复必须为加密模式。先接收加密的消息，然后返回加密的回复内容。</p>
 <p>需要注意的是，加密、解密所用的  token ,aeskey是你在创建第三方平台填写的，appid是创建后可以查看。</p>
@@ -714,7 +714,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -829,7 +829,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">34.6k</span>
+    <span title="Site words total count">34.7k</span>
   
 </div>
 

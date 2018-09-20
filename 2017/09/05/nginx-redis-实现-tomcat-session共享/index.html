@@ -131,23 +131,17 @@
 
 
 
-<meta name="description" content="nginx配置  upstream session_server{      server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;      server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
+<meta name="description" content="nginx配置 12345678910upstream session_server&amp;#123;         server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;         server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx+redis 实现 tomcat session共享">
 <meta property="og:url" content="https://www.yf2017.top/2017/09/05/nginx-redis-实现-tomcat-session共享/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="nginx配置  upstream session_server{      server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;      server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
+<meta property="og:description" content="nginx配置 12345678910upstream session_server&amp;#123;         server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;         server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
-<meta property="og:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
-<meta property="og:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
-<meta property="og:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
-<meta property="og:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
-<meta property="og:updated_time" content="2018-09-19T09:38:01.663Z">
+<meta property="og:updated_time" content="2018-09-20T03:09:27.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx+redis 实现 tomcat session共享">
-<meta name="twitter:description" content="nginx配置  upstream session_server{      server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;      server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
-<meta name="twitter:image" content="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif">
+<meta name="twitter:description" content="nginx配置 12345678910upstream session_server&amp;#123;         server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2;         server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;">
 
 
 
@@ -424,8 +418,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-19T17:38:01+08:00">
-                2018-09-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T11:09:27+08:00">
+                2018-09-20
               </time>
             
           </span>
@@ -468,7 +462,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  146
+                  150
                 </span>
               
 
@@ -506,16 +500,9 @@
 
       
         <p><strong>nginx配置</strong></p>
-<p><img src="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif" alt=""></p>
-<p>upstream session_server{ </p>
-<pre><code>    server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2; 
-    server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;                                               
-    #keepalive 2000;
-}
-</code></pre><p>  location /testSession/ {<br>            proxy_pass <a href="http://session_server" target="_blank" rel="noopener">http://session_server</a>;<br>        }</p>
-<p><img src="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif" alt="">  </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">upstream session_server&#123; </span><br><span class="line"></span><br><span class="line">        server 10.10.16.163:8080 weight=1 max_fails=2 fail_timeout=2; </span><br><span class="line">        server 10.10.16.163:8081 weight=1 max_fails=2 fail_timeout=2;                                               </span><br><span class="line">        #keepalive 2000;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  location /testSession/ &#123; </span><br><span class="line">            proxy_pass http://session_server; </span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure> 
 <p><strong>tomcat配置</strong></p>
-<p>context.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"com.orangefunction.tomcat.redissessions.RedisSessionHandlerValve"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Manager</span> <span class="attr">className</span>=<span class="string">"com.orangefunction.tomcat.redissessions.RedisSessionManager"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">host</span>=<span class="string">"127.0.0.1"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">port</span>=<span class="string">"6379"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">database</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">maxInactiveInterval</span>=<span class="string">"60"</span></span></span><br><span class="line"><span class="tag">         /&gt;</span></span><br></pre></td></tr></table></figure><br><img src="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif" alt=""></p>
+<p>context.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"com.orangefunction.tomcat.redissessions.RedisSessionHandlerValve"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Manager</span> <span class="attr">className</span>=<span class="string">"com.orangefunction.tomcat.redissessions.RedisSessionManager"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">host</span>=<span class="string">"127.0.0.1"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">port</span>=<span class="string">"6379"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">database</span>=<span class="string">"0"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">maxInactiveInterval</span>=<span class="string">"60"</span></span></span><br><span class="line"><span class="tag">         /&gt;</span></span><br></pre></td></tr></table></figure> </p>
 <p>lib/</p>
 <ul>
 <li><p>tomcat-redis-session-manager-VERSION.jar</p>
@@ -525,7 +512,6 @@
 <li><p>commons-pool2-2.2.jar</p>
 </li>
 </ul>
-<p><img src="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif" alt=""></p>
 <p>启动redis</p>
 <p>启动tomcat</p>
 <p>启动nginx</p>
@@ -533,7 +519,6 @@
 <p><a href="https://github.com/jcoleman/tomcat-redis-session-manager" target="_blank" rel="noopener">https://github.com/jcoleman/tomcat-redis-session-manager</a></p>
 <p>打包方法，安装gradle, 配置path, 然后执行 gradle build</p>
 <p>最后访问 <a href="http://127.0.0.1/testSession" target="_blank" rel="noopener">http://127.0.0.1/testSession</a></p>
-<p><img src="http://www.yf2017.top/Public/mlib/ueditor/themes/default/images/spacer.gif" alt=""></p>
 <p>注意不要用<a href="http://localhost访问" target="_blank" rel="noopener">http://localhost访问</a></p>
 
       
@@ -691,7 +676,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -806,7 +791,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">34.6k</span>
+    <span title="Site words total count">34.7k</span>
   
 </div>
 
