@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：12345       &amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;com.squareup.okhttp3&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;okht">
+<meta name="description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：                   com.squareup.okhttp3           okhttp           3.4.1           注意：okhttp3.4.1需要jdk1.7以上">
 <meta property="og:type" content="article">
 <meta property="og:title" content="okhttp的使用方法 http, https">
 <meta property="og:url" content="https://www.yf2017.top/2016/08/22/okhttp的使用方法-http-https/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：12345       &amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;com.squareup.okhttp3&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;okht">
+<meta property="og:description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：                   com.squareup.okhttp3           okhttp           3.4.1           注意：okhttp3.4.1需要jdk1.7以上">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T06:43:44.319Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="okhttp的使用方法 http, https">
-<meta name="twitter:description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：12345       &amp;lt;dependency&amp;gt;  &amp;lt;groupId&amp;gt;com.squareup.okhttp3&amp;lt;/groupId&amp;gt;  &amp;lt;artifactId&amp;gt;okht">
+<meta name="twitter:description" content="okhttp的项目主页https://github.com/square/okhttp 介绍页 http://square.github.io/okhttp/ 使用方法以maven为例：                   com.squareup.okhttp3           okhttp           3.4.1           注意：okhttp3.4.1需要jdk1.7以上">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-11T14:43:44+08:00">
-                2018-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  735
+                  650
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -500,13 +495,208 @@
 
       
         <p>okhttp的项目主页<a href="https://github.com/square/okhttp" target="_blank" rel="noopener">https://github.com/square/okhttp</a> 介绍页 <a href="http://square.github.io/okhttp/" target="_blank" rel="noopener">http://square.github.io/okhttp/</a></p>
-<p>使用方法以maven为例：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.squareup.okhttp3<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>okhttp<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>使用方法以maven为例：<br><pre class="brush: xml">
+       <dependency>
+          <groupid>com.squareup.okhttp3</groupid>
+          <artifactid>okhttp</artifactid>
+          <version>3.4.1</version>
+        </dependency>
+</pre></p>
 <p><strong>注意：okhttp3.4.1需要jdk1.7以上版本</strong></p>
-<p>HttpUtil.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.leegtang.demo.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.security.SecureRandom;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.CertificateException;</span><br><span class="line"><span class="keyword">import</span> java.security.cert.X509Certificate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.HostnameVerifier;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLContext;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLSession;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.SSLSocketFactory;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.TrustManager;</span><br><span class="line"><span class="keyword">import</span> javax.net.ssl.X509TrustManager;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> okhttp3.MediaType;</span><br><span class="line"><span class="keyword">import</span> okhttp3.OkHttpClient;</span><br><span class="line"><span class="keyword">import</span> okhttp3.Request;</span><br><span class="line"><span class="keyword">import</span> okhttp3.RequestBody;</span><br><span class="line"><span class="keyword">import</span> okhttp3.Response;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HttpUtil</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> MediaType JSON = MediaType</span><br><span class="line">            .parse(<span class="string">"application/json; charset=utf-8&amp;ququot;);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    static OkHttpClient client ;</span></span><br><span class="line"><span class="string">     </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    static HostnameVerifier DO\_NOT\_VERIFY = new HostnameVerifier() &#123; </span></span><br><span class="line"><span class="string">        @Override</span></span><br><span class="line"><span class="string">        public boolean verify(String hostname, SSLSession session) &#123; </span></span><br><span class="line"><span class="string">            return true;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">     &#125;;</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">     private static SSLSocketFactory createSSLSocketFactory() &#123;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">         SSLSocketFactory sSLSocketFactory = null;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">         try &#123;</span></span><br><span class="line"><span class="string">             SSLContext sc = SSLContext.getInstance("</span>TLS<span class="string">");</span></span><br><span class="line"><span class="string">             sc.init(null, new TrustManager\[\]&#123;new TrustAllManager()&#125;,</span></span><br><span class="line"><span class="string">                     new SecureRandom());</span></span><br><span class="line"><span class="string">             sSLSocketFactory = sc.getSocketFactory();</span></span><br><span class="line"><span class="string">         &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="string">         &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">         return sSLSocketFactory;</span></span><br><span class="line"><span class="string">     &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">     private static class TrustAllManager implements X509TrustManager &#123;</span></span><br><span class="line"><span class="string">         @Override</span></span><br><span class="line"><span class="string">         public void checkClientTrusted(X509Certificate\[\] chain, String authType)</span></span><br><span class="line"><span class="string">                 throws CertificateException &#123;</span></span><br><span class="line"><span class="string">         &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">         @Override</span></span><br><span class="line"><span class="string">         public void checkServerTrusted(X509Certificate\[\] chain, String authType)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">                 throws CertificateException &#123;</span></span><br><span class="line"><span class="string">         &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">         @Override</span></span><br><span class="line"><span class="string">         public X509Certificate\[\] getAcceptedIssuers() &#123;</span></span><br><span class="line"><span class="string">             return new X509Certificate\[0\];</span></span><br><span class="line"><span class="string">         &#125;</span></span><br><span class="line"><span class="string">     &#125;</span></span><br><span class="line"><span class="string">     </span></span><br><span class="line"><span class="string">    public static String post(String url, String json) &#123;  </span></span><br><span class="line"><span class="string">        if(url.startsWith("</span>https<span class="string">"))&#123; </span></span><br><span class="line"><span class="string">//          client = new OkHttpClient.Builder().sslSocketFactory(createSSLSocketFactory()).hostnameVerifier(DO_NOT_VERIFY)</span></span><br><span class="line"><span class="string">//                  .build(); </span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            client = new OkHttpClient.Builder()</span></span><br><span class="line"><span class="string">                    .sslSocketFactory(createSSLSocketFactory(),new TrustAllManager())</span></span><br><span class="line"><span class="string">                    .hostnameVerifier(DO\_NOT\_VERIFY)</span></span><br><span class="line"><span class="string">                    .build(); </span></span><br><span class="line"><span class="string">        &#125;else&#123;</span></span><br><span class="line"><span class="string">            client = new OkHttpClient.Builder().build();</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        try &#123;  </span></span><br><span class="line"><span class="string">            RequestBody body=null;</span></span><br><span class="line"><span class="string">            if(json.startsWith("</span>&#123;<span class="string">"))&#123;</span></span><br><span class="line"><span class="string">                    body= RequestBody.create(JSON, json);</span></span><br><span class="line"><span class="string">            &#125;else&#123;</span></span><br><span class="line"><span class="string">                    MediaType text=MediaType.parse("</span>application/x-www-form-urlencoded<span class="string">");</span></span><br><span class="line"><span class="string">                    body= RequestBody.create(text, json);</span></span><br><span class="line"><span class="string">            &#125; </span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">            Request request = new Request.Builder().url(url).post(body).build();</span></span><br><span class="line"><span class="string">            Response response = client.newCall(request).execute();</span></span><br><span class="line"><span class="string">            return response.body().string();</span></span><br><span class="line"><span class="string">        &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="string">            e.printStackTrace();</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        return null;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    public static String get(String url, String json) &#123;  </span></span><br><span class="line"><span class="string">        if(url.startsWith("</span>https<span class="string">"))&#123; </span></span><br><span class="line"><span class="string">            client = new OkHttpClient.Builder()</span></span><br><span class="line"><span class="string">                    .sslSocketFactory(createSSLSocketFactory(),new TrustAllManager())</span></span><br><span class="line"><span class="string">                    .hostnameVerifier(DO_NOT_VERIFY)</span></span><br><span class="line"><span class="string">                    .build(); </span></span><br><span class="line"><span class="string">        &#125;else&#123;</span></span><br><span class="line"><span class="string">            client = new OkHttpClient.Builder().build();</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        try &#123;   </span></span><br><span class="line"><span class="string">            Request request = new Request.Builder().url(url).build();</span></span><br><span class="line"><span class="string">            Response response = client.newCall(request).execute();</span></span><br><span class="line"><span class="string">            return response.body().string();</span></span><br><span class="line"><span class="string">        &#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="string">            e.printStackTrace();</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">        return null;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">     </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    public static void main(String\[\] args) &#123;</span></span><br><span class="line"><span class="string">        String url="</span>https:<span class="comment">//www.yf2017.top";</span></span><br><span class="line">        String json=String.format(<span class="string">"&#123;"</span>loginName<span class="string">":"</span>%s<span class="string">","</span>pwd<span class="string">":"</span>%s<span class="string">","</span>serviceName<span class="string">":"</span>%s<span class="string">","</span></span><br><span class="line">                + <span class="string">""</span>param<span class="string">":&#123;"</span>idCard<span class="string">":"</span>%s<span class="string">","</span>name<span class="string">":"</span>%s<span class="string">"&#125;"</span></span><br><span class="line">                + <span class="string">"&#125;"</span>,<span class="string">"test"</span>, <span class="string">"123456"</span>, <span class="string">"IDNameCheck"</span>, <span class="string">"320743199101175520"</span>, <span class="string">"李丙付"</span>);</span><br><span class="line">        </span><br><span class="line">        String res=post(url, json);</span><br><span class="line">        System.out.println(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  </span><br></pre></td></tr></table></figure></p>
+<p>HttpUtil.java<br><pre class="brush: java">
+package com.leegtang.demo.util;
+
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
+public class HttpUtil {
+    public static final MediaType JSON = MediaType
+            .parse("application/json; charset=utf-8&ququot;);
+
+    static OkHttpClient client ;
+     
+    
+    static HostnameVerifier DO\_NOT\_VERIFY = new HostnameVerifier() { 
+        @Override
+        public boolean verify(String hostname, SSLSession session) { 
+            return true;
+        }
+     };
+      
+     private static SSLSocketFactory createSSLSocketFactory() {
+
+         SSLSocketFactory sSLSocketFactory = null;
+
+         try {
+             SSLContext sc = SSLContext.getInstance("TLS");
+             sc.init(null, new TrustManager\[\]{new TrustAllManager()},
+                     new SecureRandom());
+             sSLSocketFactory = sc.getSocketFactory();
+         } catch (Exception e) {
+         }
+
+         return sSLSocketFactory;
+     }
+
+     private static class TrustAllManager implements X509TrustManager {
+         @Override
+         public void checkClientTrusted(X509Certificate\[\] chain, String authType)
+                 throws CertificateException {
+         }
+
+         @Override
+         public void checkServerTrusted(X509Certificate\[\] chain, String authType)
+
+                 throws CertificateException {
+         }
+
+         @Override
+         public X509Certificate\[\] getAcceptedIssuers() {
+             return new X509Certificate\[0\];
+         }
+     }
+     
+    public static String post(String url, String json) {  
+        if(url.startsWith("https")){ 
+//          client = new OkHttpClient.Builder().sslSocketFactory(createSSLSocketFactory()).hostnameVerifier(DO_NOT_VERIFY)
+//                  .build(); 
+            
+            client = new OkHttpClient.Builder()
+                    .sslSocketFactory(createSSLSocketFactory(),new TrustAllManager())
+                    .hostnameVerifier(DO\_NOT\_VERIFY)
+                    .build(); 
+        }else{
+            client = new OkHttpClient.Builder().build();
+        }
+        
+        try {  
+            RequestBody body=null;
+            if(json.startsWith("{")){
+                    body= RequestBody.create(JSON, json);
+            }else{
+                    MediaType text=MediaType.parse("application/x-www-form-urlencoded");
+                    body= RequestBody.create(text, json);
+            } 
+            
+            Request request = new Request.Builder().url(url).post(body).build();
+            Response response = client.newCall(request).execute();
+            return response.body().string();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    public static String get(String url, String json) {  
+        if(url.startsWith("https")){ 
+            client = new OkHttpClient.Builder()
+                    .sslSocketFactory(createSSLSocketFactory(),new TrustAllManager())
+                    .hostnameVerifier(DO_NOT_VERIFY)
+                    .build(); 
+        }else{
+            client = new OkHttpClient.Builder().build();
+        }
+        
+        try {   
+            Request request = new Request.Builder().url(url).build();
+            Response response = client.newCall(request).execute();
+            return response.body().string();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+     
+
+    
+    
+    
+    
+    public static void main(String\[\] args) {
+        String url="https://www.yf2017.top";
+        String json=String.format("{"loginName":"%s","pwd":"%s","serviceName":"%s","
+                + ""param":{"idCard":"%s","name":"%s"}"
+                + "}","test", "123456", "IDNameCheck", "320743199101175520", "李丙付");
+        
+        String res=post(url, json);
+        System.out.println(res);
+    }
+}
+
+  
+</pre></p>
 <p>okhttp header</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">String data=<span class="string">"_ctype_=json"</span>; </span><br><span class="line">RequestBody body=  RequestBody.create(MediaType.parse(<span class="string">"application/json; charset=utf-8"</span>), data);</span><br><span class="line">Request request = <span class="keyword">new</span> Request.Builder()</span><br><span class="line">     .url(<span class="string">"http://www.yf2017.top/test.do?"</span>+data)</span><br><span class="line">     .header(<span class="string">"Accept"</span>, <span class="string">"application/json, text/javascript, */*; q=0.01"</span>)</span><br><span class="line"><span class="comment">//      .addHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")</span></span><br><span class="line">     .post(body)</span><br><span class="line">     .build();</span><br><span class="line">OkHttpClient client = <span class="keyword">new</span> OkHttpClient.Builder().addInterceptor(<span class="keyword">new</span> LoggingInterceptor()).build();</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">Response response = client.newCall(request).execute();</span><br><span class="line">Stringres=response.body().string();</span><br><span class="line">System.out.println(res);</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>  
+<pre class="brush: java">
+String data="_ctype_=json"; 
+RequestBody body=  RequestBody.create(MediaType.parse("application/json; charset=utf-8"), data);
+Request request = new Request.Builder()
+     .url("http://www.yf2017.top/test.do?"+data)
+     .header("Accept", "application/json, text/javascript, */*; q=0.01")
+//      .addHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")
+     .post(body)
+     .build();
+OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new LoggingInterceptor()).build();
+try {
+Response response = client.newCall(request).execute();
+Stringres=response.body().string();
+System.out.println(res);
+} catch (Exception e) {
+e.printStackTrace();
+}
+
+</pre>  
 <p>如果传入json数据，则方在RequestBody里，如果只是字符串，可以放到url后面拼接。</p>
-<p>okhttp日志输出<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lcg.demo.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> okhttp3.Interceptor;</span><br><span class="line"><span class="keyword">import</span> okhttp3.Request;</span><br><span class="line"><span class="keyword">import</span> okhttp3.Response;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LoggingInterceptor</span> <span class="keyword">implements</span> <span class="title">Interceptor</span> </span>&#123;</span><br><span class="line"> Logger logger =LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"> <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> Response <span class="title">intercept</span><span class="params">(Interceptor.Chain chain)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">   Request request = chain.request();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">long</span> t1 = System.nanoTime();</span><br><span class="line">   logger.info(String.format(<span class="string">"Sending request %s on %s%n%s"</span>,</span><br><span class="line">       request.url(), chain.connection(), request.headers()));</span><br><span class="line"></span><br><span class="line">   Response response = chain.proceed(request);</span><br><span class="line"></span><br><span class="line">   <span class="keyword">long</span> t2 = System.nanoTime();</span><br><span class="line">   logger.info(String.format(<span class="string">"Received response for %s in %.1fms%n%s"</span>,</span><br><span class="line">       response.request().url(), (t2 - t1) / <span class="number">1e6</span>d, response.headers()));</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> response;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">OkHttpClient client = <span class="keyword">new</span> OkHttpClient.Builder().addInterceptor(<span class="keyword">new</span> LoggingInterceptor()).build();</span><br><span class="line"></span><br></pre></td></tr></table></figure>  </p>
+<p>okhttp日志输出<br><pre class="brush: java">
+package com.lcg.demo.util;
+
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
+
+class LoggingInterceptor implements Interceptor {
+ Logger logger =LoggerFactory.getLogger(this.getClass());
+ @Override public Response intercept(Interceptor.Chain chain) throws IOException {
+   Request request = chain.request();
+
+   long t1 = System.nanoTime();
+   logger.info(String.format("Sending request %s on %s%n%s",
+       request.url(), chain.connection(), request.headers()));
+
+   Response response = chain.proceed(request);
+
+   long t2 = System.nanoTime();
+   logger.info(String.format("Received response for %s in %.1fms%n%s",
+       response.request().url(), (t2 - t1) / 1e6d, response.headers()));
+
+   return response;
+ }
+}
+
+  
+
+OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new LoggingInterceptor()).build();
+
+</pre>  </p>
 <p>增加logback的相关配置,可以参考 </p>
 <p>如何从log4j转到logback</p>
 <p>(全文完)</p>
@@ -666,7 +856,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -688,7 +878,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -764,7 +954,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -781,7 +970,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -826,7 +1015,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -835,11 +1023,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -915,22 +1100,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1289,7 +1469,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1359,11 +1538,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

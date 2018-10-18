@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+
+
+  
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta name="baidu-site-verification" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/lqz.jpg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lqz.jpg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lqz.jpg?v=5.1.3">
+
+
+
+
+
+
+  <meta name="keywords" content="," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="aceadmin是基于bootstrap开发的一套后台ui框架，由外国友人开发的。可以在github上找到它的源代码。   下面一起来看看它的构成。 主页预览  列表页 index.html       首页-管理平台                                      Bob: Nullam quis risus eget urna mollis ornare ...">
+<meta name="keywords" content="ui">
+<meta property="og:type" content="website">
+<meta property="og:title" content="介绍一套后台UI-aceadmin">
+<meta property="og:url" content="https://www.yf2017.top/newPost/介绍一套后台UI-aceadmin.html">
+<meta property="og:site_name" content="蓝旗子">
+<meta property="og:description" content="aceadmin是基于bootstrap开发的一套后台ui框架，由外国友人开发的。可以在github上找到它的源代码。   下面一起来看看它的构成。 主页预览  列表页 index.html       首页-管理平台                                      Bob: Nullam quis risus eget urna mollis ornare ...">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.yf2017.top/files/1533526588000614.png">
+<meta property="og:image" content="https://www.yf2017.top/files/1533526762000018.png">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.288Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="介绍一套后台UI-aceadmin">
+<meta name="twitter:description" content="aceadmin是基于bootstrap开发的一套后台ui框架，由外国友人开发的。可以在github上找到它的源代码。   下面一起来看看它的构成。 主页预览  列表页 index.html       首页-管理平台                                      Bob: Nullam quis risus eget urna mollis ornare ...">
+<meta name="twitter:image" content="https://www.yf2017.top/files/1533526588000614.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.yf2017.top/newPost/介绍一套后台UI-aceadmin.html"/>
+
+
+
+
+
+  <title>介绍一套后台UI-aceadmin | 蓝旗子</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
+<link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  
+  
+    
+  
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蓝旗子</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daohang">
+          <a href="/2018/09/05/daohang/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h2 class="post-title" itemprop="name headline">介绍一套后台UI-aceadmin</h2>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p>aceadmin是基于bootstrap开发的一套后台ui框架，由外国友人开发的。可以在github上找到它的源代码。  </p>
+<p>下面一起来看看它的构成。</p>
+<p>主页预览</p>
+<p><img src="https://www.yf2017.top/files/1533526588000614.png" alt="aceadmin预览" title="aceadmin预览"></p>
+<p>列表页 index.html</p>
+<pre class="brush: html">
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" >
+<meta charset="utf-8" >
+<title>首页-管理平台</title>
+
+<meta name="description" content="overview &amp; stats" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" >
+
+<!-- bootstrap & fontawesome -->
+<link rel="stylesheet" href="assets css="" bootstrap.min.css" ="">
+<link rel="stylesheet" href="assets font-awesome="" 4.5.0="" css="" font-awesome.min.css" ="">
+
+<!-- page specific plugin styles -->
+
+<!-- text fonts -->
+<link rel="stylesheet" href="assets css="" fonts.googleapis.com.css" ="">
+
+<!-- ace styles -->
+<link rel="stylesheet" href="assets css="" ace.min.css" id="main-ace-style"  ="">
+
+<!--\[if lte IE 9\]>
+<link rel="stylesheet" href="assets/css/ace-part2.min.css" />
+<!\[endif\]-->
+<link rel="stylesheet" href="assets css="" ace-skins.min.css" ="">
+<link rel="stylesheet" href="assets css="" ace-rtl.min.css" ="">
+
+<!--\[if lte IE 9\]>
+  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+<!\[endif\]-->
+
+<!-- inline styles related to this page -->
+
+<!-- ace settings handler -->
+<script src="assets js="" ace-extra.min.js"="">
+
+<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+<!--\[if lte IE 8\]>
+<script src="assets/js/html5shiv.min.js"></script>
+<script src="assets/js/respond.min.js"></script>
+<!\[endif\]-->
+</script src="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" ></meta name="description" content="overview &amp; stats" ></meta charset="utf-8" ></meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" ></head>
+
+<body>
+<div id="navbar" class="navbar navbar-default ace-save-state">
+<div class="navbar-container ace-save-state" id="navbar-container">
+<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+<span>Toggle sidebar</span>
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+
+<div class="navbar-header pull-left">
+<a href="index.html">
+<small>
+<i class="fa fa-leaf">
+Ace 管理平台
+</i class="fa fa-leaf"></small>
+
+
+
+<div class="navbar-buttons navbar-header pull-right" role="navigation">
+<ul class="nav ace-nav">
+<li class="grey dropdown-modal">
+<a data-toggle="dropdown" href="#">
+<i class="ace-icon fa fa-tasks">
+<span class="badge badge-grey">4
+
+
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<li>
+<i class="ace-icon fa fa-check">
+4 Tasks to complete
+</i class="ace-icon fa fa-check"></li>
+
+<li>
+<ul class="dropdown-menu dropdown-navbar">
+<li>
+<a href="#">
+<div>
+<span>Software Update</span>
+<span>65%</span>
+</div>
+
+<div class="progress progress-mini">
+<div style="width:65%">
+
+
+</div style="width:65%"></div class="progress progress-mini"></a href="#"></li>
+
+<li>
+<a href="#">
+<div>
+<span>Hardware Upgrade</span>
+<span>35%</span>
+</div>
+
+<div class="progress progress-mini">
+<div style="width:35%" class="progress-bar progress-bar-danger">
+
+
+</div style="width:35%" class="progress-bar progress-bar-danger"></div class="progress progress-mini"></a href="#"></li>
+
+<li>
+<a href="#">
+<div>
+<span>Unit Testing</span>
+<span>15%</span>
+</div>
+
+<div class="progress progress-mini">
+<div style="width:15%" class="progress-bar progress-bar-warning">
+
+
+</div style="width:15%" class="progress-bar progress-bar-warning"></div class="progress progress-mini"></a href="#"></li>
+
+<li>
+<a href="#">
+<div>
+<span>Bug Fixes</span>
+<span>90%</span>
+</div>
+
+<div class="progress progress-mini progress-striped active">
+<div style="width:90%" class="progress-bar progress-bar-success">
+
+
+</div style="width:90%" class="progress-bar progress-bar-success"></div class="progress progress-mini progress-striped active"></a href="#"></li>
+
+</ul class="dropdown-menu dropdown-navbar"></li>
+
+<li>
+<a href="#">
+See tasks with details
+<i class="ace-icon fa fa-arrow-right">
+
+</i class="ace-icon fa fa-arrow-right"></a href="#"></li>
+
+
+
+<li class="purple dropdown-modal">
+<a data-toggle="dropdown" href="#">
+<i class="ace-icon fa fa-bell icon-animated-bell">
+<span class="badge badge-important">8
+
+
+<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+<li>
+<i class="ace-icon fa fa-exclamation-triangle">
+8 Notifications
+</i class="ace-icon fa fa-exclamation-triangle"></li>
+
+<li>
+<ul class="dropdown-menu dropdown-navbar navbar-pink">
+<li>
+<a href="#">
+<div>
+<span>
+<i class="btn btn-xs no-hover btn-pink fa fa-comment">
+New Comments
+</i class="btn btn-xs no-hover btn-pink fa fa-comment"></span>
+<span class="pull-right badge badge-info">+12
+</span class="pull-right badge badge-info"></div>
+
+</a href="#"></li>
+
+<li>
+<a href="#">
+<i class="btn btn-xs btn-primary fa fa-user">
+Bob just signed up as an editor ...
+
+</i class="btn btn-xs btn-primary fa fa-user"></a href="#"></li>
+
+<li>
+<a href="#">
+<div>
+<span>
+<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart">
+New Orders
+</i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></span>
+<span class="pull-right badge badge-success">+8
+</span class="pull-right badge badge-success"></div>
+
+</a href="#"></li>
+
+<li>
+<a href="#">
+<div>
+<span>
+<i class="btn btn-xs no-hover btn-info fa fa-twitter">
+Followers
+</i class="btn btn-xs no-hover btn-info fa fa-twitter"></span>
+<span class="pull-right badge badge-info">+11
+</span class="pull-right badge badge-info"></div>
+
+</a href="#"></li>
+
+</ul class="dropdown-menu dropdown-navbar navbar-pink"></li>
+
+<li>
+<a href="#">
+See all notifications
+<i class="ace-icon fa fa-arrow-right">
+
+</i class="ace-icon fa fa-arrow-right"></a href="#"></li>
+
+
+
+<li class="green dropdown-modal">
+<a data-toggle="dropdown" href="#">
+<i class="ace-icon fa fa-envelope icon-animated-vertical">
+<span class="badge badge-success">5
+
+
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+<li>
+<i class="ace-icon fa fa-envelope-o">
+5 Messages
+</i class="ace-icon fa fa-envelope-o"></li>
+
+<li>
+<ul class="dropdown-menu dropdown-navbar">
+<li>
+<a href="#">
+<img src="assets images="" avatars="" avatar.png" alt="Alex's Avatar"  ="">
+<span>
+<span>
+<span>Alex:</span>
+Ciao sociis natoque penatibus et auctor ...
+</span>
+
+<span>
+<i class="ace-icon fa fa-clock-o">
+<span>a moment ago</span>
+</i class="ace-icon fa fa-clock-o"></span>
+</span>
+
+</img src="assets></a href="#"></li>
+
+<li>
+<a href="#">
+<img src="assets images="" avatars="" avatar3.png" alt="Susan's Avatar"  ="">
+<span>
+<span>
+<span>Susan:</span>
+Vestibulum id ligula porta felis euismod ...
+</span>
+
+<span>
+<i class="ace-icon fa fa-clock-o">
+<span>20 minutes ago</span>
+</i class="ace-icon fa fa-clock-o"></span>
+</span>
+
+</img src="assets></a href="#"></li>
+
+<li>
+<a href="#">
+<img src="assets images="" avatars="" avatar4.png" alt="Bob's Avatar"  ="">
+<span>
+<span>
+<span>Bob:</span>
+Nullam quis risus eget urna mollis ornare ...
+</span>
+
+<span>
+<i class="ace-icon fa fa-clock-o">
+<span>3:15 pm</span>
+</i class="ace-icon fa fa-clock-o"></span>
+</span>
+
+</img src="assets></a href="#"></li>
+
+<li>
+<a href="#">
+<img src="assets images="" avatars="" avatar2.png" alt="Kate's Avatar"  ="">
+<span>
+<span>
+<span>Kate:</span>
+Ciao sociis natoque eget urna mollis ornare ...
+</span>
+
+<span>
+<i class="ace-icon fa fa-clock-o">
+<span>1:33 pm</span>
+</i class="ace-icon fa fa-clock-o"></span>
+</span>
+
+</img src="assets></a href="#"></li>
+
+<li>
+<a href="#">
+<img src="assets images="" avatars="" avatar5.png" alt="Fred's Avatar"  ="">
+<span>
+<span>
+<span>Fred:</span>
+Vestibulum id penatibus et auctor  ...
+</span>
+
+<span>
+<i class="ace-icon fa fa-clock-o">
+<span>10:09 am</span>
+</i class="ace-icon fa fa-clock-o"></span>
+</span>
+
+</img src="assets></a href="#"></li>
+
+</ul class="dropdown-menu dropdown-navbar"></li>
+
+<li>
+<a href="inbox.html">
+进入收件箱
+<i class="ace-icon fa fa-arrow-right">
+
+</i class="ace-icon fa fa-arrow-right"></a href="inbox.html"></li>
+
+
+
+<li class="light-blue dropdown-modal">
+<a data-toggle="dropdown" href="#">
+<img src="assets images="" avatars="" user.jpg" alt="Jason's Photo"  ="">
+<span>
+<small>欢迎你,</small>
+Admin
+</span>
+
+<i class="ace-icon fa fa-caret-down">
+
+
+<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+<li>
+<a href="#">
+<i class="ace-icon fa fa-cog">
+系统设置
+
+</i class="ace-icon fa fa-cog"></a href="#"></li>
+
+<li>
+<a href="profile.html">
+<i class="ace-icon fa fa-user">
+个人资料
+
+</i class="ace-icon fa fa-user"></a href="profile.html"></li>
+
+<li></li>
+
+<li>
+<a href="#">
+<i class="ace-icon fa fa-power-off">
+注销
+
+</i class="ace-icon fa fa-power-off"></a href="#"></li>
+
+
+
+
+<!-- /.navbar-container -->
+
+
+<div class="main-container ace-save-state" id="main-container">
+<script type="text javascript"="">
+try{ace.settings.loadState('main-container')}catch(e){}
+
+
+<div id="sidebar" class="sidebar responsive ace-save-state">
+<ul class="nav nav-list">
+<li >
+<a href="index.html">
+<i class="menu-icon fa fa-tachometer">
+<span> 首页 </span>
+
+
+<b></b>
+
+
+
+<li class="">
+<a href="#">
+<i class="menu-icon fa fa-list">
+<span> 系统管理 </span>
+<b class="arrow fa fa-angle-down">
+
+
+<b></b>
+<ul>
+<li>
+<a href="index.html">
+<i class="menu-icon fa fa-caret-right">
+人员管理
+
+
+<b></b>
+</i class="menu-icon fa fa-caret-right"></a href="index.html"></li>
+
+<li class="">
+<a href="form.html">
+<i class="menu-icon fa fa-caret-right">
+新增人员
+
+
+<b></b>
+
+</i class="menu-icon fa fa-caret-right"></a href="form.html"></li class=""></ul>
+
+
+
+<!-- /.nav-list -->
+
+<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right">
+
+
+
+<div>
+<div>
+<div class=&quoquot;breadcrumbs ace-save-state" id="breadcrumbs">
+<ul>
+<li>
+<i class="ace-icon fa fa-home home-icon">
+<a href="#">管理平台
+</a href="#"></i class="ace-icon fa fa-home home-icon"></li>
+<li>首页</li>
+</ul><!-- /.breadcrumb -->
+
+
+</div class=&quoquot;breadcrumbs ace-save-state" id="breadcrumbs"></div>
+
+<div>
+
+<div>
+<div>
+<!-- PAGE CONTENT BEGINS -->
+
+<div>
+<div>
+<h3 class="header smaller lighter blue">jQuery dataTables
+
+<div>
+<div class="pull-right tabletools-container"></div class="pull-right tabletools-container"></div>
+</h3 class="header smaller lighter blue"></div>
+<div>
+Results for "Latest Registered Domains"
+</div>
+
+<!-- div.table-responsive -->
+
+<!-- div.dataTables_borderWrap -->
+<div>
+<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+<thead>
+<tr>
+<th>ID
+<label>
+<!-- <input type="checkbox" />
+<span></span>-->
+</label>
+</th>
+<th>Domain</th>
+<th>Price</th>
+<th>Clicks</th>
+
+<th>
+<i class="ace-icon fa fa-clock-o bigger-110 hidden-480">
+Update
+</i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></th>
+<th>Status</th>
+
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>
+<label>
+<input type="checkbox" >
+<span></span>
+</input type="checkbox" ></label>
+</td>
+
+<td>
+<a href="#">app.com
+</a href="#"></td>
+<td>$45</td>
+<td>3,330</td>
+<td>Feb 12</td>
+
+<td>
+<span class="label label-sm label-warning">Expiring
+</span class="label label-sm label-warning"></td>
+
+<td>
+<div class="hidden-sm hidden-xs action-buttons">
+<a href="#">
+<i class="ace-icon fa fa-search-plus bigger-130">
+
+
+<a href="#">
+<i class="ace-icon fa fa-pencil bigger-130">
+
+
+<a href="#">
+<i class="ace-icon fa fa-trash-o bigger-130">
+
+</i class="ace-icon fa fa-trash-o bigger-130"></a href="#"></i class="ace-icon fa fa-pencil bigger-130"></a href="#"></i class="ace-icon fa fa-search-plus bigger-130"></a href="#"></div class="hidden-sm hidden-xs action-buttons"></td></tr></tbody></table id="dynamic-table" class="table table-striped table-bordered table-hover"></div>
+
+<div class="hidden-md hidden-lg">
+<div class="inline pos-rel">
+<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
+<i class="ace-icon fa fa-caret-down icon-only bigger-120">
+
+
+<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+<li>
+<a href="#" data-rel="tooltip" title="view">
+<span>
+<i class="ace-icon fa fa-search-plus bigger-120">
+</i class="ace-icon fa fa-search-plus bigger-120"></span>
+
+</a href="#" data-rel="tooltip" title="view"></li>
+
+<li>
+<a href="#" data-rel="tooltip" title="edit">
+<span>
+<i class="ace-icon fa fa-pencil-square-o bigger-120">
+</i class="ace-icon fa fa-pencil-square-o bigger-120"></span>
+
+</a href="#" data-rel="tooltip" title="edit"></li>
+
+<li>
+<a href="#" data-rel="tooltip" title="delete">
+<span>
+<i class="ace-icon fa fa-trash-o bigger-120">
+</i class="ace-icon fa fa-trash-o bigger-120"></span>
+
+</a href="#" data-rel="tooltip" title="delete"></li>
+
+</ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close"></i class="ace-icon fa fa-caret-down icon-only bigger-120"></button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto"></div class="inline pos-rel"></div class="hidden-md hidden-lg"></div>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<!-- PAGE CONTENT ENDS -->
+<!-- /.col -->
+<!-- /.row -->
+<!-- /.page-content -->
+
+<!-- /.main-content -->
+
+<div>
+<div>
+<div>
+<span>
+<span class="blue bolder">Ace</span class="blue bolder"></span>
+管理平台 &copy; 2016 All Rights Reserved
+
+</div>
+</div>
+</div>
+
+<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+<i class="ace-icon fa fa-angle-double-up icon-only bigger-110">
+
+<!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--\[if !IE\]> -->
+<script src="assets js="" jquery-2.1.4.min.js"="">
+
+<!-- <!\[endif\]-->
+
+<!--\[if IE\]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<!\[endif\]-->
+<script type="text javascript"="">
+if('ontouchstart' in document.documentElement) document.write("<script src='assets js="" jquery.mobile.custom.min.js'="">"+"<"+" script="">");
+
+<script src="assets js="" bootstrap.min.js"="">
+
+<!-- page specific plugin scripts -->
+
+<!--\[if lte IE 8\]>
+  <script src="assets/js/excanvas.min.js"></script>
+<!\[endif\]-->
+<script src="assets js="" jquery-ui.custom.min.js"="">
+<script src="assets js="" jquery.ui.touch-punch.min.js"="">
+<script src="assets js="" jquery.easypiechart.min.js"="">
+<script src="assets js="" jquery.sparkline.index.min.js"="">
+<script src="assets js="" jquery.flot.min.js"="">
+<script src="assets js="" jquery.flot.pie.min.js"="">
+<script src="assets js="" jquery.flot.resize.min.js"="">
+
+
+<!-- page specific plugin scripts -->
+<script src="assets js="" jquery.datatables.min.js"="">
+<script src="assets js="" jquery.datatables.bootstrap.min.js"="">
+<script src="assets js="" datatables.buttons.min.js"="">
+<script src="assets js="" buttons.flash.min.js"="">
+<script src="assets js="" buttons.html5.min.js"="">
+<script src="assets js="" buttons.print.min.js"="">
+<script src="assets js="" buttons.colvis.min.js"="">
+<script src="assets js="" datatables.select.min.js"="">
+
+
+<!-- ace scripts -->
+<script src="assets js="" ace-elements.min.js"="">
+<script src="assets js="" ace.min.js"="">
+
+<!-- inline scripts related to this page -->
+<script type="text javascript"="">
+
+jQuery(function($) {
+//initiate dataTables plugin
+var myTable =
+$('#dynamic-table').DataTable({
+"processing": true,
+"serverSide": true,
+"ajax": "tables.php"
+
+});
+
+
+$.fn.dataTable.Buttons.defaults.dom.container.className = 'dt-buttons btn-overlap btn-group btn-overlap';
+
+new $.fn.dataTable.Buttons(myTable, {
+buttons: \[
+{
+"extend": "colvis",
+"text": "<i class='fa fa-search bigger-110 blue'> <span>Show/hide columns</span>",
+"className": "btn btn-white btn-primary btn-bold",
+columns: ':not(:first):not(:last)'
+},
+{
+"extend": "copy",
+"text": "<i class='fa fa-copy bigger-110 pink'> <span>Copy to clipboard</span>",
+"className": "btn btn-white btn-primary btn-bold"
+},
+{
+"extend": "csv",
+"text": "<i class='fa fa-database bigger-110 orange'> <span>Export to CSV</span>",
+"className": "btn btn-white btn-primary btn-bold"
+},
+{
+"extend": "excel",
+"text": "<i class='fa fa-file-excel-o bigger-110 green'> <span>Export to Excel</span>",
+"className": "btn btn-white btn-primary btn-bold"
+},
+{
+"extend": "pdf",
+"text": "<i class='fa fa-file-pdf-o bigger-110 red'> <span>Export to PDF</span>",
+"className": "btn btn-white btn-primary btn-bold"
+},
+{
+"extend": "print",
+"text": "<i class='fa fa-print bigger-110 grey'> <span>Print</span>",
+"className": "btn btn-white btn-primary btn-bold",
+autoPrint: false,
+message: 'This print was produced using the Print button for DataTables'
+}
+\]
+});
+myTable.buttons().container().appendTo($('.tableTools-container'));
+
+
+myTable.on('select', function (e, dt, type, index) {
+if (type === 'row') {
+$(myTable.row(index).node()).find('input:checkbox').prop('checked', true);
+}
+});
+myTable.on('deselect', function (e, dt, type, index) {
+if (type === 'row') {
+$(myTable.row(index).node()).find('input:checkbox').prop('checked', false);
+}
+});
+
+/////////////////////////////////
+//table checkboxes
+$('th input\[type=checkbox\], td input\[type=checkbox\]').prop('checked', false);
+
+//select/deselect all rows according to table header checkbox
+$('#dynamic-table > thead > tr > th input\[type=checkbox\], #dynamic-table_wrapper input\[type=checkbox\]').eq(0).on('click', function () {
+var th_checked = this.checked;//checkbox inside "TH" table header
+
+$('#dynamic-table').find('tbody > tr').each(function () {
+var row = this;
+if (th_checked) myTable.row(row).select();
+else  myTable.row(row).deselect();
+});
+});
+
+//select/deselect a row when the checkbox is checked/unchecked
+$('#dynamic-table').on('click', 'td input\[type=checkbox\]', function () {
+var row = $(this).closest('tr').get(0);
+if (this.checked) myTable.row(row).deselect();
+else myTable.row(row).select();
+});
+
+
+$(document).on('click', '#dynamic-table .dropdown-toggle', function (e) {
+e.stopImmediatePropagation();
+e.stopPropagation();
+e.preventDefault();
+});
+
+})
+
+</i class='fa fa-print bigger-110 grey'></i class='fa fa-file-pdf-o bigger-110 red'></i class='fa fa-file-excel-o bigger-110 green'></i class='fa fa-database bigger-110 orange'></i class='fa fa-copy bigger-110 pink'></i class='fa fa-search bigger-110 blue'></script type="text></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></"+"></script src='assets></script type="text></script src="assets></i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"></i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse"></b class="arrow fa fa-angle-down"></i class="menu-icon fa fa-list"></a href="#"></li class=""></i class="menu-icon fa fa-tachometer"></a href="index.html"></li ></ul class="nav nav-list"></div id="sidebar" class="sidebar responsive ace-save-state"></script type="text></div class="main-container ace-save-state" id="main-container"></ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close"></i class="ace-icon fa fa-caret-down"></img src="assets></a data-toggle="dropdown" href="#"></li class="light-blue dropdown-modal"></ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-success"></i class="ace-icon fa fa-envelope icon-animated-vertical"></a data-toggle="dropdown" href="#"></li class="green dropdown-modal"></ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-important"></i class="ace-icon fa fa-bell icon-animated-bell"></a data-toggle="dropdown" href="#"></li class="purple dropdown-modal"></ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-grey"></i class="ace-icon fa fa-tasks"></a data-toggle="dropdown" href="#"></li class="grey dropdown-modal"></ul class="nav ace-nav"></div class="navbar-buttons navbar-header pull-right" role="navigation"></a href="index.html"></div class="navbar-header pull-left"></button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar"></div class="navbar-container ace-save-state" id="navbar-container"></div id="navbar" class="navbar navbar-default ace-save-state"></body>
+</html>
+</pre>
+<p>表单页form.html<br><pre class="brush: html">
+<!DOCTYPE html>    
+<html lang="en">    
+    <head>    
+        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" >    
+        <meta charset="utf-8" >    
+        <title>新增人员-管理平台</title>    
+        <meta name="description" content="overview &amp; stats" >    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" >    
+        <!-- bootstrap & fontawesome -->    
+        <link rel="stylesheet" href="assets css="" bootstrap.min.css" ="">    
+        <link rel="stylesheet" href="assets font-awesome="" 4.5.0="" css="" font-awesome.min.css" ="">    
+        <!-- page specific plugin styles -->    
+        <!-- text fonts -->    
+        <link rel="stylesheet" href="assets css="" fonts.googleapis.com.css" ="">    
+        <!-- ace styles -->    
+        <link rel="stylesheet" href="assets css="" ace.min.css" class="ace-main-stylesheet"  id="main-ace-style"  ="">    
+        <!--\[if lte IE 9\]>    
+            <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />    
+        <!\[endif\]-->    
+        <link rel="stylesheet" href="assets css="" ace-skins.min.css" ="">    
+        <link rel="stylesheet" href="assets css="" ace-rtl.min.css" ="">    
+        <!--\[if lte IE 9\]>    
+          <link rel="stylesheet" href="assets/css/ace-ie.min.css" />    
+        <!\[endif\]-->    
+        <!-- inline styles related to this page -->    
+        <link rel="stylesheet" href="assets css="" select2.min.css" ="">    
+        <!-- ace settings handler -->    
+        <script src="assets js="" ace-extra.min.js"="">    
+        <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->    
+        <!--\[if lte IE 8\]>    
+        <script src="assets/js/html5shiv.min.js"></script>    
+        <script src="assets/js/respond.min.js"></script>    
+        <!\[endif\]-->    
+    </script src="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></link rel="stylesheet" href="assets></meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" ></meta name="description" content="overview &amp; stats" ></meta charset="utf-8" ></meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" ></head>    
+    <body class="no-skin">    
+        <div id="navbar" class="navbar navbar-default          ace-save-state">    
+            <div class="navbar-container ace-save-state" id="navbar-container">    
+                <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">    
+                    <span class="sr-only">Toggle sidebar    
+                    <span class="icon-bar">    
+                    <span class="icon-bar">    
+                    <span class="icon-bar">    
+                    
+                <div class="navbar-header pull-left">    
+                    <a href="index.html" class="navbar-brand">    
+                        <small>    
+                            <i class="fa fa-leaf">    
+                            Ace 管理平台    
+                        </i class="fa fa-leaf"></small>    
+                        
+                    
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">    
+                    <ul class="nav ace-nav">    
+                        <li class="grey dropdown-modal">    
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">    
+                                <i class="ace-icon fa fa-tasks">    
+                                <span class="badge badge-grey">4    
+                                
+                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">    
+                                <li class="dropdown-header">    
+                                    <i class="ace-icon fa fa-check">    
+                                    4 Tasks to complete    
+                                    
+                                <li class="dropdown-content">    
+                                    <ul class="dropdown-menu dropdown-navbar">    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">Software Update    
+                                                    <span class="pull-right">65%    
+                                                    
+                                                <div class="progress progress-mini">    
+                                                    <div style="width:65%" class="progress-bar">    
+                                                    
+                                                
+                                        </div style="width:65%" class="progress-bar"></div class="progress progress-mini"></span class="pull-right"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">Hardware Upgrade    
+                                                    <span class="pull-right">35%    
+                                                    
+                                                <div class="progress progress-mini">    
+                                                    <div style="width:35%" class="progress-bar progress-bar-danger">    
+                                                    
+                                                
+                                        </div style="width:35%" class="progress-bar progress-bar-danger"></div class="progress progress-mini"></span class="pull-right"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">Unit Testing    
+                                                    <span class="pull-right">15%    
+                                                    
+                                                <div class="progress progress-mini">    
+                                                    <div style="width:15%" class="progress-bar progress-bar-warning">    
+                                                    
+                                                
+                                        </div style="width:15%" class="progress-bar progress-bar-warning"></div class="progress progress-mini"></span class="pull-right"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">Bug Fixes    
+                                                    <span class="pull-right">90%    
+                                                    
+                                                <div class="progress progress-mini progress-striped active">    
+                                                    <div style="width:90%" class="progress-bar progress-bar-success">    
+                                                    
+                                                
+                                        </div style="width:90%" class="progress-bar progress-bar-success"></div class="progress progress-mini progress-striped active"></span class="pull-right"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        
+                                    
+                                <li class="dropdown-footer">    
+                                    <a href="#">    
+                                        See tasks with details    
+                                        <i class="ace-icon fa fa-arrow-right">    
+                                        
+                                    
+                                
+                            
+                        <li class="purple dropdown-modal">    
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">    
+                                <i class="ace-icon fa fa-bell icon-animated-bell">    
+                                <span class="badge badge-important">8    
+                                
+                            <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">    
+                                <li class="dropdown-header">    
+                                    <i class="ace-icon fa fa-exclamation-triangle">    
+                                    8 Notifications    
+                                    
+                                <li class="dropdown-content">    
+                                    <ul class="dropdown-menu dropdown-navbar navbar-pink">    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">    
+                                                        <i class="btn btn-xs no-hover btn-pink fa fa-comment">    
+                                                        New Comments    
+                                                        
+                                                    <span class="pull-right badge badge-info">+12    
+                                                    
+                                                
+                                        </span class="pull-right badge badge-info"></i class="btn btn-xs no-hover btn-pink fa fa-comment"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <i class="btn btn-xs btn-primary fa fa-user">    
+                                                Bob just signed up as an editor ...    
+                                                
+                                        </i class="btn btn-xs btn-primary fa fa-user"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">    
+                                                        <i class="btn btn-xs no-hover btn-success fa fa-shopping-cart">    
+                                                        New Orders    
+                                                        
+                                                    <span class="pull-right badge badge-success">+8    
+                                                    
+                                                
+                                        </span class="pull-right badge badge-success"></i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        <li>    
+                                            <a href="#">    
+                                                <div class="clearfix">    
+                                                    <span class="pull-left">    
+                                                        <i class="btn btn-xs no-hover btn-info fa fa-twitter">    
+                                                        Followers    
+                                                        
+                                                    <span class="pull-right badge badge-info">+11    
+                                                    
+                                                
+                                        </span class="pull-right badge badge-info"></i class="btn btn-xs no-hover btn-info fa fa-twitter"></span class="pull-left"></div class="clearfix"></a href="#"></li>    
+                                        
+                                    
+                                <li class="dropdown-footer">    
+                                    <a href="#">    
+                                        See all notifications    
+                                        <i class="ace-icon fa fa-arrow-right">    
+                                        
+                                    
+                                
+                            
+                        <li class="green dropdown-modal">    
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">    
+                                <i class="ace-icon fa fa-envelope icon-animated-vertical">    
+                                <span class="badge badge-success">5    
+                                
+                            <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">    
+                                <li class="dropdown-header">    
+                                    <i class="ace-icon fa fa-envelope-o">    
+                                    5 Messages    
+                                    
+                                <li class="dropdown-content">    
+                                    <ul class="dropdown-menu dropdown-navbar">    
+                                        <li>    
+                                            <a href="#" class="clearfix">    
+                                                <img src="assets images="" avatars="" avatar.png" class="msg-photo"  alt="Alex's Avatar"  ="">    
+                                                <span class="msg-body">    
+                                                    <span class="msg-title">    
+                                                        <span class="blue">Alex:    
+                                                        Ciao sociis natoque penatibus et auctor ...    
+                                                        
+                                                    <span class="msg-time">    
+                                                        <i class="ace-icon fa fa-clock-o">    
+                                                        <span>a moment ago</span>    
+                                                        
+                                                    
+                                                
+                                        </i class="ace-icon fa fa-clock-o"></span class="msg-time"></span class="blue"></span class="msg-title"></span class="msg-body"></img src="assets></a href="#" class="clearfix"></li>    
+                                        <li>    
+                                            <a href="#" class="clearfix">    
+                                                <img src="assets images="" avatars="" avatar3.png" class="msg-photo"  alt="Susan's Avatar"  ="">    
+                                                <span class="msg-body">    
+                                                    <span class="msg-title">    
+                                                        <span class="blue">Susan:    
+                                                        Vestibulum id ligula porta felis euismod ...    
+                                                        
+                                                    <span class="msg-time">    
+                                                        <i class="ace-icon fa fa-clock-o">    
+                                                        <span>20 minutes ago</span>    
+                                                        
+                                                    
+                                                
+                                        </i class="ace-icon fa fa-clock-o"></span class="msg-time"></span class="blue"></span class="msg-title"></span class="msg-body"></img src="assets></a href="#" class="clearfix"></li>    
+                                        <li>    
+                                            <a href="#" class="clearfix">    
+                                                <img src="assets images="" avatars="" avatar4.png" class="msg-photo"  alt="Bob's Avatar"  ="">    
+                                                <span class="msg-body">    
+                                                    <span class="msg-title">    
+                                                        <span class="blue">Bob:    
+                                                        Nullam quis risus eget urna mollis ornare ...    
+                                                        
+                                                    <span class="msg-time">    
+                                                        <i class="ace-icon fa fa-clock-o">    
+                                                        <span>3:15 pm</span>    
+                                                        
+                                                    
+                                                
+                                        </i class="ace-icon fa fa-clock-o"></span class="msg-time"></span class="blue"></span class="msg-title"></span class="msg-body"></img src="assets></a href="#" class="clearfix"></li>    
+                                        <li>    
+                                            <a href="#" class="clearfix">    
+                                                <img src="assets images="" avatars="" avatar2.png" class="msg-photo"  alt="Kate's Avatar"  ="">    
+                                                <span class="msg-body">    
+                                                    <span class="msg-title">    
+                                                        <span class="blue">Kate:    
+                                                        Ciao sociis natoque eget urna mollis ornare ...    
+                                                        
+                                                    <span class="msg-time">    
+                                                        <i class="ace-icon fa fa-clock-o">    
+                                                        <span>1:33 pm</span>    
+                                                        
+                                                    
+                                                
+                                        </i class="ace-icon fa fa-clock-o"></span class="msg-time"></span class="blue"></span class="msg-title"></span class="msg-body"></img src="assets></a href="#" class="clearfix"></li>    
+                                        <li>    
+                                            <a href="#" class="clearfix">    
+                                                <img src="assets images="" avatars="" avatar5.png" class="msg-photo"  alt="Fred's Avatar"  ="">    
+                                                <span class="msg-body">    
+                                                    <span class="msg-title">    
+                                                        <span class="blue">Fred:    
+                                                        Vestibulum id penatibus et auctor  ...    
+                                                        
+                                                    <span class="msg-time">    
+                                                        <i class="ace-icon fa fa-clock-o">    
+                                                        <span>10:09 am</span>    
+                                                        
+                                                    
+                                                
+                                        </i class="ace-icon fa fa-clock-o"></span class="msg-time"></span class="blue"></span class="msg-title"></span class="msg-body"></img src="assets></a href="#" class="clearfix"></li>    
+                                        
+                                    
+                                <li class="dropdown-footer">    
+                                    <a href="inbox.html">    
+                                        进入收件箱    
+                                        <i class="ace-icon fa fa-arrow-right">    
+                                        
+                                    
+                                
+                            
+                        <li class="light-blue dropdown-modal">    
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">    
+                                <img class="nav-user-photo" src="assets images="" avatars="" user.jpg" alt="Jason's Photo"  ="">    
+                                <span class="user-info">    
+                                    <small>欢迎你,</small>    
+                                    Admin    
+                                    
+                                <i class="ace-icon fa fa-caret-down">    
+                                
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">    
+                                <li>    
+                                    <a href="#">    
+                                        <i class="ace-icon fa fa-cog">    
+                                        系统设置    
+                                        
+                                </i class="ace-icon fa fa-cog"></a href="#"></li>    
+                                <li>    
+                                    <a href="profile.html">    
+                                        <i class="ace-icon fa fa-user">    
+                                        个人资料    
+                                        
+                                </i class="ace-icon fa fa-user"></a href="profile.html"></li>    
+                                <li class="divider">    
+                                <li>    
+                                    <a href="#">    
+                                        <i class="ace-icon fa fa-power-off">    
+                                        注销    
+                                        
+                                </i class="ace-icon fa fa-power-off"></a href="#"></li>    
+                                
+                            
+                        
+                    
+            <!-- /.navbar-container -->    
+            
+        <div class="main-container ace-save-state" id="main-container">    
+            <script type="text javascript"="">    
+                try{ace.settings.loadState('main-container')}catch(e){}    
+                
+            <div id="sidebar" class="sidebar responsive ace-save-state">    
+                <ul class="nav nav-list">    
+                    <li >    
+                        <a href="index.html">    
+                            <i class="menu-icon fa fa-tachometer">    
+                            <span class="menu-text"> 首页     
+                            
+                        <b class="arrow">    
+                        
+                    <li class="">    
+                        <a href="#" class="dropdown-toggle">    
+                            <i class="menu-icon fa fa-list">    
+                            <span class="menu-text"> 系统管理     
+                            <b class="arrow fa fa-angle-down">    
+                            
+                        <b class="arrow">    
+                        <ul class="submenu">    
+                            <li class="">    
+                                <a href="index.html">    
+                                    <i class="menu-icon fa fa-caret-right">    
+                                    人员管理    
+                                    
+                                <b class="arrow">    
+                                
+                            <li class="active">    
+                                <a href="form.html">    
+                                    <i class="menu-icon fa fa-caret-right">    
+                                    新增人员    
+                                    
+                                <b class="arrow">    
+                                
+                            
+                        
+                <!-- /.nav-list -->    
+                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">    
+                    <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right">    
+                    
+                
+            <div class="main-content">    
+                <div class="main-content-inner">    
+                    <div class="breadcrumbs ace-save-state" id="breadcrumbs">    
+                        <ul class="breadcrumb">    
+                            <li>    
+                                <i class="ace-icon fa fa-home home-icon">    
+                                <a href="#">系统管理    
+                            </a href="#"></i class="ace-icon fa fa-home home-icon"></li>    
+                            <li class="active">新增人员    
+                        <!-- /.breadcrumb -->    
+                        
+                    <div class="page-content">    
+                        <div class="row">    
+                            <div class="col-xs-12">    
+                                <!-- PAGE CONTENT BEGINS -->    
+                                <form class="form-horizontal" role="form" id="validation-form">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Text Field     
+                                        <div class="col-sm-9 ">    
+                                            <div class="clearfix">    
+                                                <input type="text" name="username" id="form-field-1" placeholder="username" class="col-xs-10 col-sm-5" >    
+                                                
+                                            
+                                        
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"> Full Length     
+                                        <div class="col-sm-9">    
+                                            <input type="text" id="form-field-1-1" placeholder="text field" class="form-control" >    
+                                            
+                                        
+                                    <div class="space-4">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-2"> Password Field     
+                                        <div class="col-sm-9">    
+                                            <input type="password" id="form-field-2" placeholder="password" class="col-xs-10 col-sm-5" >    
+                                            <span class="help-inline col-xs-12 col-sm-7">    
+                                                <span class="middle">Inline help text    
+                                                
+                                            
+                                        
+                                    <div class="space-4">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"> Readonly field     
+                                        <div class="col-sm-9">    
+                                            <input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" value="this text field is readonly!" >    
+                                            <span class="help-inline col-xs-12 col-sm-7">    
+                                                <label class="middle">    
+                                                    <input class="ace" type="checkbox" id="id-disable-check" >    
+                                                    <span class="lbl"> Disable it!    
+                                                    
+                                                
+                                            
+                                        
+                                    <div class="space-4">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-4">Relative Sizing    
+                                        <div class="col-sm-9">    
+                                            <input class="input-sm" type="text" id="form-field-4" placeholder=".input-sm" >    
+                                            <div class="space-2">    
+                                            <div class="help-block" id="input-size-slider">    
+                                            
+                                        
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-5">Grid Sizing    
+                                        <div class="col-sm-9">    
+                                            <div class="clearfix">    
+                                                <input class="col-xs-1" type="text" id="form-field-5" placeholder=".col-xs-1" >    
+                                                
+                                            <div class="space-2">    
+                                            <div class="help-block" id="input-span-slider">    
+                                            
+                                        
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right">Input with Icon    
+                                        <div class="col-sm-9">    
+                                            <span class="input-icon">    
+                                                <input type="text" id="form-field-icon-1" >    
+                                                <i class="ace-icon fa fa-leaf blue">    
+                                                
+                                            <span class="input-icon input-icon-right">    
+                                                <input type="text" id="form-field-icon-2" >    
+                                                <i class="ace-icon fa fa-leaf green">    
+                                                
+                                            
+                                        
+                                    <div class="space-4">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-6">Tooltip and help button    
+                                        <div class="col-sm-9">    
+                                            <input data-rel="tooltip" type="text" id="form-field-6" placeholder="tooltip on hover" title="hello tooltip!" data-placement="bottom" >    
+                                            <span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="more details." title="popover on hover">?    
+                                            
+                                        
+                                    <div class="space-4">    
+                                    <div class="form-group">    
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-tags">Tag input    
+                                        <div class="col-sm-9">    
+                                            <div class="inline">    
+                                                <input type="text" name="tags" id="form-field-tags" value="tag input control" placeholder="enter tags ..." >    
+                                                
+                                            
+                                        
+                                    <div class="clearfix form-actions">    
+                                        <div class="col-md-offset-3 col-md-9">    
+                                            <button class="btn btn-info" type="button" onclick="validf();">    
+                                                <i class="ace-icon fa fa-check bigger-110">    
+                                                Submit    
+                                                
+                                            &nbsp; &nbsp; &nbsp;    
+                                            <button class="btn" type="reset">    
+                                                <i class="ace-icon fa fa-undo bigger-110">    
+                                                Reset    
+                                                
+                                            
+                                        
+                                    
+                                <!-- PAGE CONTENT ENDS -->    
+                            <!-- /.col -->    
+                        <!-- /.row -->    
+                    <!-- /.page-content -->    
+                    
+            <!-- /.main-content -->    
+            <div class="footer">    
+                <div class="footer-inner">    
+                    <div class="footer-content">    
+                        <span class="bigger-120">    
+                            <span class="blue bolder">Ace    
+                            管理平台 &copy; 2016 All Rights Reserved    
+                            
+                        
+                    
+                
+            <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">    
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110">    
+                
+        <!-- /.main-container -->    
+        <!-- basic scripts -->    
+        <!--\[if !IE\]> -->    
+        <script src="assets js="" jquery-2.1.4.min.js"="">    
+        <!-- <!\[endif\]-->    
+        <!--\[if IE\]>    
+<script src="assets/js/jquery-1.11.3.min.js"></script>    
+<!\[endif\]-->    
+        <script type="text javascript"="">    
+            if('ontouchstart' in document.documentElement) document.write("<script src='assets js="" jquery.mobile.custom.min.js'="">"+"<"+" script="">");    
+            
+        <script src="assets js="" bootstrap.min.js"="">    
+        <!-- page specific plugin scripts -->    
+        <script src="assets js="" jquery.validate.min.js"="">    
+        <script src="assets js="" jquery-additional-methods.min.js"="">    
+        <script src="assets js="" bootbox.js"="">    
+        <script src="assets js="" jquery.maskedinput.min.js"="">    
+        <script src="assets js="" select2.min.js"="">    
+        <!--\[if lte IE 8\]>    
+          <script src="assets/js/excanvas.min.js"></script>    
+        <!\[endif\]-->    
+        <script src="assets js="" jquery-ui.custom.min.js"="">    
+        <script src="assets js="" jquery.ui.touch-punch.min.js"="">    
+        <script src="assets js="" jquery.easypiechart.min.js"="">    
+        <script src="assets js="" jquery.sparkline.index.min.js"="">    
+        <script src="assets js="" jquery.flot.min.js"="">    
+        <script src="assets js="" jquery.flot.pie.min.js"="">    
+        <script src="assets js="" jquery.flot.resize.min.js"="">    
+        <!-- page specific plugin scripts -->    
+        <!-- ace scripts -->    
+        <script src="assets js="" ace-elements.min.js"="">    
+        <script src="assets js="" ace.min.js"="">    
+        <!-- inline scripts related to this page -->    
+        <script type="text javascript"="">    
+            function validF(){    
+                if(!$('#validation-form').valid()){    
+                }    
+            }    
+            jQuery(function($) {    
+            $.mask.definitions\['~'\]='\[+-\]';    
+            $('#phone').mask('(999) 999-9999');    
+            jQuery.validator.addMethod("phone", function (value, element) {    
+                return this.optional(element) || /^(d{3}) d{3}-d{4}( xd{1,6})?$/.test(value);    
+            }, "Enter a valid phone number.");    
+            $('#validation-form').validate({    
+                errorElement: 'div',    
+                errorClass: 'help-block',    
+                focusInvalid: false,    
+                ignore: "",    
+                rules: {    
+                    email: {    
+                        required: true,    
+                        email:true    
+                    },    
+                    password: {    
+                        required: true,    
+                        minlength: 5    
+                    },    
+                    password2: {    
+                        required: true,    
+                        minlength: 5,    
+                        equalTo: "#password"    
+                    },    
+                    username: {    
+                        required: true    
+                    },    
+                    phone: {    
+                        required: true,    
+                        phone: 'required'    
+                    },    
+                    url: {    
+                        required: true,    
+                        url: true    
+                    },    
+                    comment: {    
+                        required: true    
+                    },    
+                    state: {    
+                        required: true    
+                    },    
+                    platform: {    
+                        required: true    
+                    },    
+                    subscription: {    
+                        required: true    
+                    },    
+                    gender: {    
+                        required: true,    
+                    },    
+                    agree: {    
+                        required: true,    
+                    }    
+                },    
+                messages: {    
+                    email: {    
+                        required: "Please provide a valid email.",    
+                        email: "Please provide a valid email."    
+                    },    
+                    password: {    
+                        required: "Please specify a password.",    
+                        minlength: "Please specify a secure password."    
+                    },    
+                    state: "Please choose state",    
+                    subscription: "Please choose at least one option",    
+                    gender: "Please choose gender",    
+                    agree: "Please accept our policy"    
+                },    
+                highlight: function (e) {    
+                    $(e).closest('.form-group').removeClass('has-info').addClass('has-error');    
+                },    
+                success: function (e) {    
+                    $(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');    
+                    $(e).remove();    
+                },    
+                errorPlacement: function (error, element) {    
+                    if(element.is('input\[type=checkbox\]') || element.is('input\[type=radio\]')) {    
+                        var controls = element.closest('div\[class*="col-"\]');    
+                        if(controls.find(':checkbox,:radio').length > 1) controls.append(error);    
+                        else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));    
+                    }    
+                    else if(element.is('.select2')) {    
+                        error.insertAfter(element.siblings('\[class*="select2-container"\]:eq(0)'));    
+                    }    
+                    else if(element.is('.chosen-select')) {    
+                        error.insertAfter(element.siblings('\[class*="chosen-container"\]:eq(0)'));    
+                    }    
+                    else error.insertAfter(element.parent());    
+                },    
+                submitHandler: function (form) {    
+                },    
+                invalidHandler: function (form) {    
+                }    
+            });    
+        })    
+            
+        
+
+</script type="text></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></script src="assets></"+"></script src='assets></script type="text></script src="assets></i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"></span class="blue bolder"></span class="bigger-120"></div class="footer-content"></div class="footer-inner"></div class="footer"></i class="ace-icon fa fa-undo bigger-110"></button class="btn" type="reset"></i class="ace-icon fa fa-check bigger-110"></button class="btn btn-info" type="button" onclick="validf();"></div class="col-md-offset-3 col-md-9"></div class="clearfix form-actions"></input type="text" name="tags" id="form-field-tags" value="tag input control" placeholder="enter tags ..." ></div class="inline"></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-tags"></div class="form-group"></div class="space-4"></span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="more details." title="popover on hover"></input data-rel="tooltip" type="text" id="form-field-6" placeholder="tooltip on hover" title="hello tooltip!" data-placement="bottom" ></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-6"></div class="form-group"></div class="space-4"></i class="ace-icon fa fa-leaf green"></input type="text" id="form-field-icon-2" ></span class="input-icon input-icon-right"></i class="ace-icon fa fa-leaf blue"></input type="text" id="form-field-icon-1" ></span class="input-icon"></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right"></div class="form-group"></div class="help-block" id="input-span-slider"></div class="space-2"></input class="col-xs-1" type="text" id="form-field-5" placeholder=".col-xs-1" ></div class="clearfix"></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-5"></div class="form-group"></div class="help-block" id="input-size-slider"></div class="space-2"></input class="input-sm" type="text" id="form-field-4" placeholder=".input-sm" ></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-4"></div class="form-group"></div class="space-4"></span class="lbl"></input class="ace" type="checkbox" id="id-disable-check" ></label class="middle"></span class="help-inline col-xs-12 col-sm-7"></input readonly="" type="text" class="col-xs-10 col-sm-5" id="form-input-readonly" value="this text field is readonly!" ></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-input-readonly"></div class="form-group"></div class="space-4"></span class="middle"></span class="help-inline col-xs-12 col-sm-7"></input type="password" id="form-field-2" placeholder="password" class="col-xs-10 col-sm-5" ></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-2"></div class="form-group"></div class="space-4"></input type="text" id="form-field-1-1" placeholder="text field" class="form-control" ></div class="col-sm-9"></label class="col-sm-3 control-label no-padding-right" for="form-field-1-1"></div class="form-group"></input type="text" name="username" id="form-field-1" placeholder="username" class="col-xs-10 col-sm-5" ></div class="clearfix"></div class="col-sm-9 "></label class="col-sm-3 control-label no-padding-right" for="form-field-1"></div class="form-group"></form class="form-horizontal" role="form" id="validation-form"></div class="col-xs-12"></div class="row"></div class="page-content"></li class="active"></ul class="breadcrumb"></div class="breadcrumbs ace-save-state" id="breadcrumbs"></div class="main-content-inner"></div class="main-content"></i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse"></b class="arrow"></i class="menu-icon fa fa-caret-right"></a href="form.html"></li class="active"></b class="arrow"></i class="menu-icon fa fa-caret-right"></a href="index.html"></li class=""></ul class="submenu"></b class="arrow"></b class="arrow fa fa-angle-down"></span class="menu-text"></i class="menu-icon fa fa-list"></a href="#" class="dropdown-toggle"></li class=""></b class="arrow"></span class="menu-text"></i class="menu-icon fa fa-tachometer"></a href="index.html"></li ></ul class="nav nav-list"></div id="sidebar" class="sidebar responsive ace-save-state"></script type="text></div class="main-container ace-save-state" id="main-container"></li class="divider"></ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close"></i class="ace-icon fa fa-caret-down"></span class="user-info"></img class="nav-user-photo" src="assets></a data-toggle="dropdown" href="#" class="dropdown-toggle"></li class="light-blue dropdown-modal"></i class="ace-icon fa fa-arrow-right"></a href="inbox.html"></li class="dropdown-footer"></ul class="dropdown-menu dropdown-navbar"></li class="dropdown-content"></i class="ace-icon fa fa-envelope-o"></li class="dropdown-header"></ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-success"></i class="ace-icon fa fa-envelope icon-animated-vertical"></a data-toggle="dropdown" class="dropdown-toggle" href="#"></li class="green dropdown-modal"></i class="ace-icon fa fa-arrow-right"></a href="#"></li class="dropdown-footer"></ul class="dropdown-menu dropdown-navbar navbar-pink"></li class="dropdown-content"></i class="ace-icon fa fa-exclamation-triangle"></li class="dropdown-header"></ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-important"></i class="ace-icon fa fa-bell icon-animated-bell"></a data-toggle="dropdown" class="dropdown-toggle" href="#"></li class="purple dropdown-modal"></i class="ace-icon fa fa-arrow-right"></a href="#"></li class="dropdown-footer"></ul class="dropdown-menu dropdown-navbar"></li class="dropdown-content"></i class="ace-icon fa fa-check"></li class="dropdown-header"></ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close"></span class="badge badge-grey"></i class="ace-icon fa fa-tasks"></a data-toggle="dropdown" class="dropdown-toggle" href="#"></li class="grey dropdown-modal"></ul class="nav ace-nav"></div class="navbar-buttons navbar-header pull-right" role="navigation"></a href="index.html" class="navbar-brand"></div class="navbar-header pull-left"></span class="icon-bar"></span class="icon-bar"></span class="icon-bar"></span class="sr-only"></button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar"></div class="navbar-container ace-save-state" id="navbar-container"></div id="navbar" class="navbar navbar-default          ace-save-state"></body class="no-skin"></html lang="en"></pre><br>表单页预览</p>
+<p><img src="https://www.yf2017.top/files/1533526762000018.png" alt="表单页预览" title="表单页预览"></p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Caigen Lee" />
+            
+              <p class="site-author-name" itemprop="name">Caigen Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">307</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/leegtang" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          <div id="player1" class="aplayer"></div>
+<script src="/js/src/APlayer.min.js"></script>
+<script type="text/javascript">
+var ap = new APlayer({
+    element: document.getElementById('player1'),                       // Optional, player element
+    narrow: false,                                                     // Optional, narrow style
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                             // Optional, max height of play list
+    music: [
+        {
+            title: '楽園PROJECT',                                          // Required, music title
+            author: 'Ray',                          // Required, music author
+            url: '/music/Ray%20-%20%E6%A5%BD%E5%9C%92PROJECT.mp3'
+        },
+        {
+            title: '恋人を射ち堕とした日',
+            author: 'Sound Horizon',
+            url: '/music/Sound%20Horizon%20-%20%E6%81%8B%E4%BA%BA%E3%82%92%E5%B0%84%E3%81%A1%E5%A0%95%E3%81%A8%E3%81%97%E3%81%9F%E6%97%A5%20_%20Koibito%20wo%20Uchiotoshia%20Hi.mp3'
+        },
+        {
+            title: 'cat\'s dance',
+            author: 'すーぱーそに子',
+            url: '/music/%E3%81%99%E3%83%BC%E3%81%B1%E3%83%BC%E3%81%9D%E3%81%AB%E5%AD%90%20-%20cat%27s%20dance.mp3'
+        }]
+});
+</script>
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Caigen Lee</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">140.3k</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+  
+  
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:[
+				'https://www.yf2017.top/images/jumpgirl.jpg'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+</body>
+</html>

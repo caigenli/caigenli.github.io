@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="ftl模板编译工具类，FtlUtil123456789101112131415161718192021222324252627282930313233343536import java.io.File;import java.io.StringWriter;import java.util.Map;import freemarker.template.Configuration;import fr">
+<meta name="description" content="ftl模板编译工具类，FtlUtil import java.io.File; import java.io.StringWriter; import java.util.Map;  import freemarker.template.Configuration; import freemarker.template.Template; import freemarker.template.Te">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FtlUtil，ftl模板编译，变量替换">
 <meta property="og:url" content="https://www.yf2017.top/2018/06/12/FtlUtil，ftl模板编译，变量替换/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="ftl模板编译工具类，FtlUtil123456789101112131415161718192021222324252627282930313233343536import java.io.File;import java.io.StringWriter;import java.util.Map;import freemarker.template.Configuration;import fr">
+<meta property="og:description" content="ftl模板编译工具类，FtlUtil import java.io.File; import java.io.StringWriter; import java.util.Map;  import freemarker.template.Configuration; import freemarker.template.Template; import freemarker.template.Te">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T07:25:53.442Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:07.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FtlUtil，ftl模板编译，变量替换">
-<meta name="twitter:description" content="ftl模板编译工具类，FtlUtil123456789101112131415161718192021222324252627282930313233343536import java.io.File;import java.io.StringWriter;import java.util.Map;import freemarker.template.Configuration;import fr">
+<meta name="twitter:description" content="ftl模板编译工具类，FtlUtil import java.io.File; import java.io.StringWriter; import java.util.Map;  import freemarker.template.Configuration; import freemarker.template.Template; import freemarker.template.Te">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:25:53+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  173
+                  138
                 </span>
               
 
@@ -499,7 +494,50 @@
       
 
       
-        <p>ftl模板编译工具类，FtlUtil<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.StringWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> freemarker.template.Configuration;</span><br><span class="line"><span class="keyword">import</span> freemarker.template.Template;</span><br><span class="line"><span class="keyword">import</span> freemarker.template.TemplateException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FtlUtil</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">doProcess</span><span class="params">(String ftlName, Map root)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          Configuration cfg = <span class="keyword">new</span> Configuration(); </span><br><span class="line">          cfg.setDirectoryForTemplateLoading(<span class="keyword">new</span> File(<span class="string">"d:\\html\\ftl\\"</span>)); </span><br><span class="line">                  </span><br><span class="line">                  Template t = cfg.getTemplate(ftlName);  </span><br><span class="line">                    </span><br><span class="line">                  <span class="comment">//最关键在这里，不使用与文件相关的Writer  </span></span><br><span class="line">                  StringWriter stringWriter=<span class="keyword">new</span> StringWriter();  </span><br><span class="line">                    </span><br><span class="line">                  <span class="keyword">try</span>  </span><br><span class="line">                  &#123;  </span><br><span class="line">                      t.process(root, stringWriter);                          </span><br><span class="line">                      <span class="comment">//这里打印的就是通过模板处理后得到的字符串内容  </span></span><br><span class="line">                      System.out.println(<span class="string">"stringWriter: "</span>+stringWriter.toString());</span><br><span class="line">                      <span class="keyword">return</span> stringWriter.toString();</span><br><span class="line">                  &#125; <span class="keyword">catch</span> (TemplateException e)  </span><br><span class="line">                  &#123;  </span><br><span class="line">                      e.printStackTrace();  </span><br><span class="line">                  &#125;  </span><br><span class="line">            </span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>maven依赖<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.freemarker<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>freemarker<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.23<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+        <p>ftl模板编译工具类，FtlUtil<br><pre class="brush: java">
+import java.io.File;
+import java.io.StringWriter;
+import java.util.Map;
+
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
+
+public class FtlUtil {
+    public static String doProcess(String ftlName, Map root){
+        try {
+          Configuration cfg = new Configuration(); 
+          cfg.setDirectoryForTemplateLoading(new File("d:\\html\\ftl\\")); 
+                  
+                  Template t = cfg.getTemplate(ftlName);  
+                    
+                  //最关键在这里，不使用与文件相关的Writer  
+                  StringWriter stringWriter=new StringWriter();  
+                    
+                  try  
+                  {  
+                      t.process(root, stringWriter);                          
+                      //这里打印的就是通过模板处理后得到的字符串内容  
+                      System.out.println("stringWriter: "+stringWriter.toString());
+                      return stringWriter.toString();
+                  } catch (TemplateException e)  
+                  {  
+                      e.printStackTrace();  
+                  }  
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+}
+</pre><br>maven依赖<br><pre class="brush: xml">
+<dependency>
+    <groupid>org.freemarker</groupid>
+    <artifactid>freemarker</artifactid>
+    <version>2.3.23</version>
+</dependency>
+</pre></p>
 
       
     </div>
@@ -656,7 +694,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -678,7 +716,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +792,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -771,7 +808,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -816,7 +853,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -825,11 +861,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -905,22 +938,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1279,7 +1307,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1349,11 +1376,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

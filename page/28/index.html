@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -192,25 +190,23 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -349,13 +345,215 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yf2017.top/2013/06/29/PC电脑和Android模拟器访问及模拟器之间tcp-udp通信/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Caigen Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝旗子">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2013/06/29/PC电脑和Android模拟器访问及模拟器之间tcp-udp通信/" itemprop="url">PC电脑和Android模拟器访问及模拟器之间tcp udp通信</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-06-29T14:14:00+08:00">
+                2013-06-29
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2013/06/29/PC电脑和Android模拟器访问及模拟器之间tcp-udp通信/" class="leancloud_visitors" data-flag-title="PC电脑和Android模拟器访问及模拟器之间tcp udp通信">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  612
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Android系统默认只能通过IP（10.0.2.2）单向访问PC电脑，而PC电脑不能通过IP来直接访问Android模拟器系统。要想实现PC电脑和Android模拟器系统以及Android模拟器之间相互通信必须借助端口重定向(redir)来实现。
+先说说端口重定向所需要的telnet客户端安装： 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2013/06/29/PC电脑和Android模拟器访问及模拟器之间tcp-udp通信/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -417,8 +615,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:13:02+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -478,7 +676,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  353
+                  41
                 </span>
               
 
@@ -494,7 +692,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -517,7 +715,27 @@
       
         
           
-          在jstl中有两个比较重要，一个是core核心,一个是fmt格式化。1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556&lt;%@ taglib
+          在jstl中有两个比较重要，一个是core核心,一个是fmt格式化。
+  
+
+
+
+
+  
+     
+      
+     序号  
+      
+      
+     工号  
+      
+      
+     姓名  
+      
+      
+     生日  
+      
+   
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -619,8 +837,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -827,8 +1045,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1033,8 +1251,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:06:17+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1094,7 +1312,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  191
+                  39
                 </span>
               
 
@@ -1133,7 +1351,21 @@
       
         
           
-          //以下是JSP代码:1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950//----------------------------------------------
+          //以下是JSP代码:
+//--------------------------------------------------------------------
+
+  
+
+
+  
+  
+     
+    Read Word File  
+
+    
+    
+    
+   An exampl
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1235,8 +1467,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:05:17+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1296,7 +1528,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  340
+                  43
                 </span>
               
 
@@ -1312,7 +1544,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -1335,7 +1567,17 @@
       
         
           
-          直接贴源码（jsp页面的）：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727
+          直接贴源码（jsp页面的）：
+  
+  
+Read Excel file   
+  
+  
+An example of using Jakarta POI's HSSF package to read an excel spreadsheet: 
+
+  
+  
+Select an Excel fil
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1437,8 +1679,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1642,8 +1884,8 @@ package acer.lx
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1848,8 +2090,8 @@ installLocation有三个值可以选择：internalOnly、auto、preferExternal�
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -2056,8 +2298,8 @@ jar cvf test.jar comm
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -2211,208 +2453,6 @@ System.out.println(`“m
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yf2017.top/2012/05/09/Java用三种循环方式打印1-100之间所有5的倍数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Caigen Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蓝旗子">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/05/09/Java用三种循环方式打印1-100之间所有5的倍数/" itemprop="url">Java用三种循环方式打印1-100之间所有5的倍数</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-09T21:58:00+08:00">
-                2012-05-09
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2012/05/09/Java用三种循环方式打印1-100之间所有5的倍数/" class="leancloud_visitors" data-flag-title="Java用三种循环方式打印1-100之间所有5的倍数">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  94
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          public class Dm5{ public static void main(String[] args){ /  \ 打印1-100之间所有5的倍数  * 分别使用3种以上的方法来写程序  */  int i=1;  //使用for(;;)  for(i=1;i&lt;=100;i++){ 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2012/05/09/Java用三种循环方式打印1-100之间所有5的倍数/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2482,7 +2522,7 @@ System.out.println(`“m
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2504,7 +2544,7 @@ System.out.println(`“m
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2580,7 +2620,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -2597,7 +2636,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -2642,7 +2681,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -2651,11 +2689,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -2731,18 +2766,13 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
-
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -3101,7 +3131,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -3191,11 +3220,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

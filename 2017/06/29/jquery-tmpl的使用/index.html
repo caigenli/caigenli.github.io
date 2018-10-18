@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;$&amp;#123;app&amp;#125;/js/fontawesome/css/font-awesome.min.css&quot;/&amp;gt;&amp;lt;script sr">
+<meta name="description" content="(function($){     $.fn.tpl = function(data){         $.template(&apos;template&apos;, $(this).html().replace(/@/g,&quot;$&quot;));         return $.tmpl(&apos;template&apos;, data);     } })($)      项目概览 项目名称: @{project.pro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jquery.tmpl的使用">
 <meta property="og:url" content="https://www.yf2017.top/2017/06/29/jquery-tmpl的使用/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;$&amp;#123;app&amp;#125;/js/fontawesome/css/font-awesome.min.css&quot;/&amp;gt;&amp;lt;script sr">
+<meta property="og:description" content="(function($){     $.fn.tpl = function(data){         $.template(&apos;template&apos;, $(this).html().replace(/@/g,&quot;$&quot;));         return $.tmpl(&apos;template&apos;, data);     } })($)      项目概览 项目名称: @{project.pro">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-19T09:21:39.185Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.091Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jquery.tmpl的使用">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243&amp;lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;$&amp;#123;app&amp;#125;/js/fontawesome/css/font-awesome.min.css&quot;/&amp;gt;&amp;lt;script sr">
+<meta name="twitter:description" content="(function($){     $.fn.tpl = function(data){         $.template(&apos;template&apos;, $(this).html().replace(/@/g,&quot;$&quot;));         return $.tmpl(&apos;template&apos;, data);     } })($)      项目概览 项目名称: @{project.pro">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-19T17:21:39+08:00">
-                2018-09-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  271
+                  93
                 </span>
               
 
@@ -499,7 +494,51 @@
       
 
       
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"$&#123;app&#125;/js/fontawesome/css/font-awesome.min.css"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"$&#123;app&#125;/js/jquery-easyui-1.4.1/jquery-1.8.0.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"$&#123;app&#125;/js/tmpl/jquery.tmpl.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"$&#123;app&#125;/js/tmpl/jquery.tmplPlus.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">(function($)&#123;</span></span><br><span class="line"><span class="undefined">    $.fn.tpl = function(data)&#123;</span></span><br><span class="line"><span class="undefined">        $.template('template', $(this).html().replace(/@/g,"$"));</span></span><br><span class="line"><span class="undefined">        return $.tmpl('template', data);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">&#125;)($)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"main"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"model"</span> <span class="attr">type</span>=<span class="string">"text/x-jquery-tmpl"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>项目概览<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line"><span class="undefined">项目名称: @&#123;project.projectname&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">计划时间: @&#123;project.planstart&#125;-@&#123;project.planend&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">分管领导: @&#123;project.projectmaster&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">项目经理: @&#123;project.pm&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">业务对接人: @&#123;project.projectyewu&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">业务部门: @&#123;project.yewudept&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">当前进度: @&#123;project.currentstate&#125;%</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">进度灯: @&#123;project.currentlight&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line"><span class="undefined">本周进展与风险: @&#123;project.currentproblem&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">var msg=eval('($&#123;msg.msg&#125;)');</span></span><br><span class="line"><span class="undefined">console.log(msg.project.createtime); </span></span><br><span class="line"><span class="undefined">$("#model").tpl(msg).appendTo('#main'); </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <pre class="brush: html">
+<link rel="stylesheet" type="text css" href="${app}/js/fontawesome/css/font-awesome.min.css">
+<script src="${app} js="" jquery-easyui-1.4.1="" jquery-1.8.0.min.js"="">
+<script src="${app} js="" tmpl="" jquery.tmpl.min.js"="">
+<script src="${app} js="" tmpl="" jquery.tmplplus.min.js"="">
+<script>
+
+(function($){
+    $.fn.tpl = function(data){
+        $.template('template', $(this).html().replace(/@/g,"$"));
+        return $.tmpl('template', data);
+    }
+})($)
+</script>
+
+<body>
+<div id="main">
+<script id="model" type="text x-jquery-tmpl"="">
+<h3>项目概览</h3>
+项目名称: @{project.projectname}
+<br>
+计划时间: @{project.planstart}-@{project.planend}
+<br>
+分管领导: @{project.projectmaster}
+<br>
+项目经理: @{project.pm}
+<br>
+业务对接人: @{project.projectyewu}
+<br>
+业务部门: @{project.yewudept}
+<br>
+当前进度: @{project.currentstate}%
+<br>
+进度灯: @{project.currentlight}
+<br>
+本周进展与风险: @{project.currentproblem}
+
+
+
+<script>
+var msg=eval('(${msg.msg})');
+console.log(msg.project.createtime); 
+$("#model").tpl(msg).appendTo('#main'); 
+</script>
+</script id="model" type="text></div id="main"></body></script src="${app}></script src="${app}></script src="${app}></link rel="stylesheet" type="text></pre>
 <p>用 @替换 $, 避免被jstl解析。</p>
 
       
@@ -624,8 +663,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -657,7 +705,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -679,7 +727,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -745,6 +793,22 @@ var ap = new APlayer({
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">项目概览</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -755,7 +819,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -772,7 +835,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -817,7 +880,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -826,11 +888,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -906,22 +965,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1280,7 +1334,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1350,11 +1403,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

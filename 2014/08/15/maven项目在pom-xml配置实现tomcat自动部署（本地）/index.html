@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="1234567891011121314151617181920 &amp;lt;!-- tomcat7x --&amp;gt;            &amp;lt;plugin&amp;gt;                  &amp;lt;groupId&amp;gt;org.codehaus.cargo&amp;lt;/groupId&amp;gt;                  &amp;lt;artifactId&amp;gt;cargo-maven2-plu">
+<meta name="description" content="org.codehaus.cargo                   cargo-maven2-plugin                   1.1.3                                                                     tomcat7x">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven项目在pom.xml配置实现tomcat自动部署（本地）">
 <meta property="og:url" content="https://www.yf2017.top/2014/08/15/maven项目在pom-xml配置实现tomcat自动部署（本地）/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="1234567891011121314151617181920 &amp;lt;!-- tomcat7x --&amp;gt;            &amp;lt;plugin&amp;gt;                  &amp;lt;groupId&amp;gt;org.codehaus.cargo&amp;lt;/groupId&amp;gt;                  &amp;lt;artifactId&amp;gt;cargo-maven2-plu">
+<meta property="og:description" content="org.codehaus.cargo                   cargo-maven2-plugin                   1.1.3                                                                     tomcat7x">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-19T09:33:05.888Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven项目在pom.xml配置实现tomcat自动部署（本地）">
-<meta name="twitter:description" content="1234567891011121314151617181920 &amp;lt;!-- tomcat7x --&amp;gt;            &amp;lt;plugin&amp;gt;                  &amp;lt;groupId&amp;gt;org.codehaus.cargo&amp;lt;/groupId&amp;gt;                  &amp;lt;artifactId&amp;gt;cargo-maven2-plu">
+<meta name="twitter:description" content="org.codehaus.cargo                   cargo-maven2-plugin                   1.1.3                                                                     tomcat7x">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-19T17:33:05+08:00">
-                2018-09-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  120
+                  29
                 </span>
               
 
@@ -499,7 +494,28 @@
       
 
       
-        <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!-- tomcat7x --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.codehaus.cargo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cargo-maven2-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span>  </span><br><span class="line">                    <span class="tag">&lt;<span class="name">container</span>&gt;</span>  </span><br><span class="line">                        <span class="tag">&lt;<span class="name">containerId</span>&gt;</span>tomcat7x<span class="tag">&lt;/<span class="name">containerId</span>&gt;</span>  </span><br><span class="line">                        <span class="tag">&lt;<span class="name">home</span>&gt;</span>D:Tomcat 7.0<span class="tag">&lt;/<span class="name">home</span>&gt;</span>  </span><br><span class="line">                    <span class="tag">&lt;/<span class="name">container</span>&gt;</span>  </span><br><span class="line">                    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span>  </span><br><span class="line">                        <span class="tag">&lt;<span class="name">type</span>&gt;</span>existing<span class="tag">&lt;/<span class="name">type</span>&gt;</span>  </span><br><span class="line">                        <span class="tag">&lt;<span class="name">home</span>&gt;</span>D:/Tomcat 7.0<span class="tag">&lt;/<span class="name">home</span>&gt;</span>  </span><br><span class="line">                        <span class="comment">&lt;!--   </span></span><br><span class="line"><span class="comment">                            &lt;type&gt;standalone&lt;/type&gt;  </span></span><br><span class="line"><span class="comment">                            &lt;home&gt;$&#123;project.build.directory&#125;/tomcat7x&lt;/home&gt;  </span></span><br><span class="line"><span class="comment">                         --&gt;</span>  </span><br><span class="line">                    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span>  </span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure> 
+        <pre class="brush: xml">
+ <!-- tomcat7x -->
+            <plugin>  
+                <groupid>org.codehaus.cargo</groupid>  
+                <artifactid>cargo-maven2-plugin</artifactid>  
+                <version>1.1.3</version>  
+                <configuration>  
+                    <container>  
+                        <containerid>tomcat7x</containerid>  
+                        <home>D:Tomcat 7.0</home>  
+                    </container>  
+                    <configuration>  
+                        <type>existing</type>  
+                        <home>D:/Tomcat 7.0</home>  
+                        <!--   
+                            <type>standalone</type>  
+                            <home>${project.build.directory}/tomcat7x</home>  
+                         -->  
+                    </configuration>  
+                </configuration>  
+            </plugin>
+</pre> 
 <p>菜单：maven-build … -&gt;goal输入 carbo:start</p>
 
       
@@ -657,7 +673,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -679,7 +695,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -755,7 +771,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -772,7 +787,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -817,7 +832,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -826,11 +840,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -906,22 +917,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1280,7 +1286,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1350,11 +1355,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。123keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &amp;quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&amp;q">
+<meta name="description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。 keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&quot; -keypas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows下搭建otter ( 三）otter管理平台manager的https">
 <meta property="og:url" content="https://www.yf2017.top/2016/09/26/windows下搭建otter-三）otter管理平台manager的https/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。123keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &amp;quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&amp;q">
+<meta property="og:description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。 keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&quot; -keypas">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T07:19:57.472Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows下搭建otter ( 三）otter管理平台manager的https">
-<meta name="twitter:description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。123keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &amp;quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&amp;q">
+<meta name="twitter:description" content="在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。 keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&quot; -keypas">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:19:57+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  460
+                  136
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -499,7 +494,49 @@
       
 
       
-        <p>在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname &quot;CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN&quot; -keypass changeit -storepass changeit</span><br><span class="line"></span><br><span class="line">keytool -export -alias tomcat -keystore d:/mykeystore -file d:/mycerts.cer -storepass changeit</span><br></pre></td></tr></table></figure><br>然后，修改manager/conf下的jetty.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> &lt;New id=&quot;sslContextFactory&quot; class=&quot;org.eclipse.jetty.http.ssl.SslContextFactory&quot;&gt;  </span><br><span class="line">    &lt;Set name=&quot;KeyStore&quot;&gt;D:/mykeystore&lt;/Set&gt;  </span><br><span class="line">    &lt;Set name=&quot;KeyStorePassword&quot;&gt;changeit&lt;/Set&gt;  </span><br><span class="line">    &lt;Set name=&quot;KeyManagerPassword&quot;&gt;changeit&lt;/Set&gt;  </span><br><span class="line">    &lt;Set name=&quot;TrustStore&quot;&gt;D:/mykeystore&lt;/Set&gt;  </span><br><span class="line">    &lt;Set name=&quot;TrustStorePassword&quot;&gt;changeit&lt;/Set&gt;  </span><br><span class="line">  &lt;/New&gt;  </span><br><span class="line"></span><br><span class="line">    &lt;Call name=&quot;addConnector&quot;&gt;</span><br><span class="line">      &lt;Arg&gt;</span><br><span class="line">        &lt;!-- &lt;New class=&quot;org.eclipse.jetty.server.nio.SelectChannelConnector&quot;&gt; --&gt;</span><br><span class="line">          &lt;New class=&quot;org.eclipse.jetty.server.ssl.SslSelectChannelConnector&quot;&gt;  </span><br><span class="line">        &lt;Arg&gt;&lt;Ref id=&quot;sslContextFactory&quot; /&gt;&lt;/Arg&gt;  </span><br><span class="line">            &lt;Set name=&quot;port&quot;&gt;&lt;SystemProperty name=&quot;otter.port&quot; default=&quot;8080&quot; /&gt;&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;forwarded&quot;&gt;true&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;forwardedHostHeader&quot;&gt;ignore&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;forwardedServerHeader&quot;&gt;ignore&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;maxIdleTime&quot;&gt;600000&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;Acceptors&quot;&gt;2&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;acceptQueueSize&quot;&gt;256&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;statsOn&quot;&gt;false&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;confidentialPort&quot;&gt;8443&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;lowResourcesConnections&quot;&gt;2000&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;lowResourcesMaxIdleTime&quot;&gt;5000&lt;/Set&gt;</span><br><span class="line">            &lt;Set name=&quot;requestHeaderSize&quot;&gt;8192&lt;/Set&gt;</span><br><span class="line">&lt;Set name=&quot;responseHeaderSize&quot;&gt;8192&lt;/Set&gt;</span><br><span class="line">          &lt;/New&gt;</span><br><span class="line">      &lt;/Arg&gt;</span><br><span class="line">    &lt;/Call&gt;</span><br></pre></td></tr></table></figure><br>最后，修改D: oolsmanager.deployer-4.2.13webappWEB-INFcommonuris.xml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;services:uris&gt;</span><br><span class="line">        &lt;uris:uri id=&quot;server&quot;&gt;</span><br><span class="line">            &lt;serverURI&gt;https://$&#123;otter.domainName&#125;:$&#123;otter.port&#125;/&lt;/serverURI&gt;</span><br><span class="line">        &lt;/uris:uri&gt;</span><br><span class="line">        &lt;uris:turbine-uri id=&quot;homeModule&quot; exposed=&quot;true&quot; extends=&quot;server&quot;&gt;</span><br><span class="line">            &lt;componentPath&gt;/&lt;/componentPath&gt;</span><br><span class="line">        &lt;/uris:turbine-uri&gt;</span><br></pre></td></tr></table></figure><br>将http改成https.改完重启manager，即可通过 https访问。<a href="https://192.168.19.1:8090/login.htm" target="_blank" rel="noopener">https://192.168.19.1:8090/login.htm</a></p>
+        <p>在otter的manager中使用https协议，首先安装openssl工具，生成ssl证书或向机构申请ssl证书。<br><pre class="brush: html">
+keytool -genkey -alias tomcat -keyalg RSA -keystore d:/mykeystore -dname "CN=localhost, OU=localhost, O=localhost, L=SH, ST=SH, C=CN" -keypass changeit -storepass changeit
+
+keytool -export -alias tomcat -keystore d:/mykeystore -file d:/mycerts.cer -storepass changeit
+</pre><br>然后，修改manager/conf下的jetty.xml<br><pre class="brush: html">
+ <new id="sslcontextfactory" class="org.eclipse.jetty.http.ssl.sslcontextfactory">  
+    <set name="keystore">D:/mykeystore  
+    <set name="keystorepassword">changeit  
+    <set name="keymanagerpassword">changeit  
+    <set name="truststore">D:/mykeystore  
+    <set name="truststorepassword">changeit  
+    
+
+    <call name="addconnector">
+      <arg>
+        <!-- <New class="org.eclipse.jetty.server.nio.SelectChannelConnector"> -->
+          <new class="org.eclipse.jetty.server.ssl.sslselectchannelconnector">  
+        <arg><ref id="sslcontextfactory" ></ref id="sslcontextfactory" ></arg>  
+            <set name="port"><systemproperty name="otter.port" default="8080" >
+            <set name="forwarded">true
+            <set name="forwardedhostheader">ignore
+            <set name="forwardedserverheader">ignore
+            <set name="maxidletime">600000
+            <set name="acceptors">2
+            <set name="acceptqueuesize">256
+            <set name="statson">false
+            <set name="confidentialport">8443
+            <set name="lowresourcesconnections">2000
+            <set name="lowresourcesmaxidletime">5000
+            <set name="requestheadersize">8192
+            <set name="responseheadersize">8192
+          
+      </set name="responseheadersize"></set name="requestheadersize"></set name="lowresourcesmaxidletime"></set name="lowresourcesconnections"></set name="confidentialport"></set name="statson"></set name="acceptqueuesize"></set name="acceptors"></set name="maxidletime"></set name="forwardedserverheader"></set name="forwardedhostheader"></set name="forwarded"></systemproperty name="otter.port" default="8080" ></set name="port"></new class="org.eclipse.jetty.server.ssl.sslselectchannelconnector"></arg>
+    
+</call name="addconnector"></set name="truststorepassword"></set name="truststore"></set name="keymanagerpassword"></set name="keystorepassword"></set name="keystore"></new id="sslcontextfactory" class="org.eclipse.jetty.http.ssl.sslcontextfactory"></pre><br>最后，修改D: oolsmanager.deployer-4.2.13webappWEB-INFcommonuris.xml<br><pre class="brush: html">
+<services:uris>
+        <uris:uri id="server">
+            <serveruri>https://${otter.domainName}:${otter.port}/</serveruri>
+        
+        <uris:turbine-uri id="homemodule" exposed="true" extends="server">
+            <componentpath>/</componentpath>
+        
+</uris:turbine-uri id="homemodule" exposed="true" extends="server"></uris:uri id="server"></services:uris></pre><br>将http改成https.改完重启manager，即可通过 https访问。<a href="https://192.168.19.1:8090/login.htm" target="_blank" rel="noopener">https://192.168.19.1:8090/login.htm</a></p>
 
       
     </div>
@@ -656,7 +693,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -678,7 +715,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +791,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -771,7 +807,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -816,7 +852,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -825,11 +860,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -905,22 +937,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1279,7 +1306,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1349,11 +1375,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

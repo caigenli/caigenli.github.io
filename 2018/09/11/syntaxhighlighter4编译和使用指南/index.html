@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容 123export NODE_HOME=/usr/l">
+<meta name="description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容  export NODE_HOME=/usr/loc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="syntaxhighlighter4编译和使用指南">
 <meta property="og:url" content="https://www.yf2017.top/2018/09/11/syntaxhighlighter4编译和使用指南/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容 123export NODE_HOME=/usr/l">
+<meta property="og:description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容  export NODE_HOME=/usr/loc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T06:37:57.553Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="syntaxhighlighter4编译和使用指南">
-<meta name="twitter:description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容 123export NODE_HOME=/usr/l">
+<meta name="twitter:description" content="syntaxhighlighter从3.8开始需要自己编译。它的编译依赖于nodejs即npm。我在linux系统上编译它。首先从官网下载 node-v6.9.4-linux-x64.tar.gz（其他版本可能会有编译问题。） 解压到 /usr/local/node/设置环境变量cd /etc/profile.dvi node.sh插入如下内容  export NODE_HOME=/usr/loc">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-11T14:37:57+08:00">
-                2018-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  328
+                  272
                 </span>
               
 
@@ -501,9 +496,29 @@
       
         <p>syntaxhighlighter从3.8开始需要自己编译。<br>它的编译依赖于nodejs即npm。<br>我在linux系统上编译它。<br>首先从官网下载 <a href="https://nodejs.org/dist/v6.9.4/node-v6.9.4-linux-x64.tar.gz" target="_blank" rel="noopener">node-v6.9.4-linux-x64.tar.gz</a><br>（其他版本可能会有编译问题。）</p>
 <p>解压到 /usr/local/node/<br>设置环境变量<br>cd /etc/profile.d<br>vi node.sh<br>插入如下内容</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> NODE_HOME=/usr/<span class="built_in">local</span>/node</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$NODE_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> NODE_PATH=<span class="variable">$NODE_HOME</span>/lib/node_modules</span><br></pre></td></tr></table></figure>
-<p>使环境变量生效<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> profile</span><br><span class="line"><span class="comment"># 测试</span></span><br><span class="line">nodejs -version</span><br><span class="line"></span><br><span class="line">npm -version</span><br></pre></td></tr></table></figure></p>
-<p>下载 <a href="https://github.com/syntaxhighlighter/syntaxhighlighter/tree/v4.0.1" target="_blank" rel="noopener">syntaxhighlighter4.0.1</a>  (4.0依赖有问题)<br>解压<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">unzip syntaxhighlighter-4.0.1.zip</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> syntaxhighlighter-4.0.1</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># 需要你设置ssh key, 并将生成的id-rsa.pub的内容添加的github ssh key.</span></span><br><span class="line"><span class="comment"># 需要设置git全局变量  git config --global user.name "xxxxxx"</span></span><br><span class="line"><span class="comment"># git config --global user.email "xxxxxx"</span></span><br><span class="line">./node_modules/gulp/bin/gulp.js setup-project</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<pre class="brush: bash">
+export NODE_HOME=/usr/local/node
+export PATH=$PATH:$NODE_HOME/bin
+export NODE_PATH=$NODE_HOME/lib/node_modules
+</pre>
+<p>使环境变量生效<br><pre class="brush: bash">
+source profile
+# 测试
+nodejs -version
+
+npm -version
+</pre></p>
+<p>下载 <a href="https://github.com/syntaxhighlighter/syntaxhighlighter/tree/v4.0.1" target="_blank" rel="noopener">syntaxhighlighter4.0.1</a>  (4.0依赖有问题)<br>解压<br><pre class="brush: bash">
+unzip syntaxhighlighter-4.0.1.zip
+
+cd syntaxhighlighter-4.0.1
+npm install
+# 需要你设置ssh key, 并将生成的id-rsa.pub的内容添加的github ssh key.
+# 需要设置git全局变量  git config --global user.name "xxxxxx"
+# git config --global user.email "xxxxxx"
+./node_modules/gulp/bin/gulp.js setup-project
+
+</pre></p>
 <p>#如果报permission问题，则你的git设置有问题</p>
 <p>执行build</p>
 <p>./node_modules/gulp/bin/gulp.js build –brushes=all –theme=default </p>
@@ -513,7 +528,27 @@
 <p>为</p>
 <p>Promise = require(“bluebird”);</p>
 <p>最后在 dist文件夹中有生成的文件<br> -syntaxhighlighter.js<br> -theme.css<br> -index.html</p>
-<p> 使用<br> <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"syntaxhighlighter.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"theme.css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span> <span class="attr">class</span>=<span class="string">"brush: js"</span>&gt;</span> </span><br><span class="line">function foo()</span><br><span class="line">&#123;</span><br><span class="line">&#125; </span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/syntaxhighlighter"</span> <span class="attr">class</span>=<span class="string">"brush: js"</span>&gt;</span><span class="undefined">&lt;![CDATA[</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span></span></span><br><span class="line"><span class="undefined">  &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">if</span> (counter &lt;= <span class="number">10</span>)</span></span><br><span class="line"><span class="javascript">          <span class="keyword">return</span>;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// it works!</span></span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">]]&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><br>两种方法都可以</p>
+<p> 使用<br> <pre class="brush: html">
+ <script type="text/javascript" src="syntaxhighlighter.js"></script>
+  
+  <link type="text/css" rel="stylesheet" href="theme.css">
+
+
+<pre class="brush: js"> 
+function foo()
+{
+} 
+</pre>
+
+<script type="text/syntaxhighlighter" class="brush: js"><![CDATA[
+  function foo()
+  {
+      if (counter <= 10)
+          return;
+      // it works!
+  }
+]]></script>
+</pre><br>两种方法都可以</p>
 
       
     </div>
@@ -670,7 +705,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -692,7 +727,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -768,7 +803,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -785,7 +819,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -830,7 +864,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -839,11 +872,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -919,22 +949,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1293,7 +1318,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1363,11 +1387,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

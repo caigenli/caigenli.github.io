@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="–这个速度稍微慢些1234select * from  (select m.*,rownum rn  from (select * from music order by id) m)  where rn between 11 and 20–最好选择以下方式12345select * from  (select m.*,rownum rn  from (select * from music or">
+<meta name="description" content="–这个速度稍微慢些 select * from   (select m.*,rownum rn   from (select * from music order by id) m)   where rn between 11 and 20 –最好选择以下方式 select * from   (select m.*,rownum rn   from (select * from music ord">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle数据分页">
 <meta property="og:url" content="https://www.yf2017.top/2014/08/21/Oracle数据分页/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="–这个速度稍微慢些1234select * from  (select m.*,rownum rn  from (select * from music order by id) m)  where rn between 11 and 20–最好选择以下方式12345select * from  (select m.*,rownum rn  from (select * from music or">
+<meta property="og:description" content="–这个速度稍微慢些 select * from   (select m.*,rownum rn   from (select * from music order by id) m)   where rn between 11 and 20 –最好选择以下方式 select * from   (select m.*,rownum rn   from (select * from music ord">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T07:15:17.575Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle数据分页">
-<meta name="twitter:description" content="–这个速度稍微慢些1234select * from  (select m.*,rownum rn  from (select * from music order by id) m)  where rn between 11 and 20–最好选择以下方式12345select * from  (select m.*,rownum rn  from (select * from music or">
+<meta name="twitter:description" content="–这个速度稍微慢些 select * from   (select m.*,rownum rn   from (select * from music order by id) m)   where rn between 11 and 20 –最好选择以下方式 select * from   (select m.*,rownum rn   from (select * from music ord">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:15:17+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  58
+                  53
                 </span>
               
 
@@ -499,7 +494,17 @@
       
 
       
-        <p>–这个速度稍微慢些<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select * from  </span><br><span class="line">(select m.*,rownum rn  </span><br><span class="line">from (select * from music order by id) m)  </span><br><span class="line">where rn between 11 and 20</span><br></pre></td></tr></table></figure><br>–最好选择以下方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from  </span><br><span class="line">(select m.*,rownum rn  </span><br><span class="line">from (select * from music order by id) m  </span><br><span class="line">where rownum&lt;=20)  </span><br><span class="line">where rn&gt;=11</span><br></pre></td></tr></table></figure></p>
+        <p>–这个速度稍微慢些<br><pre class="brush: html">
+select * from  
+(select m.*,rownum rn  
+from (select * from music order by id) m)  
+where rn between 11 and 20
+</pre><br>–最好选择以下方式<br><pre class="brush: html">
+select * from  
+(select m.*,rownum rn  
+from (select * from music order by id) m  
+where rownum<=20) where="" rn="">=11
+</=20)></pre></p>
 
       
     </div>
@@ -656,7 +661,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -678,7 +683,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +759,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -771,7 +775,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -816,7 +820,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -825,11 +828,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -905,22 +905,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1279,7 +1274,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1349,11 +1343,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

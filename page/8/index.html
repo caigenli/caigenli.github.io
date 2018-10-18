@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -192,25 +190,23 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -349,7 +345,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -417,8 +412,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -601,8 +596,8 @@ X 理论（消极）基本内容：
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T16:21:13+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -640,7 +635,7 @@ X 理论（消极）基本内容：
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  334
                 </span>
               
 
@@ -656,7 +651,7 @@ X 理论（消极）基本内容：
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  1
                 </span>
               
             </div>
@@ -680,7 +675,11 @@ X 理论（消极）基本内容：
         
           
           使用java jdbc生成带注释的实体类（model），只要导入mysql的jar包，执行下面的代码，（setter和getter还未生成）
-代码如下：12345678910111213141516171819202122232425262728293031323334353637383940414
+代码如下：
+package com.test;
+
+import java.io.Serializable;
+import java.sql.Connectio
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -782,8 +781,8 @@ X 理论（消极）基本内容：
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -965,8 +964,8 @@ itchat项目代码地址：https://itchat.readthedocs.io/zh/latest/
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1148,8 +1147,8 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-19T17:21:39+08:00">
-                2018-09-19
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1187,7 +1186,7 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  271
+                  93
                 </span>
               
 
@@ -1226,7 +1225,17 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
       
         
           
-          12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;link rel="stylesheet" type="text/css" href="$&#123;app&#125;/js/fonta
+          
+
+
+
+
+
+
+(function($){
+    $.fn.tpl = function(data){
+        $.template('template', $(this).html().replace(/@/g,"$"));
+        return $.tmpl('template'
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1328,8 +1337,8 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1513,8 +1522,8 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1695,8 +1704,8 @@ Font Awesome为您提供可缩放的矢量图标，您可以使用CSS所提供�
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -1878,8 +1887,8 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -2016,7 +2025,7 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yf2017.top/2017/03/17/springmvc-quartz集群-cluster-配置/">
+    <link itemprop="mainEntityOfPage" href="https://www.yf2017.top/2017/04/25/elasticsearch的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Caigen Lee">
@@ -2035,7 +2044,7 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/17/springmvc-quartz集群-cluster-配置/" itemprop="url">springmvc+quartz集群(cluster)配置</a></h2>
+                <a class="post-title-link" href="/2017/04/25/elasticsearch的使用/" itemprop="url">elasticsearch的使用</a></h2>
         
 
         <div class="post-meta">
@@ -2047,8 +2056,8 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T13:52:56+08:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T17:52:40+08:00">
+                2017-04-25
               </time>
             
 
@@ -2063,13 +2072,35 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-04T14:03:23+08:00">
-                2018-09-04
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T14:07:54+08:00">
+                2018-10-18
               </time>
             
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术交流/" itemprop="url" rel="index">
+                    <span itemprop="name">技术交流</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -2077,7 +2108,7 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
 
           
           
-             <span id="/2017/03/17/springmvc-quartz集群-cluster-配置/" class="leancloud_visitors" data-flag-title="springmvc+quartz集群(cluster)配置">
+             <span id="/2017/04/25/elasticsearch的使用/" class="leancloud_visitors" data-flag-title="elasticsearch的使用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2102,7 +2133,7 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  833
+                  537
                 </span>
               
 
@@ -2118,7 +2149,7 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  2
                 </span>
               
             </div>
@@ -2141,14 +2172,11 @@ npm config set registry https://registry.npm.taobao.org –globalnpm config se
       
         
           
-          在测试和生产环境一般服务器的部署不会少于2台。这时定时任务的配置问题尤其重要，因为定时任务只需要跑一次。
-有的公司采用的做法是，单独一台服务器部署跑批服务，其他服务器提供其他业务服务。另外的一种做法是使用quartz集群。
-本文将介绍spring mvc框架中quartz集群的搭建方法。
-maven
+          ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/17/springmvc-quartz集群-cluster-配置/#more" rel="contents">
+            <a class="btn" href="/2017/04/25/elasticsearch的使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2255,7 +2283,7 @@ maven
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2277,7 +2305,7 @@ maven
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2353,7 +2381,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -2370,7 +2397,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -2415,7 +2442,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -2424,11 +2450,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -2504,18 +2527,13 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
-
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -2874,7 +2892,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -2964,11 +2981,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

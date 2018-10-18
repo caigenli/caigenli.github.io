@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,19 +129,19 @@
 
 
 
-<meta name="description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码：1234567891011121314151617181920212223242526272829303132package com.lcg.nodeext;import com.alibaba.otter.">
+<meta name="description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码： package com.lcg.nodeext;  import com.alibaba.otter.node.extend.processor.AbstractEventProcessor; import">
 <meta property="og:type" content="article">
 <meta property="og:title" content="otter最佳实践（四）部分数据脱敏等处理">
 <meta property="og:url" content="https://www.yf2017.top/2016/10/13/otter最佳实践（四）部分数据脱敏等处理/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码：1234567891011121314151617181920212223242526272829303132package com.lcg.nodeext;import com.alibaba.otter.">
+<meta property="og:description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码： package com.lcg.nodeext;  import com.alibaba.otter.node.extend.processor.AbstractEventProcessor; import">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://www.yf2017.top/147634859600078.png">
 <meta property="og:image" content="https://www.yf2017.top/147634859600037.png">
-<meta property="og:updated_time" content="2018-09-25T07:18:36.029Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.143Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="otter最佳实践（四）部分数据脱敏等处理">
-<meta name="twitter:description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码：1234567891011121314151617181920212223242526272829303132package com.lcg.nodeext;import com.alibaba.otter.">
+<meta name="twitter:description" content="在数据同步时，出于某些考虑，对一些敏感数据要进行二次处理，在otter中如何实现？ 同步管理-&amp;gt;channel-&amp;gt;pipeline-&amp;gt;映射关系 编辑，   脱敏处理实例源码： package com.lcg.nodeext;  import com.alibaba.otter.node.extend.processor.AbstractEventProcessor; import">
 <meta name="twitter:image" content="https://www.yf2017.top/147634859600078.png">
 
 
@@ -199,24 +197,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -355,7 +351,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -421,8 +416,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:18:36+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -465,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  203
+                  179
                 </span>
               
 
@@ -506,7 +501,40 @@
 <p>同步管理-&gt;channel-&gt;pipeline-&gt;映射关系 编辑，</p>
 <p><img src="https://www.yf2017.top/147634859600078.png" alt=""></p>
 <p><img src="https://www.yf2017.top/147634859600037.png" alt=""></p>
-<p>脱敏处理实例源码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package com.lcg.nodeext;</span><br><span class="line"></span><br><span class="line">import com.alibaba.otter.node.extend.processor.AbstractEventProcessor;</span><br><span class="line">import com.alibaba.otter.shared.etl.model.EventColumn;</span><br><span class="line">import com.alibaba.otter.shared.etl.model.EventData;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Hello world!</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">public class App extends AbstractEventProcessor &#123;</span><br><span class="line"></span><br><span class="line">        public boolean process(EventData eventData) &#123;</span><br><span class="line">            System.out.println(&quot;插件进入  plugins in ...&quot;);</span><br><span class="line">            if(&quot;fuser&quot;.equalsIgnoreCase(eventData.getTableName()))&#123;</span><br><span class="line">                 for (EventColumn column : eventData.getColumns()) &#123;</span><br><span class="line">                   //对手机号码进行转换处理</span><br><span class="line">                   if(column.getColumnName().equalsIgnoreCase(&quot;phone&quot;))&#123;</span><br><span class="line">                      String oriphone = column.getColumnValue();</span><br><span class="line">                      System.out.println(&quot;process column phone:&quot;+oriphone);</span><br><span class="line">                      if(oriphone != null &amp;&amp; oriphone.length() == 11)&#123;</span><br><span class="line">                          column.setColumnValue(oriphone.substring(0, 3)+&quot;****&quot;+oriphone.substring(7));</span><br><span class="line">                      &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">                  &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">           </span><br><span class="line">           return true; </span><br><span class="line">        &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>  </p>
+<p>脱敏处理实例源码：<br><pre class="brush: html">
+package com.lcg.nodeext;
+
+import com.alibaba.otter.node.extend.processor.AbstractEventProcessor;
+import com.alibaba.otter.shared.etl.model.EventColumn;
+import com.alibaba.otter.shared.etl.model.EventData;
+
+/**
+ * Hello world!
+ *
+ */
+public class App extends AbstractEventProcessor {
+
+        public boolean process(EventData eventData) {
+            System.out.println("插件进入  plugins in ...");
+            if("fuser".equalsIgnoreCase(eventData.getTableName())){
+                 for (EventColumn column : eventData.getColumns()) {
+                   //对手机号码进行转换处理
+                   if(column.getColumnName().equalsIgnoreCase("phone")){
+                      String oriphone = column.getColumnValue();
+                      System.out.println("process column phone:"+oriphone);
+                      if(oriphone != null && oriphone.length() == 11){
+                          column.setColumnValue(oriphone.substring(0, 3)+"****"+oriphone.substring(7));
+                      }
+                   }
+                  }
+
+            }
+           
+           return true; 
+        } 
+}
+
+</pre>  </p>
 <p>本文参考：<a href="https://github.com/alibaba/otter/wiki/Otter%E6%89%A9%E5%B1%95%E6%80%A7" target="_blank" rel="noopener">https://github.com/alibaba/otter/wiki/Otter%E6%89%A9%E5%B1%95%E6%80%A7</a></p>
 
       
@@ -664,7 +692,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -686,7 +714,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -762,7 +790,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -779,7 +806,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -824,7 +851,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -833,11 +859,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -913,22 +936,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1287,7 +1305,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1357,11 +1374,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+<meta name="description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法 package ajava;  import java.io.BufferedReader; import java.io.File; import jav">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从svn日志中读取指定开发人员的修改记录并按工程归档">
 <meta property="og:url" content="https://www.yf2017.top/2017/02/28/从svn日志中读取指定开发人员的修改记录并按工程归档/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+<meta property="og:description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法 package ajava;  import java.io.BufferedReader; import java.io.File; import jav">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-20T05:57:07.340Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从svn日志中读取指定开发人员的修改记录并按工程归档">
-<meta name="twitter:description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+<meta name="twitter:description" content="svn日志获取 svn checkout工程， svn log -r {开始日期}:{结束日期} -v &amp;gt; 日志保存路径  svn log -r {2017-2-6}:{2017-2-15} -v &amp;gt; d:/svn.log 主方法 package ajava;  import java.io.BufferedReader; import java.io.File; import jav">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T13:57:07+08:00">
-                2018-09-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  529
+                  419
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  2
                 </span>
               
             </div>
@@ -502,7 +497,139 @@
         <p>svn日志获取</p>
 <p>svn checkout工程， svn log -r {开始日期}:{结束日期} -v &gt; 日志保存路径 </p>
 <p>svn log -r {2017-2-6}:{2017-2-15} -v &gt; d:/svn.log</p>
-<p>主方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> ajava;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestReadFile</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> String[] apps=<span class="string">"工程A,工程B,工程C"</span>.split(<span class="string">","</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> StringBuffer <span class="title">readFileByLines</span><span class="params">(String fileName, String uname)</span> </span>&#123;</span><br><span class="line">        StringBuffer buf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        File file = <span class="keyword">new</span> File(fileName);</span><br><span class="line">        BufferedReader reader = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// System.out.println("以行为单位读取文件内容，一次读一整行：");</span></span><br><span class="line">            InputStreamReader read = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(</span><br><span class="line">                    file), <span class="string">"gbk"</span>);</span><br><span class="line">            reader = <span class="keyword">new</span> BufferedReader(read);</span><br><span class="line">            String tempString = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">int</span> line = <span class="number">1</span>;</span><br><span class="line">            <span class="comment">// 一次读入一行，直到读入null为文件结束</span></span><br><span class="line">            <span class="keyword">boolean</span> f = <span class="keyword">false</span>;</span><br><span class="line">            <span class="keyword">boolean</span> me = <span class="keyword">false</span>;</span><br><span class="line">            String con = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">while</span> ((tempString = reader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="string">"------------------------------------------------------------------------"</span></span><br><span class="line">                .equals(tempString)) &#123;</span><br><span class="line">                    f = <span class="keyword">true</span>;</span><br><span class="line">                    me = <span class="keyword">false</span>;</span><br><span class="line">                    con = <span class="string">""</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (tempString.indexOf(uname) &gt; -<span class="number">1</span>) &#123;</span><br><span class="line">                        me = <span class="keyword">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (me) &#123;</span><br><span class="line">                        con = tempString + <span class="string">""</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// System.out.println(con);</span></span><br><span class="line">                buf.append(con);</span><br><span class="line">                <span class="comment">// 显示行号</span></span><br><span class="line">                System.out.println(<span class="string">"line "</span> + line + <span class="string">": finished"</span>);</span><br><span class="line">                line++;</span><br><span class="line">            &#125;</span><br><span class="line">            reader.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    reader.close();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> buf;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> StringBuffer <span class="title">readFileByKey</span><span class="params">(String fileName, String key)</span> </span>&#123;</span><br><span class="line">        StringBuffer buf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        File file = <span class="keyword">new</span> File(fileName);</span><br><span class="line">        BufferedReader reader = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123; </span><br><span class="line">            InputStreamReader read = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(</span><br><span class="line">                    file), <span class="string">"gbk"</span>);</span><br><span class="line">            reader = <span class="keyword">new</span> BufferedReader(read);</span><br><span class="line">            String tempString = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">int</span> line = <span class="number">1</span>;</span><br><span class="line">         </span><br><span class="line">            <span class="keyword">while</span> ((tempString = reader.readLine()) != <span class="keyword">null</span>) &#123; </span><br><span class="line">                    <span class="keyword">if</span> (tempString.indexOf(key) &gt; -<span class="number">1</span>) &#123;</span><br><span class="line">                        buf.append(tempString + <span class="string">"</span></span><br><span class="line"><span class="string">"</span>);</span><br><span class="line">                    &#125; </span><br><span class="line">                    System.out.println(<span class="string">"line "</span> + line + <span class="string">": finished"</span>);</span><br><span class="line">                    line++; </span><br><span class="line">                &#125;</span><br><span class="line">                  </span><br><span class="line">            reader.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    reader.close();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> buf;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">writeFile</span><span class="params">(String fileName, String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            FileWriter fileWriter = <span class="keyword">new</span> FileWriter(fileName);</span><br><span class="line"></span><br><span class="line">            fileWriter.write(str);</span><br><span class="line">            fileWriter.flush();</span><br><span class="line">            fileWriter.close();</span><br><span class="line">            <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">            System.out.println(<span class="string">"写文件耗时："</span> + (end - start) + <span class="string">" ms"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">step1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        String str = readFileByLines(</span><br><span class="line">                <span class="string">"C:/Users/Administrator/Desktop/test/logs.txt"</span>, <span class="string">"开发人员svn账户"</span>)</span><br><span class="line">                .toString();</span><br><span class="line">         </span><br><span class="line">        System.out.println(str);</span><br><span class="line">        writeFile(<span class="string">"C:/Users/Administrator/Desktop/test/mylog.txt"</span>,str);</span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"耗时："</span> + (end - start) + <span class="string">" ms"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">step2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; apps.length; i++) &#123;</span><br><span class="line">            String key=apps[i];</span><br><span class="line">            String str = readFileByKey(</span><br><span class="line">                    <span class="string">"C:/Users/Administrator/Desktop/test/mylog.txt"</span>,key)</span><br><span class="line">                    .toString(); </span><br><span class="line">            key=key.replace(<span class="string">"/"</span>, <span class="string">""</span>);</span><br><span class="line">            writeFile(<span class="string">"C:/Users/Administrator/Desktop/test/"</span>+key+<span class="string">".txt"</span>,str);</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="keyword">long</span> end = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">"耗时："</span> + (end - start) + <span class="string">" ms"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        step2();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>主方法<br><pre class="brush: java">
+package ajava;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class TestReadFile {
+    static String[] apps="工程A,工程B,工程C".split(",");
+    
+    public static StringBuffer readFileByLines(String fileName, String uname) {
+        StringBuffer buf = new StringBuffer();
+        File file = new File(fileName);
+        BufferedReader reader = null;
+        try {
+            // System.out.println("以行为单位读取文件内容，一次读一整行：");
+            InputStreamReader read = new InputStreamReader(new FileInputStream(
+                    file), "gbk");
+            reader = new BufferedReader(read);
+            String tempString = null;
+            int line = 1;
+            // 一次读入一行，直到读入null为文件结束
+            boolean f = false;
+            boolean me = false;
+            String con = "";
+            while ((tempString = reader.readLine()) != null) {
+                if ("------------------------------------------------------------------------"
+                .equals(tempString)) {
+                    f = true;
+                    me = false;
+                    con = "";
+                } else {
+                    if (tempString.indexOf(uname) > -1) {
+                        me = true;
+                    }
+
+                    if (me) {
+                        con = tempString + "";
+                    }
+                }
+                // System.out.println(con);
+                buf.append(con);
+                // 显示行号
+                System.out.println("line " + line + ": finished");
+                line++;
+            }
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+
+        return buf;
+    }
+    
+    
+    public static StringBuffer readFileByKey(String fileName, String key) {
+        StringBuffer buf = new StringBuffer();
+        File file = new File(fileName);
+        BufferedReader reader = null;
+        try { 
+            InputStreamReader read = new InputStreamReader(new FileInputStream(
+                    file), "gbk");
+            reader = new BufferedReader(read);
+            String tempString = null;
+            int line = 1;
+         
+            while ((tempString = reader.readLine()) != null) { 
+                    if (tempString.indexOf(key) > -1) {
+                        buf.append(tempString + "
+");
+                    } 
+                    System.out.println("line " + line + ": finished");
+                    line++; 
+                }
+                  
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                }
+            }
+        }
+
+        return buf;
+    }
+
+    public static void writeFile(String fileName, String str) {
+        long start = System.currentTimeMillis();
+        try {
+            FileWriter fileWriter = new FileWriter(fileName);
+
+            fileWriter.write(str);
+            fileWriter.flush();
+            fileWriter.close();
+            long end = System.currentTimeMillis();
+            System.out.println("写文件耗时：" + (end - start) + " ms");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    
+    
+    
+    public static void step1(){
+        long start = System.currentTimeMillis();
+        String str = readFileByLines(
+                "C:/Users/Administrator/Desktop/test/logs.txt", "开发人员svn账户")
+                .toString();
+         
+        System.out.println(str);
+        writeFile("C:/Users/Administrator/Desktop/test/mylog.txt",str);
+        long end = System.currentTimeMillis();
+        System.out.println("耗时：" + (end - start) + " ms");
+    }
+    
+    public static void step2(){
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < apps.length; i++) { string key="apps[i];" string str =" readFileByKey(" "c:="" users="" administrator="" desktop="" test="" mylog.txt",key)="" .tostring(); ="" key="key.replace("/", "");" writefile("c:="" "+key+".txt",str);="" }="" long end =" System.currentTimeMillis();" system.out.println("耗时：" + (end - start) + " ms");="" public static void main(string[] args) {="" step2();="" <="" pre=""></ apps.length; i++) {></pre></p>
 
       
     </div>
@@ -659,7 +786,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -681,7 +808,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -757,7 +884,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -774,7 +900,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -819,7 +945,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -828,11 +953,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -908,22 +1030,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1282,7 +1399,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1352,11 +1468,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

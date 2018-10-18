@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -142,7 +140,7 @@
 <meta property="og:image" content="https://www.yf2017.top/files/147996575200093.png">
 <meta property="og:image" content="https://www.yf2017.top/files/1479965752000115.png">
 <meta property="og:image" content="https://www.yf2017.top/files/147996575200007.png">
-<meta property="og:updated_time" content="2018-09-20T03:11:57.851Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信第三方平台开发攻略">
 <meta name="twitter:description" content="先从注册说起。 注册微信开放平台账号，进行资质认证。企业需要提交营业执照、公函（个人无法进行资质认证，腾讯认为个人是无法完成一个公众号第三方平台搭建的）。 公众号第三方平台是什么？ – 为公众号提供便捷的服务，基于微信公众号，微信提供的第三方API进行开发，为微信公众号的使用者提供便捷服务。  进行完资质认证后，可以创建公众号第三方平台了，一个账号最多创建5个公众平台。 比较便捷的是，填完第三方平">
@@ -201,24 +199,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -357,7 +353,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -423,8 +418,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-20T11:11:57+08:00">
-                2018-09-20
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -467,7 +462,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  1.1k
                 </span>
               
 
@@ -514,18 +509,68 @@
 <p>一步步按照文档来。</p>
 <p>1.接收component_verify_ticket</p>
 <p>注意，ticket每10分钟微信服务器会像你的地址推送一次。收到后，你要保存好，因为后面要用到。</p>
-<p>推送的报文：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">xml</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">AppId</span>&gt;</span> <span class="tag">&lt;/<span class="name">AppId</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">CreateTime</span>&gt;</span>1413192605 <span class="tag">&lt;/<span class="name">CreateTime</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">InfoType</span>&gt;</span> <span class="tag">&lt;/<span class="name">InfoType</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ComponentVerifyTicket</span>&gt;</span> <span class="tag">&lt;/<span class="name">ComponentVerifyTicket</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">xml</span>&gt;</span></span><br></pre></td></tr></table></figure><br>你需要保存 ComponentVerifyTicket ，我将他保存到redis, 以 $AppId$_ticket命名。（$AppId$为AppId的值）。</p>
+<p>推送的报文：<br><pre class="brush: xml">
+<xml>
+
+<appid> </appid>
+
+<createtime>1413192605 </createtime>
+
+<infotype> </infotype>
+
+<componentverifyticket> </componentverifyticket>
+
+</xml>
+</pre><br>你需要保存 ComponentVerifyTicket ，我将他保存到redis, 以 $AppId$_ticket命名。（$AppId$为AppId的值）。</p>
 <p>处理完后，返回微信服务器 success 即可。</p>
 <p>2.根据ticket获取component_access_token</p>
 <p>向 <a href="https://api.weixin.qq.com/cgi-bin/component/api_component_token" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/component/api_component_token</a></p>
-<p>post 如下数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;component_appid&quot;:&quot;appid_value&quot; ,</span><br><span class="line"></span><br><span class="line">&quot;component_appsecret&quot;: &quot;appsecret_value&quot;, </span><br><span class="line"></span><br><span class="line">&quot;component_verify_ticket&quot;: &quot;ticket_value&quot; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>其中，appid和appsecret在微信开放平台-》管理中心-》平台详情查看（需要扫码）。</p>
-<p>返回结果示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;component_access_token&quot;:&quot;61W3mEpU66027wgNZ_MhGHNQDHnFATkDa9-2llqrMBjUwxRSNPbVsMmyD-yq8wZETSoE5NQgecigDrSHkPtIYA&quot;, </span><br><span class="line"></span><br><span class="line">&quot;expires_in&quot;:7200</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>我将component_access_token保存到redis, 命名为 $APPID$_token.</p>
+<p>post 如下数据<br><pre class="brush: html">
+{
+
+"component_appid":"appid_value" ,
+
+"component_appsecret": "appsecret_value", 
+
+"component_verify_ticket": "ticket_value" 
+
+}
+</pre><br>其中，appid和appsecret在微信开放平台-》管理中心-》平台详情查看（需要扫码）。</p>
+<p>返回结果示例：<br><pre class="brush: html">
+{
+
+"component_access_token":"61W3mEpU66027wgNZ_MhGHNQDHnFATkDa9-2llqrMBjUwxRSNPbVsMmyD-yq8wZETSoE5NQgecigDrSHkPtIYA", 
+
+"expires_in":7200
+
+}
+</pre><br>我将component_access_token保存到redis, 命名为 $APPID$_token.</p>
 <p>3.根据component_access_token获取预授权码pre_auth_code</p>
 <p>向 <a href="https://api.weixin.qq.com/cgi-bin/component/api_create_preauthcode?component_access_token=xxx" target="_blank" rel="noopener">https://api.weixin.qq.com/cgi-bin/component/api_create_preauthcode?component_access_token=xxx</a></p>
-<p>post 如下数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;component_appid&quot;:&quot;appid_value&quot; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>其中，appid在微信开放平台-》管理中心-》平台详情查看。</p>
-<p>返回结果示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&quot;pre_auth_code&quot;:&quot;Cx_Dk6qiBE0Dmx4EmlT3oRfArPvwSQ-oa3NL_fwHM7VI08r52wazoZX2Rhpz1dEw&quot;,</span><br><span class="line"></span><br><span class="line">&quot;expires_in&quot;:3600</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>我将pre_auth_code保存到redis, 命名为 $APPID$_preauth.</p>
+<p>post 如下数据<br><pre class="brush: html">
+{
+
+"component_appid":"appid_value" 
+
+}
+</pre><br>其中，appid在微信开放平台-》管理中心-》平台详情查看。</p>
+<p>返回结果示例：<br><pre class="brush: html">
+{
+
+"pre_auth_code":"Cx_Dk6qiBE0Dmx4EmlT3oRfArPvwSQ-oa3NL_fwHM7VI08r52wazoZX2Rhpz1dEw",
+
+"expires_in":3600
+
+}
+</pre><br>我将pre_auth_code保存到redis, 命名为 $APPID$_preauth.</p>
 <p>注意 1，2，3 都有一定的时效，发布时要做成定时任务。</p>
-<p>4.生成授权链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String url=String.format(&quot;https://mp.weixin.qq.com/cgi-bin/componentloginpage?component_appid=%s&amp;pre_auth_code=%s&amp;redirect_uri=%s&quot;,</span><br><span class="line"></span><br><span class="line">    APPID, RedisUtil.getData(APPID+&quot;_preauth&quot;), &quot;你的平台地址&quot;);</span><br><span class="line"></span><br><span class="line">    System.out.println(url);</span><br></pre></td></tr></table></figure><br>在浏览器中访问，效果如下</p>
+<p>4.生成授权链接<br><pre class="brush: html">
+String url=String.format("https://mp.weixin.qq.com/cgi-bin/componentloginpage?component_appid=%s&pre_auth_code=%s&redirect_uri=%s",
+
+    APPID, RedisUtil.getData(APPID+"_preauth"), "你的平台地址");
+
+    System.out.println(url);
+</pre><br>在浏览器中访问，效果如下</p>
 <p><img src="https://www.yf2017.top/files/147996575200093.png" alt=""></p>
 <p>用微信扫码后，点确认，完成授权。</p>
 <p>【小结一下】</p>
@@ -550,10 +595,40 @@
 <p>5.1 event事件模拟</p>
 <p>当接收到来自 wx570bc396a51b8ff8 的事件消息时，一律回复 普通文本信息，信息内容event + “from_callback”（假定event为LOCATION，则Content为: LOCATIONfrom_callback）</p>
 <p>5.2 固定文本消息应答</p>
-<p>微信推送固定文本信息TESTCOMPONENT_MSG_TYPE_TEXT 到第三方平台地址 ，此时你需要回复固定的文本消息TESTCOMPONENT_MSG_TYPE_TEXT_callback作为应答。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if(msg.equals(&quot;TESTCOMPONENT_MSG_TYPE_TEXT&quot;))&#123;</span><br><span class="line"></span><br><span class="line">                    if(appid.equals(&quot;wx570bc396a51b8ff8&quot;))&#123;</span><br><span class="line"></span><br><span class="line">。。 。处理</span><br><span class="line"></span><br><span class="line">&#125; &#125;</span><br></pre></td></tr></table></figure><br>5.3 固定文本不应答，API检测</p>
+<p>微信推送固定文本信息TESTCOMPONENT_MSG_TYPE_TEXT 到第三方平台地址 ，此时你需要回复固定的文本消息TESTCOMPONENT_MSG_TYPE_TEXT_callback作为应答。<br><pre class="brush: html">
+if(msg.equals("TESTCOMPONENT_MSG_TYPE_TEXT")){
+
+                    if(appid.equals("wx570bc396a51b8ff8")){
+
+。。 。处理
+
+} }
+</pre><br>5.3 固定文本不应答，API检测</p>
 <p>微信会推送一段以QUERY_AUTH_CODE:开头的文本信息，此时需要回复 success .(也就是不做应答）</p>
 <p>然后调用客服API, 发送文本信息 ，文本内容为 $query_auth_code$_from_api。其中 $query_auth_code$ 是微信推送文本中除了 QUERY_AUTH_CODE:的内容。</p>
-<p>示例代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">if(msg.startsWith(&quot;QUERY_AUTH_CODE&quot;))&#123;</span><br><span class="line"></span><br><span class="line">                    if(appid.equals(&quot;wx570bc396a51b8ff8&quot;))&#123;</span><br><span class="line"></span><br><span class="line">                    String auth=msg.replace(&quot;QUERY_AUTH_CODE:&quot;, &quot;&quot;);</span><br><span class="line"></span><br><span class="line">                    System.out.println(&quot;AUTH:&quot;+auth);</span><br><span class="line"></span><br><span class="line">                this.responseOutText(&quot;success&quot;, response);</span><br><span class="line"></span><br><span class="line">                // 调授权换取</span><br><span class="line"></span><br><span class="line">                Compement.getAuthAc(&quot;&quot;, auth, request.getParameter(&quot;openid&quot;));</span><br><span class="line"></span><br><span class="line">                // 调客服</span><br><span class="line"></span><br><span class="line">                return null;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><br>5.4 ticket接收</p>
+<p>示例代码如下：<br><pre class="brush: html">
+if(msg.startsWith("QUERY_AUTH_CODE")){
+
+                    if(appid.equals("wx570bc396a51b8ff8")){
+
+                    String auth=msg.replace("QUERY_AUTH_CODE:", "");
+
+                    System.out.println("AUTH:"+auth);
+
+                this.responseOutText("success", response);
+
+                // 调授权换取
+
+                Compement.getAuthAc("", auth, request.getParameter("openid"));
+
+                // 调客服
+
+                return null;
+
+    }
+
+    }
+</pre><br>5.4 ticket接收</p>
 <p>微信模拟每10分钟的ticket推送，直接回复success 即可。</p>
 <p>至此完成发布前的自动化检测准备工作，可以继续完善你的第三方平台，然后择期全网发布。</p>
 <p>【全文完】</p>
@@ -714,7 +789,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -736,7 +811,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -812,7 +887,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -829,7 +903,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -874,7 +948,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -883,11 +956,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -963,22 +1033,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1337,7 +1402,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1407,11 +1471,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

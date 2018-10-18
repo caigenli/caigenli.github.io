@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml12&amp;lt;!-- 自动扫描(自动注入) --&amp;gt;    &amp;lt;context:component-scan base-package=&quot;com.lcg.demo&quot; /&amp;gt;applationContext-mybatis.xm">
+<meta name="description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml       applationContext-mybatis.xml">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mybatis中使用sqlsession操作数据库">
 <meta property="og:url" content="https://www.yf2017.top/2017/09/07/mybatis中使用sqlsession操作数据库/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml12&amp;lt;!-- 自动扫描(自动注入) --&amp;gt;    &amp;lt;context:component-scan base-package=&quot;com.lcg.demo&quot; /&amp;gt;applationContext-mybatis.xm">
+<meta property="og:description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml       applationContext-mybatis.xml">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-26T09:41:26.909Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mybatis中使用sqlsession操作数据库">
-<meta name="twitter:description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml12&amp;lt;!-- 自动扫描(自动注入) --&amp;gt;    &amp;lt;context:component-scan base-package=&quot;com.lcg.demo&quot; /&amp;gt;applationContext-mybatis.xm">
+<meta name="twitter:description" content="springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。 applactionContext-service.xml       applationContext-mybatis.xml">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-26T17:41:26+08:00">
-                2018-09-26
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  673
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  3
                 </span>
               
             </div>
@@ -500,10 +495,376 @@
 
       
         <p>springmvc+mybatis省略Mapper.java文件，直接用sqlSession操作数据库。</p>
-<p>applactionContext-service.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 自动扫描(自动注入) --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.lcg.demo"</span> /&gt;</span></span><br></pre></td></tr></table></figure><br>applationContext-mybatis.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:tx</span>=<span class="string">"http://www.springframework.org/schema/tx"</span> </span></span><br><span class="line"><span class="tag"><span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/beans </span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/beans/spring-beans-3.0.xsd </span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/context/spring-context-3.0.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/tx </span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/tx/spring-tx-3.0.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/aop </span></span></span><br><span class="line"><span class="tag"><span class="string">http://www.springframework.org/schema/aop/spring-aop-3.0.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">&lt;!-- 引入属性文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"classpath:jdbc.properties"</span> /&gt;</span></span><br><span class="line">     </span><br><span class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"org.apache.commons.dbcp.BasicDataSource"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span> /&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- localhost --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_url&#125;"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_username&#125;"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc_password&#125;"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"initialSize"</span> <span class="attr">value</span>=<span class="string">"5"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxActive"</span> <span class="attr">value</span>=<span class="string">"50"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxIdle"</span> <span class="attr">value</span>=<span class="string">"10"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxWait"</span> <span class="attr">value</span>=<span class="string">"20"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"minIdle"</span> <span class="attr">value</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- myBatis文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"org.mybatis.spring.SqlSessionFactoryBean"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span> /&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"mapperLocations"</span> <span class="attr">value</span>=<span class="string">"classpath:com/lcg/demo/mapping/*.xml"</span> /&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--指定实体类包，自动将实体类的简单类名映射为别名--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"typeAliasesPackage"</span> <span class="attr">value</span>=<span class="string">"com.lcg.demo.model"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- &lt;bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"&gt;</span></span><br><span class="line"><span class="comment">        &lt;property name="basePackage" value="com.lcg.demo.dao" /&gt;</span></span><br><span class="line"><span class="comment">        &lt;property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" /&gt;</span></span><br><span class="line"><span class="comment">    &lt;/bean&gt; --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 配置事务管理器 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"transactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 注解方式配置事物 --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"transactionManager"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>DaoSupport.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package com.lcg.demo.util;  </span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by Seven on 2015/6/12.</span><br><span class="line"> */</span><br><span class="line">public interface DaoSupport &#123;</span><br><span class="line"></span><br><span class="line">    public void insert(QueryHelper queryHelper);</span><br><span class="line"></span><br><span class="line">    public void insert(String method,Object param);</span><br><span class="line"></span><br><span class="line">    public void delete(QueryHelper queryHelper);</span><br><span class="line"></span><br><span class="line">    public void delete(String method,Object o);</span><br><span class="line"></span><br><span class="line">    public void update(QueryHelper queryHelper);</span><br><span class="line"></span><br><span class="line">    public void update(String method,Object o);</span><br><span class="line"></span><br><span class="line">    public&lt;T&gt; T select(QueryHelper queryHelper);</span><br><span class="line"></span><br><span class="line">    public&lt;T&gt; T select(String method,Object o);</span><br><span class="line"></span><br><span class="line">    public&lt;T&gt; List&lt;T&gt; selectList(QueryHelper queryHelper);</span><br><span class="line"></span><br><span class="line">    public&lt;T&gt; List&lt;T&gt; selectList(String method,Object o);</span><br><span class="line"></span><br><span class="line">    public&lt;T&gt; List&lt;T&gt; getPageData(int pageNum,int pageSize,QueryHelper queryHelper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>  </p>
-<p>DaoSupportImpl.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><span class="line">package com.lcg.demo.util; </span><br><span class="line"></span><br><span class="line">import java.util.List;</span><br><span class="line"></span><br><span class="line">import javax.annotation.Resource;</span><br><span class="line"></span><br><span class="line">import org.apache.ibatis.session.SqlSession;</span><br><span class="line">import org.apache.ibatis.session.SqlSessionFactory;</span><br><span class="line">import org.springframework.stereotype.Repository;</span><br><span class="line">import org.springframework.transaction.annotation.Transactional;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by Seven on 2015/6/12.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">@Repository(&quot;daoSupport&quot;)</span><br><span class="line">@Transactional</span><br><span class="line">public class DaoSupportImpl implements DaoSupport&#123;</span><br><span class="line"></span><br><span class="line">    @Resource</span><br><span class="line">    private SqlSessionFactory sqlSessionFactory;</span><br><span class="line"></span><br><span class="line">    private SqlSession sqlSession = null;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取sqlSession.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public SqlSession getSqlSession()&#123;</span><br><span class="line">        if(sqlSession==null)&#123;</span><br><span class="line">            sqlSession = sqlSessionFactory.openSession();</span><br><span class="line">        &#125;</span><br><span class="line">        return sqlSession;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 插入.</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     */</span><br><span class="line">    public void insert(QueryHelper queryHelper) &#123;</span><br><span class="line">        getSqlSession().insert(queryHelper.getMethod(),queryHelper.getRealParams());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 插入.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param param</span><br><span class="line">     */</span><br><span class="line">    public void insert(String method, Object param) &#123;</span><br><span class="line">        getSqlSession().insert(method,param);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 删除.</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     */</span><br><span class="line">    public void delete(QueryHelper queryHelper) &#123;</span><br><span class="line">        getSqlSession().delete(queryHelper.getMethod(),queryHelper.getRealParams());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 删除.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param o</span><br><span class="line">     */</span><br><span class="line">    public void delete(String method, Object o) &#123;</span><br><span class="line">        getSqlSession().delete(method,o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 更新.</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     */</span><br><span class="line">    public void update(QueryHelper queryHelper) &#123;</span><br><span class="line">        getSqlSession().update(queryHelper.getMethod(),queryHelper.getRealParams());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 更新.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param o</span><br><span class="line">     */</span><br><span class="line">    public void update(String method, Object o) &#123;</span><br><span class="line">        getSqlSession().update(method,o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查找一个.</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; T select(QueryHelper queryHelper) &#123;</span><br><span class="line">        return getSqlSession().selectOne(queryHelper.getMethod(),queryHelper.getRealParams());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查找一个.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param o</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; T select(String method, Object o) &#123;</span><br><span class="line">        return getSqlSession().selectOne(method,o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查找多个.</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; List&lt;T&gt; selectList(QueryHelper queryHelper) &#123;</span><br><span class="line">        return getSqlSession().selectList(queryHelper.getMethod(),queryHelper.getRealParams());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查找多个.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param o</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; List&lt;T&gt; selectList(String method, Object o) &#123;</span><br><span class="line">        return getSqlSession().selectList(method,o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 查找所有.</span><br><span class="line">     * @param method</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; List&lt;T&gt; selectWithoutParams(String method) &#123;</span><br><span class="line">        return getSqlSession().selectList(method);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 分页数据.</span><br><span class="line">     * @param pageNum</span><br><span class="line">     * @param pageSize</span><br><span class="line">     * @param queryHelper</span><br><span class="line">     * @param &lt;T&gt;</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public &lt;T&gt; List&lt;T&gt; getPageData(int pageNum, int pageSize, QueryHelper queryHelper) &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>QueryHelper.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">package com.lcg.demo.util; </span><br><span class="line"></span><br><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Map;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by Seven on 2015/6/12.</span><br><span class="line"> */</span><br><span class="line">public class QueryHelper &#123;</span><br><span class="line"></span><br><span class="line">    private String nameSpace;</span><br><span class="line">    private String methodId;</span><br><span class="line">    private Object param;</span><br><span class="line">    private Map&lt;String,Object&gt; params;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置命名空间.</span><br><span class="line">     * @param nameSpace</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public QueryHelper setNameSpace(String nameSpace)&#123;</span><br><span class="line">        this.nameSpace = nameSpace;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置dao方法的ID.</span><br><span class="line">     * @param methodId</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public QueryHelper setMethodId(String methodId)&#123;</span><br><span class="line">        this.methodId = methodId;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置一个参数.</span><br><span class="line">     * @param param</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public QueryHelper setParam(Object param)&#123;</span><br><span class="line">        this.param = param;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 设置多个参数.</span><br><span class="line">     * @param key</span><br><span class="line">     * @param value</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public QueryHelper setParams(String key,Object value)&#123;</span><br><span class="line">        if(params == null)&#123;</span><br><span class="line">            params = new HashMap&lt;String, Object&gt;();</span><br><span class="line">        &#125;</span><br><span class="line">        params.put(key,value);</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取一个参数.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public Object getParam()&#123;</span><br><span class="line">        return param;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获得多个参数.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public Map&lt;String,Object&gt; getParams()&#123;</span><br><span class="line">        return params;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取非空的参数.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public Object getRealParams()&#123;</span><br><span class="line">        return param == null ? params : param;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 得到结果.</span><br><span class="line">     * @return</span><br><span class="line">     */</span><br><span class="line">    public String getMethod()&#123;</span><br><span class="line">        return nameSpace+&quot;.&quot;+methodId;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>  </p>
-<p>BlogServiceImpl.java<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package com.lcg.demo.service.impl;</span><br><span class="line"></span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line">import com.lcg.demo.service.BlogService;</span><br><span class="line">import com.lcg.demo.util.DaoSupport;</span><br><span class="line"></span><br><span class="line">@Service</span><br><span class="line">public class BlogServiceImpl implements BlogService&#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private DaoSupport daoSupport;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int count() &#123;</span><br><span class="line">        int totleRecord = daoSupport.select(&quot;Blog.getTotleRecord&quot;,null);</span><br><span class="line">        return totleRecord;</span><br><span class="line">//        Page page = new Page(pageNum, Configuration.pageSize,totleRecord);</span><br><span class="line">//        QueryHelper helper = new QueryHelper();</span><br><span class="line">//        helper.setNameSpace(&quot;Article&quot;)</span><br><span class="line">//                .setMethodId(&quot;getPageData&quot;)</span><br><span class="line">//                .setParams(&quot;startIndex&quot;,page.getStartIndex())</span><br><span class="line">//                .setParams(&quot;pageSize&quot;,page.getPageSize());</span><br><span class="line">//        List list = daoSupport.selectList(helper);</span><br><span class="line">//        page.setList(list);</span><br><span class="line">//        return page;</span><br><span class="line">    &#125;</span><br><span class="line">     </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>applactionContext-service.xml<br><pre class="brush: xml">
+<!-- 自动扫描(自动注入) -->
+    <context:component-scan base-package="com.lcg.demo" >
+</context:component-scan base-package="com.lcg.demo" ></pre><br>applationContext-mybatis.xml<br><pre class="brush: xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http: www.springframework.org="" schema="" beans" ="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  ="" xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"  xsi:schemalocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+">
+
+   <!-- 引入属性文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties" >
+     
+ <bean id="datasource" class="org.apache.commons.dbcp.basicdatasource">
+        <property name="driverclassname" value="com.mysql.jdbc.driver" > 
+        <!-- localhost -->
+        <property name="url" value="${jdbc_url}" >
+        <property name="username" value="${jdbc_username}" >
+        <property name="password" value="${jdbc_password}" >
+        <property name="initialsize" value="5" >
+        <property name="maxactive" value="50" >
+        <property name="maxidle" value="10" >
+        <property name="maxwait" value="20" >
+        <property name="minidle" value="1" >
+
+    
+    <!-- myBatis文件 -->
+    <bean id="sqlsessionfactory" class="org.mybatis.spring.sqlsessionfactorybean">
+        <property name="datasource" ref="datasource" >
+        <!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+        <property name="mapperlocations" value="classpath:com lcg="" demo="" mapping="" *.xml" ="">
+        <!--指定实体类包，自动将实体类的简单类名映射为别名-->
+        <property name="typealiasespackage" value="com.lcg.demo.model">
+    
+
+    <!-- <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.lcg.demo.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean> -->
+
+    <!-- 配置事务管理器 -->
+    <bean id="transactionmanager" class="org.springframework.jdbc.datasource.datasourcetransactionmanager">
+        <property name="datasource" ref="datasource" >
+    
+
+    <!-- 注解方式配置事物 -->
+     <tx:annotation-driven transaction-manager="transactionmanager" >
+
+
+</tx:annotation-driven transaction-manager="transactionmanager" ></property name="datasource" ref="datasource" ></bean id="transactionmanager" class="org.springframework.jdbc.datasource.datasourcetransactionmanager"></property name="typealiasespackage" value="com.lcg.demo.model"></property name="mapperlocations" value="classpath:com></property name="datasource" ref="datasource" ></bean id="sqlsessionfactory" class="org.mybatis.spring.sqlsessionfactorybean"></property name="minidle" value="1" ></property name="maxwait" value="20" ></property name="maxidle" value="10" ></property name="maxactive" value="50" ></property name="initialsize" value="5" ></property name="password" value="${jdbc_password}" ></property name="username" value="${jdbc_username}" ></property name="url" value="${jdbc_url}" ></property name="driverclassname" value="com.mysql.jdbc.driver" ></bean id="datasource" class="org.apache.commons.dbcp.basicdatasource"></context:property-placeholder location="classpath:jdbc.properties" ></beans xmlns="http:></pre></p>
+<p>DaoSupport.java<br><pre class="brush: html">
+package com.lcg.demo.util;  
+
+import java.util.List;
+
+/**
+ * Created by Seven on 2015/6/12.
+ */
+public interface DaoSupport {
+
+    public void insert(QueryHelper queryHelper);
+
+    public void insert(String method,Object param);
+
+    public void delete(QueryHelper queryHelper);
+
+    public void delete(String method,Object o);
+
+    public void update(QueryHelper queryHelper);
+
+    public void update(String method,Object o);
+
+    public<t> T select(QueryHelper queryHelper);
+
+    public<t> T select(String method,Object o);
+
+    public<t> List<t> selectList(QueryHelper queryHelper);
+
+    public<t> List<t> selectList(String method,Object o);
+
+    public<t> List<t> getPageData(int pageNum,int pageSize,QueryHelper queryHelper);
+}
+</t></t></t></t></t></t></t></t></pre>  </p>
+<p>DaoSupportImpl.java<br><pre class="brush: html">
+package com.lcg.demo.util; 
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ * Created by Seven on 2015/6/12.
+ */
+
+@Repository("daoSupport")
+@Transactional
+public class DaoSupportImpl implements DaoSupport{
+
+    @Resource
+    private SqlSessionFactory sqlSessionFactory;
+
+    private SqlSession sqlSession = null;
+
+    /**
+     * 获取sqlSession.
+     * @return
+     */
+    public SqlSession getSqlSession(){
+        if(sqlSession==null){
+            sqlSession = sqlSessionFactory.openSession();
+        }
+        return sqlSession;
+    }
+
+
+    /**
+     * 插入.
+     * @param queryHelper
+     */
+    public void insert(QueryHelper queryHelper) {
+        getSqlSession().insert(queryHelper.getMethod(),queryHelper.getRealParams());
+    }
+
+    /**
+     * 插入.
+     * @param method
+     * @param param
+     */
+    public void insert(String method, Object param) {
+        getSqlSession().insert(method,param);
+    }
+
+    /**
+     * 删除.
+     * @param queryHelper
+     */
+    public void delete(QueryHelper queryHelper) {
+        getSqlSession().delete(queryHelper.getMethod(),queryHelper.getRealParams());
+    }
+
+    /**
+     * 删除.
+     * @param method
+     * @param o
+     */
+    public void delete(String method, Object o) {
+        getSqlSession().delete(method,o);
+    }
+
+    /**
+     * 更新.
+     * @param queryHelper
+     */
+    public void update(QueryHelper queryHelper) {
+        getSqlSession().update(queryHelper.getMethod(),queryHelper.getRealParams());
+    }
+
+    /**
+     * 更新.
+     * @param method
+     * @param o
+     */
+    public void update(String method, Object o) {
+        getSqlSession().update(method,o);
+    }
+
+    /**
+     * 查找一个.
+     * @param queryHelper
+     * @param <t>
+     * @return
+     */
+    public <t> T select(QueryHelper queryHelper) {
+        return getSqlSession().selectOne(queryHelper.getMethod(),queryHelper.getRealParams());
+    }
+
+    /**
+     * 查找一个.
+     * @param method
+     * @param o
+     * @param <t>
+     * @return
+     */
+    public <t> T select(String method, Object o) {
+        return getSqlSession().selectOne(method,o);
+    }
+
+    /**
+     * 查找多个.
+     * @param queryHelper
+     * @param <t>
+     * @return
+     */
+    public <t> List<t> selectList(QueryHelper queryHelper) {
+        return getSqlSession().selectList(queryHelper.getMethod(),queryHelper.getRealParams());
+    }
+
+    /**
+     * 查找多个.
+     * @param method
+     * @param o
+     * @param <t>
+     * @return
+     */
+    public <t> List<t> selectList(String method, Object o) {
+        return getSqlSession().selectList(method,o);
+    }
+
+    /**
+     * 查找所有.
+     * @param method
+     * @param <t>
+     * @return
+     */
+    public <t> List<t> selectWithoutParams(String method) {
+        return getSqlSession().selectList(method);
+    }
+
+    /**
+     * 分页数据.
+     * @param pageNum
+     * @param pageSize
+     * @param queryHelper
+     * @param <t>
+     * @return
+     */
+    public <t> List<t> getPageData(int pageNum, int pageSize, QueryHelper queryHelper) {
+        return null;
+    }
+}
+</t></t></t></t></t></t></t></t></t></t></t></t></t></t></t></t></pre><br>QueryHelper.java<br><pre class="brush: html">
+package com.lcg.demo.util; 
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Created by Seven on 2015/6/12.
+ */
+public class QueryHelper {
+
+    private String nameSpace;
+    private String methodId;
+    private Object param;
+    private Map<string,object> params;
+
+    /**
+     * 设置命名空间.
+     * @param nameSpace
+     * @return
+     */
+    public QueryHelper setNameSpace(String nameSpace){
+        this.nameSpace = nameSpace;
+        return this;
+    }
+
+    /**
+     * 设置dao方法的ID.
+     * @param methodId
+     * @return
+     */
+    public QueryHelper setMethodId(String methodId){
+        this.methodId = methodId;
+        return this;
+    }
+
+    /**
+     * 设置一个参数.
+     * @param param
+     * @return
+     */
+    public QueryHelper setParam(Object param){
+        this.param = param;
+        return this;
+    }
+
+    /**
+     * 设置多个参数.
+     * @param key
+     * @param value
+     * @return
+     */
+    public QueryHelper setParams(String key,Object value){
+        if(params == null){
+            params = new HashMap<string, object>();
+        }
+        params.put(key,value);
+        return this;
+    }
+
+    /**
+     * 获取一个参数.
+     * @return
+     */
+    public Object getParam(){
+        return param;
+    }
+
+    /**
+     * 获得多个参数.
+     * @return
+     */
+    public Map<string,object> getParams(){
+        return params;
+    }
+
+    /**
+     * 获取非空的参数.
+     * @return
+     */
+    public Object getRealParams(){
+        return param == null ? params : param;
+    }
+
+
+    /**
+     * 得到结果.
+     * @return
+     */
+    public String getMethod(){
+        return nameSpace+"."+methodId;
+    }
+
+
+
+}
+
+</string,object></string, object></string,object></pre>  </p>
+<p>BlogServiceImpl.java<br><pre class="brush: html">
+package com.lcg.demo.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.lcg.demo.service.BlogService;
+import com.lcg.demo.util.DaoSupport;
+
+@Service
+public class BlogServiceImpl implements BlogService{
+    @Autowired
+    private DaoSupport daoSupport;
+
+    @Override
+    public int count() {
+        int totleRecord = daoSupport.select("Blog.getTotleRecord",null);
+        return totleRecord;
+//        Page page = new Page(pageNum, Configuration.pageSize,totleRecord);
+//        QueryHelper helper = new QueryHelper();
+//        helper.setNameSpace("Article")
+//                .setMethodId("getPageData")
+//                .setParams("startIndex",page.getStartIndex())
+//                .setParams("pageSize",page.getPageSize());
+//        List list = daoSupport.selectList(helper);
+//        page.setList(list);
+//        return page;
+    }
+     
+}
+</pre></p>
 
       
     </div>
@@ -660,7 +1021,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -682,7 +1043,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -758,7 +1119,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -775,7 +1135,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -820,7 +1180,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -829,11 +1188,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -909,22 +1265,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1283,7 +1634,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1353,11 +1703,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

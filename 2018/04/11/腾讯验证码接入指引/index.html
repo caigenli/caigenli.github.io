@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js1&amp;lt;script src=&quot;https://ssl.captcha.qq.com/TCaptcha.js&quot;&amp;gt;&amp;lt;/script&amp;gt;在你页面需要点击验证的">
+<meta name="description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="腾讯验证码接入指引">
 <meta property="og:url" content="https://www.yf2017.top/2018/04/11/腾讯验证码接入指引/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js1&amp;lt;script src=&quot;https://ssl.captcha.qq.com/TCaptcha.js&quot;&amp;gt;&amp;lt;/script&amp;gt;在你页面需要点击验证的">
+<meta property="og:description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T07:00:38.224Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="腾讯验证码接入指引">
-<meta name="twitter:description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js1&amp;lt;script src=&quot;https://ssl.captcha.qq.com/TCaptcha.js&quot;&amp;gt;&amp;lt;/script&amp;gt;在你页面需要点击验证的">
+<meta name="twitter:description" content="网站验证码有许多种，传统的图片验证码，现在比较流行的滑动拼图验证码。   在某网站看到有使用腾讯验证码的，顺便研究了一下。 从接入指引进入 腾讯验证码  首先创建场景。得到分配的appid, 和secret。 在你的网页引入js">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-11T15:00:38+08:00">
-                2018-09-11
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  463
+                  87
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -503,13 +498,77 @@
 <p>在某网站看到有使用腾讯验证码的，顺便研究了一下。</p>
 <p>从接入指引进入 <a href="https://open.captcha.qq.com/cap_web/experience-slidepass.html" target="_blank" rel="noopener">腾讯验证码</a> </p>
 <p>首先创建场景。得到分配的appid, 和secret。</p>
-<p>在你的网页引入js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://ssl.captcha.qq.com/TCaptcha.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure><br>在你页面需要点击验证的元素加入</p>
+<p>在你的网页引入js<br><pre class="brush: js">
+<script src="https: ssl.captcha.qq.com="" tcaptcha.js"="">
+</script src="https:></pre><br>在你页面需要点击验证的元素加入</p>
 <p> id=”TencentCaptcha”<br>        data-appid=”你的appid”<br>        data-cbfn=”callback”</p>
 <p>比如  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"TencentCaptcha"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-appid</span>=<span class="string">"你的appid"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">data-cbfn</span>=<span class="string">"callback"</span>&gt;</span>验证<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>加入js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">window</span>.callback = <span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;    <span class="built_in">console</span>.log(res)    <span class="comment">// res（未通过验证）= &#123;ret: 1, ticket: null&#125;</span></span><br><span class="line">    <span class="comment">// res（验证成功） = &#123;ret: 0, ticket: "String", randstr: "String"&#125;</span></span><br><span class="line">    <span class="keyword">if</span>(res.ret === <span class="number">0</span>)&#123;</span><br><span class="line">        alert(res.ticket)   <span class="comment">// 票据</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         最好在表单设置两个隐藏域</span></span><br><span class="line"><span class="comment">         &lt;input type="hidden" name="ticket" id="ticket"/&gt;</span></span><br><span class="line"><span class="comment">         &lt;input type="hidden" name="randstr" id="randstr"/&gt;</span></span><br><span class="line"><span class="comment">         然后赋值</span></span><br><span class="line"><span class="comment">         $("#ticket").val(res.ticket);</span></span><br><span class="line"><span class="comment">         $("#randstr").val(res.randstr);</span></span><br><span class="line"><span class="comment">         </span></span><br><span class="line"><span class="comment">         最好 form提交 比如</span></span><br><span class="line"><span class="comment">         $("#form1").submit();</span></span><br><span class="line"><span class="comment">          */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<pre class="brush: html">
+<button id="tencentcaptcha"         data-appid="你的appid"         data-cbfn="callback">验证
+</button id="tencentcaptcha"></pre>
+<p>加入js<br><pre class="brush: js">
+<script>
+window.callback = function(res){    console.log(res)    // res（未通过验证）= {ret: 1, ticket: null}
+    // res（验证成功） = {ret: 0, ticket: "String", randstr: "String"}
+    if(res.ret === 0){
+        alert(res.ticket)   // 票据
+        /**
+         最好在表单设置两个隐藏域
+         <input type="hidden" name="ticket" id="ticket"/>
+         <input type="hidden" name="randstr" id="randstr"/>
+         然后赋值
+         $("#ticket").val(res.ticket);
+         $("#randstr").val(res.randstr);
+         
+         最好 form提交 比如
+         $("#form1").submit();
+          */
+    }
+}
+</script>
+</pre></p>
 <p>服务端以php代码为例</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">http_post_data</span><span class="params">($url, $data_string, $header)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//echo $url;</span></span><br><span class="line">    <span class="comment">//print_r($data_string   );</span></span><br><span class="line">    $ch = curl_init();</span><br><span class="line">    curl_setopt($ch, CURLOPT_POST, <span class="number">1</span>);</span><br><span class="line">    $SSL = substr($url, <span class="number">0</span>, <span class="number">8</span>) == <span class="string">"https://"</span> ? <span class="keyword">true</span> : <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">if</span>($SSL)&#123;</span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, <span class="keyword">false</span>); <span class="comment">// 信任任何证书</span></span><br><span class="line">        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, <span class="keyword">false</span>); <span class="comment">// 检查证书中是否设置域名（为0也可以，就是连域名存在与否都不验证了）</span></span><br><span class="line">    &#125;</span><br><span class="line">    curl_setopt($ch, CURLOPT_URL, $url);</span><br><span class="line">    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);</span><br><span class="line">   <span class="keyword">if</span>($header) curl_setopt($ch, CURLOPT_HTTPHEADER,$header) ;</span><br><span class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="keyword">TRUE</span>);</span><br><span class="line">    $response= curl_exec($ch);</span><br><span class="line">    curl_close($ch);</span><br><span class="line">    <span class="keyword">return</span> $response;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 验证码校验</span></span><br><span class="line">$url=<span class="string">"https://ssl.captcha.qq.com/ticket/verify"</span>;</span><br><span class="line">$appid=<span class="string">"你的appid"</span>;</span><br><span class="line">$AppSecretKey=<span class="string">"你的secret"</span>;</span><br><span class="line">$Ticket=I(<span class="string">'post.ticket'</span>);</span><br><span class="line">$Randstr=I(<span class="string">'post.randstr'</span>);</span><br><span class="line">$UserIP= $_SERVER[<span class="string">"REMOTE_ADDR"</span>];</span><br><span class="line">$data=<span class="string">"aid=$appid&amp;AppSecretKey=$AppSecretKey&amp;Ticket=$Ticket&amp;Randstr=$Randstr&amp;UserIP=$UserIP"</span>;</span><br><span class="line">$res=$util-&gt;http_post_data($url, $data);</span><br><span class="line"><span class="comment">//echo $res;</span></span><br><span class="line">$j=json_decode($res);</span><br><span class="line">$rep= $j-&gt;response;</span><br><span class="line"><span class="comment">//echo $rep;</span></span><br><span class="line"><span class="keyword">if</span>($rep!=<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">$this</span>-&gt;assign(<span class="string">'error'</span>,<span class="string">'验证码错误 Wrong Capcha.'</span>.$j-&gt;err_msg);</span><br><span class="line">    <span class="keyword">$this</span>-&gt;display();</span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// TODO 你原先的登录逻辑</span></span><br></pre></td></tr></table></figure>
+<pre class="brush: php">
+<?php
+function http_post_data($url, $data_string, $header) {
+    //echo $url;
+    //print_r($data_string   );
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_POST, 1);
+    $SSL = substr($url, 0, 8) == "https://" ? true : false;
+    if($SSL){
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // 信任任何证书
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); // 检查证书中是否设置域名（为0也可以，就是连域名存在与否都不验证了）
+    }
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+   if($header) curl_setopt($ch, CURLOPT_HTTPHEADER,$header) ;
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    $response= curl_exec($ch);
+    curl_close($ch);
+    return $response;
+}
+
+// 验证码校验
+$url="https://ssl.captcha.qq.com/ticket/verify";
+$appid="你的appid";
+$AppSecretKey="你的secret";
+$Ticket=I('post.ticket');
+$Randstr=I('post.randstr');
+$UserIP= $_SERVER["REMOTE_ADDR"];
+$data="aid=$appid&AppSecretKey=$AppSecretKey&Ticket=$Ticket&Randstr=$Randstr&UserIP=$UserIP";
+$res=$util->http_post_data($url, $data);
+//echo $res;
+$j=json_decode($res);
+$rep= $j->response;
+//echo $rep;
+if($rep!=1) {
+    $this->assign('error','验证码错误 Wrong Capcha.'.$j->err_msg);
+    $this->display();
+    exit();
+}
+// TODO 你原先的登录逻辑
+</pre>
 <p>至此，集成完毕。</p>
 
       
@@ -667,7 +726,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -689,7 +748,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -765,7 +824,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -782,7 +840,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -827,7 +885,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -836,11 +893,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -916,22 +970,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1290,7 +1339,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1360,11 +1408,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

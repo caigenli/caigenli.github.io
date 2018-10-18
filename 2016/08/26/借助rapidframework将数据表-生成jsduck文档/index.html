@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板1234567891011121314151617templates/$&amp;#123;className&amp;#125;.js&amp;lt;#include &quot;/macro.include&quot;/&amp;gt; &amp;lt;#assign className = table.className&amp;gt;   &amp;lt;#assign classNam">
+<meta name="description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板 templates/${className}.js           /**  * ${className} ${tableName}  *   * @class Bus.Hq.Sys.User.Web.${className}  */   /**  * @cfg {${column.javaType} (${col">
 <meta property="og:type" content="article">
 <meta property="og:title" content="借助rapidframework将数据表 生成jsduck文档">
 <meta property="og:url" content="https://www.yf2017.top/2016/08/26/借助rapidframework将数据表-生成jsduck文档/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板1234567891011121314151617templates/$&amp;#123;className&amp;#125;.js&amp;lt;#include &quot;/macro.include&quot;/&amp;gt; &amp;lt;#assign className = table.className&amp;gt;   &amp;lt;#assign classNam">
+<meta property="og:description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板 templates/${className}.js           /**  * ${className} ${tableName}  *   * @class Bus.Hq.Sys.User.Web.${className}  */   /**  * @cfg {${column.javaType} (${col">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-14T09:23:14.841Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="借助rapidframework将数据表 生成jsduck文档">
-<meta name="twitter:description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板1234567891011121314151617templates/$&amp;#123;className&amp;#125;.js&amp;lt;#include &quot;/macro.include&quot;/&amp;gt; &amp;lt;#assign className = table.className&amp;gt;   &amp;lt;#assign classNam">
+<meta name="twitter:description" content="注意windows下下载jssdk 5.3.4 版本（不要高于这个版本） 模板 templates/${className}.js           /**  * ${className} ${tableName}  *   * @class Bus.Hq.Sys.User.Web.${className}  */   /**  * @cfg {${column.javaType} (${col">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-14T17:23:14+08:00">
-                2018-09-14
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -462,7 +457,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  372
+                  69
                 </span>
               
 
@@ -478,7 +473,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -500,7 +495,57 @@
 
       
         <p>注意windows下下载jssdk 5.3.4 版本（不要高于这个版本）</p>
-<p>模板<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">templates/$&#123;className&#125;.js</span><br><span class="line"></span><br><span class="line">&lt;#include "/macro.include"/&gt; </span><br><span class="line">&lt;#assign className = table.className&gt;   </span><br><span class="line">&lt;#assign classNameLower = className?uncap_first&gt;</span><br><span class="line">&lt;#assign tableName = table.tableAlias&gt; </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * $&#123;className&#125; $&#123;tableName&#125;</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * @class &lt;#if className[0..2]=='Bus'&gt;Bus.&lt;/#if&gt;&lt;#if className[0..1]=='Hq'&gt;Hq.&lt;/#if&gt;&lt;#if className[0..2]=='Sys'&gt;Sys.&lt;/#if&gt;&lt;#if className[0..3]=='User'&gt;User.&lt;/#if&gt;&lt;#if className[0..2]=='Web'&gt;Web.&lt;/#if&gt;$&#123;className&#125;</span></span><br><span class="line"><span class="comment"> */</span> </span><br><span class="line">&lt;#list table.columns as column&gt;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @cfg &#123;$&#123;column.javaType&#125; ($&#123;column.size&#125;)&#125;  $&#123;column.columnNameLower&#125; </span></span><br><span class="line"><span class="comment"> * &lt;#if column.pk&gt;【主键】&lt;/#if&gt;$&#123;column.columnAlias&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">&lt;<span class="regexp">/#list&gt;</span></span><br></pre></td></tr></table></figure><br>生成好js文件后，用java读取目录的方法获取各文件的名称：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">       </span><br><span class="line">        String path=&quot;D:/adoc/jsbook/src/js&quot;;</span><br><span class="line">        File file=new File(path);</span><br><span class="line">        File[] tempList = file.listFiles();</span><br><span class="line">//      System.out.println(&quot;该目录下对象个数：&quot;+tempList.length);</span><br><span class="line">        for (int i = 0; i &lt; tempList.length; i++) &#123;</span><br><span class="line">         if (tempList[i].isFile()) &#123;</span><br><span class="line">          System.out.println(&quot;&quot;src/js/&quot;+tempList[i].getName()+&quot;&quot;,&quot;);</span><br><span class="line">         &#125;</span><br><span class="line">         if (tempList[i].isDirectory()) &#123;</span><br><span class="line">          //System.out.println(&quot;文件夹：&quot;+tempList[i]);</span><br><span class="line">         &#125;</span><br><span class="line">        &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><br>Jsduck的config文件config.json：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">         &quot;--output&quot;: &quot;docs&quot;,</span><br><span class="line">         &quot;--welcome&quot;: &quot;welcome.html&quot;,</span><br><span class="line">         &quot;--title&quot;: &quot;文档中心&quot;,</span><br><span class="line">         &quot;--&quot;: [</span><br><span class="line">&quot;src/js/AcctGeneralLedger.js&quot;,</span><br><span class="line">…</span><br><span class="line">],</span><br><span class="line">         &quot;--head-html&quot;:&quot;&lt;link rel=&quot;stylesheet&quot; href=&quot;../style.css&quot; type=&quot;text/css&quot;&gt;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>run.bat<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">rem   _         _            _   </span><br><span class="line">rem  (_)___  __| |_   _  ___| | __</span><br><span class="line">rem  | / __|/ _` | | | |/ __| |/ /</span><br><span class="line">rem  | \\__  (_| | |_| | (__|   &lt;</span><br><span class="line">rem _/ |___/\\__,_|\\__,_|\\___|_|\\_</span><br><span class="line">rem|__/ </span><br><span class="line">rem ***</span><br><span class="line">d:</span><br><span class="line">cd d:adocjsbook</span><br><span class="line">d:adocjsduck.exe --config config.json</span><br><span class="line"> </span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p>
+<p>模板<br><pre class="brush: js">
+templates/${className}.js
+
+<#include " macro.include"=""> 
+<#assign classname = table.classname>   
+<#assign classnamelower = classname?uncap_first>
+<#assign tablename = table.tablealias> 
+/**
+ * ${className} ${tableName}
+ * 
+ * @class <#if classname[0..2]=='bus'>Bus.<#if classname[0..1]=='hq'>Hq.<#if classname[0..2]=='sys'>Sys.<#if classname[0..3]=='user'>User.<#if classname[0..2]=='web'>Web.${className}
+ */ 
+<#list table.columns as column>
+/**
+ * @cfg {${column.javaType} (${column.size})}  ${column.columnNameLower} 
+ * <#if column.pk>【主键】${column.columnAlias}
+ */
+
+</#if column.pk></#list table.columns as column></#if classname[0..2]=='web'></#if classname[0..3]=='user'></#if classname[0..2]=='sys'></#if classname[0..1]=='hq'></#if classname[0..2]=='bus'></#assign tablename = table.tablealias></#assign classnamelower = classname?uncap_first></#assign classname = table.classname></#include "></pre><br>生成好js文件后，用java读取目录的方法获取各文件的名称：<br><pre class="brush: html">
+public static void main(String[] args) {
+       
+        String path="D:/adoc/jsbook/src/js";
+        File file=new File(path);
+        File[] tempList = file.listFiles();
+//      System.out.println("该目录下对象个数："+tempList.length);
+        for (int i = 0; i < templist.length; i++) {          if (templist[i].isfile()) {=""           system.out.println(""src="" js="" "+templist[i].getname()+"",");=""          }=""          if (templist[i].isdirectory()) {=""           ="" system.out.println("文件夹："+templist[i]);=""         }=""    }="" <="" pre=""><br>Jsduck的config文件config.json：<br><pre class="brush: html">
+{
+         "--output": "docs",
+         "--welcome": "welcome.html",
+         "--title": "文档中心",
+         "--": [
+"src/js/AcctGeneralLedger.js",
+…
+],
+         "--head-html":"<link rel="stylesheet" href=".. style.css" type="text/css">"
+}
+</link rel="stylesheet" href="..></pre><br>run.bat<br><pre class="brush: html">
+@echo off
+rem   _         _            _   
+rem  (_)___  __| |_   _  ___| | __
+rem  | / __|/ _` | | | |/ __| |/ /
+rem  | \\__  (_| | |_| | (__|   <
+rem _/ |___/\\__,_|\\__,_|\\___|_|\\_
+rem|__/ 
+rem ***
+d:
+cd d:adocjsbook
+d:adocjsduck.exe --config config.json
+ 
+pause
+</pre></ templist.length; i++) {></pre></p>
 
       
     </div>
@@ -657,7 +702,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -679,7 +724,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -755,7 +800,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -772,7 +816,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -817,7 +861,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -826,11 +869,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -906,22 +946,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1280,7 +1315,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1350,11 +1384,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>

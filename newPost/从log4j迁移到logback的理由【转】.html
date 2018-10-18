@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+
+
+  
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta name="baidu-site-verification" content="" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="1C1XSuJ8TgM2O0mcZvsgzEdy0IdRZOJfxDYPyh18U9Q" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/lqz.jpg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lqz.jpg?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lqz.jpg?v=5.1.3">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="以下为英文原版内容：转自 http://logback.qos.ch/reasonsToSwitch.html  Reasons to prefer logback over log4jLogback brings a very large number of improvements over log4j, big and small. They are too many to enumerat">
+<meta property="og:type" content="website">
+<meta property="og:title" content="从log4j迁移到logback的理由【转】">
+<meta property="og:url" content="https://www.yf2017.top/newPost/从log4j迁移到logback的理由【转】.html">
+<meta property="og:site_name" content="蓝旗子">
+<meta property="og:description" content="以下为英文原版内容：转自 http://logback.qos.ch/reasonsToSwitch.html  Reasons to prefer logback over log4jLogback brings a very large number of improvements over log4j, big and small. They are too many to enumerat">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-18T05:05:08.293Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从log4j迁移到logback的理由【转】">
+<meta name="twitter:description" content="以下为英文原版内容：转自 http://logback.qos.ch/reasonsToSwitch.html  Reasons to prefer logback over log4jLogback brings a very large number of improvements over log4j, big and small. They are too many to enumerat">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.yf2017.top/newPost/从log4j迁移到logback的理由【转】.html"/>
+
+
+
+
+
+  <title>从log4j迁移到logback的理由【转】 | 蓝旗子</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-111723881-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<script type="text/javascript" src="/js/src/love.js"></script>
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
+<link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  
+  
+    
+  
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蓝旗子</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-daohang">
+          <a href="/2018/09/05/daohang/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h2 class="post-title" itemprop="name headline">从log4j迁移到logback的理由【转】</h2>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <p>以下为英文原版内容：转自 <a href="http://logback.qos.ch/reasonsToSwitch.html" target="_blank" rel="noopener">http://logback.qos.ch/reasonsToSwitch.html</a> </p>
+<h2 id="Reasons-to-prefer-logback-over-log4j"><a href="#Reasons-to-prefer-logback-over-log4j" class="headerlink" title="Reasons to prefer logback over log4j"></a>Reasons to prefer logback over log4j</h2><p>Logback brings a very large number of improvements over log4j, big and small. They are too many to enumerate exhaustively. Nevertheless, here is a non-exhaustive list of reasons for switching to logback from log4j. Keep in mind that logback is conceptually very similar to log4j as both projects were founded by the same developer. If you are already familiar with log4j, you will quickly feel at home using logback. If you like log4j, you will probably love logback.</p>
+<h3 id="Faster-implementation"><a href="#Faster-implementation" class="headerlink" title="Faster implementation"></a>Faster implementation</h3><p>Based on our previous work on log4j, logback internals have been re-written to perform about ten times faster on certain critical execution paths. Not only are logback components faster, they have a smaller memory footprint as well.</p>
+<h3 id="Extensive-battery-of-tests"><a href="#Extensive-battery-of-tests" class="headerlink" title="Extensive battery of tests"></a>Extensive battery of tests</h3><p>Logback comes with a very extensive battery of tests developed over the course of several years and untold hours of work. While log4j is also tested, logback takes testing to a completely different level. In our opinion, this is the single most important reason to prefer logback over log4j. You want your logging framework to be rock solid and dependable even under adverse conditions.</p>
+<h3 id="logback-classic-speaks-SLF4J-natively"><a href="#logback-classic-speaks-SLF4J-natively" class="headerlink" title="logback-classic speaks SLF4J natively"></a>logback-classic speaks SLF4J natively</h3><p>Since the <code>Logger</code> class in logback-classic implements the SLF4J API natively, you incur zero overhead when invoking an SLF4J logger with logback-classic as the underlying implementation. Moreover, since logback-classic strongly encourages the use of SLF4J as its client API, if you need to switch to log4j or to j.u.l., you can do so by replacing one jar file with another. You will not need to touch your code logging via the SLF4J API. This can drastically reduce the work involved in switching logging frameworks.</p>
+<h3 id="Extensive-documentation"><a href="#Extensive-documentation" class="headerlink" title="Extensive documentation"></a>Extensive documentation</h3><p>Logback ships with detailed and constantly updated documentation.</p>
+<h3 id="Configuration-files-in-XML-or-Groovy"><a href="#Configuration-files-in-XML-or-Groovy" class="headerlink" title="Configuration files in XML or Groovy"></a>Configuration files in XML or Groovy</h3><p>The traditional way of configuring logback is via an XML file. Most of the examples in the documentation use this XML syntax. However, as of logback version 0.9.22,<a href="http://logback.qos.ch/manual/groovy.html" target="_blank" rel="noopener">configuration files written in Groovy</a> are also supported. Compared to XML, Groovy-style configuration is more intuitive, consistent and has a shorter syntax.</p>
+<p>There is also a <a href="http://logback.qos.ch/translator/asGroovy.html" target="_blank" rel="noopener">tool to automatically migrate your logback.xml files to logback.groovy</a>.</p>
+<h3 id="Automatic-reloading-of-configuration-files"><a href="#Automatic-reloading-of-configuration-files" class="headerlink" title="Automatic reloading of configuration files"></a>Automatic reloading of configuration files</h3><p>Logback-classic can <a href="http://logback.qos.ch/manual/configuration.html#autoScan" target="_blank" rel="noopener">automatically reload its configuration file upon modification</a>. The scanning process is fast, contention-free, and dynamically scales to millions of invocations per second spread over hundreds of threads. It also plays well within application servers and more generally within the JEE environment as it does <em>not</em> involve the creation of a separate thread for scanning.</p>
+<h3 id="Graceful-recovery-from-I-O-failures"><a href="#Graceful-recovery-from-I-O-failures" class="headerlink" title="Graceful recovery from I/O failures"></a>Graceful recovery from I/O failures</h3><p>Logback’s <code>FileAppender</code> and all its sub-classes, including <code>RollingFileAppender</code>, can gracefully recover from I/O failures. Thus, if a file server fails temporarily, you no longer need to restart your application just to get logging working again. As soon as the file server comes back up, the relevant logback appender will transparently and quickly recover from the previous error condition.</p>
+<h3 id="Automatic-removal-of-old-log-archives"><a href="#Automatic-removal-of-old-log-archives" class="headerlink" title="Automatic removal of old log archives"></a>Automatic removal of old log archives</h3><p>By setting the maxHistory property of <a href="http://logback.qos.ch/manual/appenders.html#TimeBasedRollingPolicy" target="_blank" rel="noopener">TimeBasedRollingPolicy</a> or <a href="http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedFNATP" target="_blank" rel="noopener">SizeAndTimeBasedFNATP</a>, you can control the maximum number of archived files. If your rolling policy calls for monthly rollover and you wish to keep one year’s worth of logs, simply set the maxHistory property to 12. Archived log files older than 12 months will be automatically removed.</p>
+<h3 id="Automatic-compression-of-archived-log-files"><a href="#Automatic-compression-of-archived-log-files" class="headerlink" title="Automatic compression of archived log files"></a>Automatic compression of archived log files</h3><p><a href="http://logback.qos.ch/manual/appenders.html#RollingFileAppender" target="_blank" rel="noopener">RollingFileAppender</a> can automatically compress archived log files during rollover. Compression always occurs asynchronously so that even for large log files, your application is not blocked for the duration of the compression.</p>
+<h3 id="Prudent-mode"><a href="#Prudent-mode" class="headerlink" title="Prudent mode"></a>Prudent mode</h3><p>In <a href="http://logback.qos.ch/manual/appenders.html#prudent" target="_blank" rel="noopener">prudent mode</a>, multiple <code>FileAppender</code> instances running on multiple JVMs can safely write to the same log file. With certain limitations, prudent mode extends to<code>RollingFileAppender</code>.</p>
+<h3 id="Lilith"><a href="#Lilith" class="headerlink" title="Lilith"></a>Lilith</h3><p><a href="http://lilith.huxhorn.de/" target="_blank" rel="noopener">Lilith</a> is a logging and access event viewer for logback. It is comparable to log4j’s chainsaw, except that Lilith is designed to handle large amounts of logging data without flinching.</p>
+<h3 id="Conditional-processing-of-configuration-files"><a href="#Conditional-processing-of-configuration-files" class="headerlink" title="Conditional processing of configuration files"></a>Conditional processing of configuration files</h3><p>Developers often need to juggle between several logback configuration files targeting different environments such as development, testing and production. These configuration files have substantial parts in common, differing only in a few places. To avoid duplication, logback supports <a href="http://logback.qos.ch/manual/configuration.html#conditional" target="_blank" rel="noopener">conditional processing of configuration files</a> with the help of <code>&lt;if&gt;</code>,<code>&lt;then&gt;</code> and <code>&lt;else&gt;</code> elements so that a single configuration file can adequately target several environments.</p>
+<h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><p>Logback comes with a wide array of <a href="http://logback.qos.ch/manual/filters.html" target="_blank" rel="noopener">filtering capabilities</a> going much further than what log4j has to offer. For example, let’s assume that you have a business-critical application deployed on a production server. Given the large volume of transactions processed, logging level is set to WARN so that only warnings and errors are logged. Now imagine that you are confronted with a bug that can be reproduced on the production system but remains elusive on the test platform due to unspecified differences between those two environments (production/testing).</p>
+<p>With log4j, your only choice is to lower the logging level to DEBUG on the production system in an attempt to identify the problem. Unfortunately, this will generate large volume of logging data, making analysis difficult. More importantly, extensive logging can impact the performance of your application on the production system.</p>
+<p>With logback, you have the option of keeping logging at the WARN level for all users except for the one user, say Alice, who is responsible for identifying the problem. When Alice is logged on, she will be logging at level DEBUG while other users can continue to log at the WARN level. This feat can be accomplished by adding 4 lines of XML to your configuration file. Search for <code>MDCFilter</code> in the <a href="http://logback.qos.ch/manual/filters.html#TurboFilter" target="_blank" rel="noopener">relevant section</a> of the manual.</p>
+<h3 id="SiftingAppender"><a href="#SiftingAppender" class="headerlink" title="SiftingAppender"></a>SiftingAppender</h3><p><a href="http://logback.qos.ch/manual/appenders.html#SiftingAppender" target="_blank" rel="noopener">SiftingAppender</a> is an amazingly versatile appender. It can be used to separate (or sift) logging according to <strong>any</strong> given runtime attribute. For example, <code>SiftingAppender</code> can separate logging events according to user sessions, so that the logs generated by each user go into distinct log files, one log file per user.</p>
+<h3 id="Stack-traces-with-packaging-data"><a href="#Stack-traces-with-packaging-data" class="headerlink" title="Stack traces with packaging data"></a>Stack traces with packaging data</h3><p>When logback prints an exception, the stack trace will include packaging data. Here is a sample stack trace generated by the <a href="http://logback.qos.ch/demo.html" target="_blank" rel="noopener">logback-demo</a> web-application.</p>
+<p>14:28:48.835 [btpool0-7] INFO  c.q.l.demo.prime.PrimeAction - 99 is not a valid value<br>java.lang.Exception: 99 is invalid<br>  at ch.qos.logback.demo.prime.PrimeAction.execute(PrimeAction.java:28) [classes/:na]<br>  at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431) [struts-1.2.9.jar:1.2.9]<br>  at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236) [struts-1.2.9.jar:1.2.9]<br>  at org.apache.struts.action.ActionServlet.doPost(ActionServlet.java:432) [struts-1.2.9.jar:1.2.9]<br>  at javax.servlet.http.HttpServlet.service(HttpServlet.java:820) [servlet-api-2.5-6.1.12.jar:6.1.12]<br>  at org.mortbay.jetty.servlet.ServletHolder.handle(ServletHolder.java:502) [jetty-6.1.12.jar:6.1.12]<br>  at ch.qos.logback.demo.UserServletFilter.doFilter(UserServletFilter.java:44) [classes/:na]<br>  at org.mortbay.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1115) [jetty-6.1.12.jar:6.1.12]<br>  at org.mortbay.jetty.servlet.ServletHandler.handle(ServletHandler.java:361) [jetty-6.1.12.jar:6.1.12]<br>  at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417) [jetty-6.1.12.jar:6.1.12]<br>  at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230) [jetty-6.1.12.jar:6.1.12]</p>
+<p>From the above, you can recognize that the application is using Struts version 1.2.9 and was deployed under jetty version 6.1.12. Thus, stack traces will quickly inform the reader about the classes intervening in the exception but also the package and package versions they belong to. When your customers send you a stack trace, as a developer you will no longer need to ask them to send you information about the versions of packages they are using. The information will be part of the stack trace. See <a href="http://logback.qos.ch/manual/layouts.html#xThrowable" target="_blank" rel="noopener">“%xThrowable” conversion word</a> for details.</p>
+<p>This feature can be quite helpful to the point that some users mistakenly consider it a <a href="http://www.jetbrains.net/devnet/message/5259058" target="_blank" rel="noopener">feature of their IDE</a>.</p>
+<h3 id="Logback-access-i-e-HTTP-access-logging-with-brains-is-an-integral-part-of-logback"><a href="#Logback-access-i-e-HTTP-access-logging-with-brains-is-an-integral-part-of-logback" class="headerlink" title="Logback-access, i.e. HTTP-access logging with brains, is an integral part of logback"></a>Logback-access, i.e. HTTP-access logging with brains, is an integral part of logback</h3><p>Last but not least, the logback-access module, part of the logback distribution, integrates with Servlet containers such as Jetty or Tomcat to provide rich and powerful HTTP-access log functionality. Since logback-access was part of the initial design, all the logback-classic features you love are available in logback-access as well.</p>
+<h3 id="In-summary"><a href="#In-summary" class="headerlink" title="In summary"></a>In summary</h3><p>We have listed a number of reasons for preferring logback over log4j. Given that logback builds upon on our previous work on log4j, simply put, logback is just a better log4j.</p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Caigen Lee" />
+            
+              <p class="site-author-name" itemprop="name">Caigen Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+			<!--my custom code begin-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
+			<script type="text/javascript">
+			  $("#sidebar").hover(function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 1});
+			  },function(){
+				$("#mydivshow").velocity('stop').velocity({opacity: 0});
+			  });
+			</script>
+			<div id="mydivshow" class="mydivshow">
+			<!--my custom code end-->
+			
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">307</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/leegtang" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          <div id="player1" class="aplayer"></div>
+<script src="/js/src/APlayer.min.js"></script>
+<script type="text/javascript">
+var ap = new APlayer({
+    element: document.getElementById('player1'),                       // Optional, player element
+    narrow: false,                                                     // Optional, narrow style
+    autoplay: false,                                                    // Optional, autoplay song(s), not supported by mobile browsers
+    showlrc: 0,                                                        // Optional, show lrc, can be 0, 1, 2, see: ###With lrc
+    mutex: true,                                                       // Optional, pause other players when this player playing
+    theme: '#e6d0b2',                                                  // Optional, theme color, default: #b7daff
+    mode: 'random',                                                    // Optional, play mode, can be `random` `single` `circulation`(loop) `order`(no loop), default: `circulation`
+    preload: 'metadata',                                               // Optional, the way to load music, can be 'none' 'metadata' 'auto', default: 'auto'
+    listmaxheight: '513px',                                             // Optional, max height of play list
+    music: [
+        {
+            title: '楽園PROJECT',                                          // Required, music title
+            author: 'Ray',                          // Required, music author
+            url: '/music/Ray%20-%20%E6%A5%BD%E5%9C%92PROJECT.mp3'
+        },
+        {
+            title: '恋人を射ち堕とした日',
+            author: 'Sound Horizon',
+            url: '/music/Sound%20Horizon%20-%20%E6%81%8B%E4%BA%BA%E3%82%92%E5%B0%84%E3%81%A1%E5%A0%95%E3%81%A8%E3%81%97%E3%81%9F%E6%97%A5%20_%20Koibito%20wo%20Uchiotoshia%20Hi.mp3'
+        },
+        {
+            title: 'cat\'s dance',
+            author: 'すーぱーそに子',
+            url: '/music/%E3%81%99%E3%83%BC%E3%81%B1%E3%83%BC%E3%81%9D%E3%81%AB%E5%AD%90%20-%20cat%27s%20dance.mp3'
+        }]
+});
+</script>
+        </div>
+		<!--my custom code begin-->
+		</div>
+		<!--my custom code end-->
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Reasons-to-prefer-logback-over-log4j"><span class="nav-number">1.</span> <span class="nav-text">Reasons to prefer logback over log4j</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Faster-implementation"><span class="nav-number">1.1.</span> <span class="nav-text">Faster implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extensive-battery-of-tests"><span class="nav-number">1.2.</span> <span class="nav-text">Extensive battery of tests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logback-classic-speaks-SLF4J-natively"><span class="nav-number">1.3.</span> <span class="nav-text">logback-classic speaks SLF4J natively</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Extensive-documentation"><span class="nav-number">1.4.</span> <span class="nav-text">Extensive documentation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration-files-in-XML-or-Groovy"><span class="nav-number">1.5.</span> <span class="nav-text">Configuration files in XML or Groovy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Automatic-reloading-of-configuration-files"><span class="nav-number">1.6.</span> <span class="nav-text">Automatic reloading of configuration files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graceful-recovery-from-I-O-failures"><span class="nav-number">1.7.</span> <span class="nav-text">Graceful recovery from I/O failures</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Automatic-removal-of-old-log-archives"><span class="nav-number">1.8.</span> <span class="nav-text">Automatic removal of old log archives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Automatic-compression-of-archived-log-files"><span class="nav-number">1.9.</span> <span class="nav-text">Automatic compression of archived log files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Prudent-mode"><span class="nav-number">1.10.</span> <span class="nav-text">Prudent mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lilith"><span class="nav-number">1.11.</span> <span class="nav-text">Lilith</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conditional-processing-of-configuration-files"><span class="nav-number">1.12.</span> <span class="nav-text">Conditional processing of configuration files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filters"><span class="nav-number">1.13.</span> <span class="nav-text">Filters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SiftingAppender"><span class="nav-number">1.14.</span> <span class="nav-text">SiftingAppender</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack-traces-with-packaging-data"><span class="nav-number">1.15.</span> <span class="nav-text">Stack traces with packaging data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Logback-access-i-e-HTTP-access-logging-with-brains-is-an-integral-part-of-logback"><span class="nav-number">1.16.</span> <span class="nav-text">Logback-access, i.e. HTTP-access logging with brains, is an integral part of logback</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#In-summary"><span class="nav-number">1.17.</span> <span class="nav-text">In summary</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Caigen Lee</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">140.3k</span>
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+    
+  </div>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+  
+  
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/exturl.js?v=5.1.3"></script>
+
+
+  <script src="/js/src/Aplayer-Controler.js"></script>
+<div id="AP-controler"></div>
+<script type="text/javascript">
+var myapc=new APlayer_Controler({
+		APC_dom:$('#AP-controler'),
+		aplayer:ap, //此为绑定的aplayer对象
+		attach_right:false,
+		position:{top:'300px',bottom:''},
+		fixed:true,
+		btn_width:100,
+		btn_height:120,
+		img_src:[
+				'https://www.yf2017.top/images/jumpgirl.jpg'],
+		img_style:{repeat:'no-repeat',position:'center',size:'contain'},
+		ctrls_color:'rgba(173,255,47,0.8)',
+		ctrls_hover_color:'rgba(255,140,0,0.7)',
+		tips_on:true,
+		tips_width:140,
+		tips_height:25,
+		tips_color:'rgba(255,255,255,0.6)',
+		tips_content:{},
+		timeout:30
+	});
+</script>
+</body>
+</html>

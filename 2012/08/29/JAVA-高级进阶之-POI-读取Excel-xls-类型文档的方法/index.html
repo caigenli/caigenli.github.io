@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 
 
-
   
-
 
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
@@ -131,17 +129,17 @@
 
 
 
-<meta name="description" content="直接贴源码（jsp页面的）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;%@ pa">
+<meta name="description" content="直接贴源码（jsp页面的）：       Read Excel file          An example of using Jakarta POI&apos;s HSSF package to read an excel spreadsheet:         Select an Excel file to read.                You chose the file .">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA 高级进阶之 POI 读取Excel(xls)类型文档的方法">
 <meta property="og:url" content="https://www.yf2017.top/2012/08/29/JAVA-高级进阶之-POI-读取Excel-xls-类型文档的方法/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="直接贴源码（jsp页面的）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;%@ pa">
+<meta property="og:description" content="直接贴源码（jsp页面的）：       Read Excel file          An example of using Jakarta POI&apos;s HSSF package to read an excel spreadsheet:         Select an Excel file to read.                You chose the file .">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-25T07:05:17.190Z">
+<meta property="og:updated_time" content="2018-10-18T05:05:07.967Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA 高级进阶之 POI 读取Excel(xls)类型文档的方法">
-<meta name="twitter:description" content="直接贴源码（jsp页面的）：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293&amp;lt;%@ pa">
+<meta name="twitter:description" content="直接贴源码（jsp页面的）：       Read Excel file          An example of using Jakarta POI&apos;s HSSF package to read an excel spreadsheet:         Select an Excel file to read.                You chose the file .">
 
 
 
@@ -196,24 +194,22 @@
 
 
 
- <!--  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
-<script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script> -->
 <script type="text/javascript" src="/js/src/love.js"></script>
-  <script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
-    
+<script src="/lib/syntaxhighlighter/syntaxhighlighter.js"></script>
 <link type="text/css" rel="stylesheet" href="/lib/syntaxhighlighter/theme.css">
+<style type="text/css">
+  .syntaxhighlighter table td.code{
+    width:93% !important;
+  }
+  </style>
 </head>
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
   
-
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -352,7 +348,6 @@
 
  </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -418,8 +413,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-25T15:05:17+08:00">
-                2018-09-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:07+08:00">
+                2018-10-18
               </time>
             
           </span>
@@ -484,7 +479,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  340
+                  43
                 </span>
               
 
@@ -500,7 +495,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -521,7 +516,50 @@
       
 
       
-        <p>直接贴源码（jsp页面的）：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span>   pageEncoding=<span class="string">"GB18030"</span> <span class="keyword">import</span>=<span class="string">"java.io.*,org.apache.poi.poifs.filesystem.POIFSFileSystem,org.apache.poi.hssf.record.*,org.apache.poi.hssf.model.*,org.apache.poi.hssf.usermodel.*,org.apache.poi.hssf.util.*"</span> %&gt;  </span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;&lt;title&gt;Read Excel file &lt;/title&gt;  </span><br><span class="line">&lt;/head&gt;  </span><br><span class="line">&lt;body&gt;  </span><br><span class="line">An example of using Jakarta POI<span class="string">'s HSSF package to read an excel spreadsheet: </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">&lt;form name="form1" method="get" action="hssf_excel.jsp"&gt;  </span></span><br><span class="line"><span class="string">Select an Excel file to read.   </span></span><br><span class="line"><span class="string">  &lt;input type="file" name="xls_filename" onChange="form1.submit()"&gt;  </span></span><br><span class="line"><span class="string">&lt;/form&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;%  </span></span><br><span class="line"><span class="string"> String filename = request.getParameter("xls_filename");   </span></span><br><span class="line"><span class="string"> if (filename != null &amp;&amp; !filename.equals("")) &#123;  </span></span><br><span class="line"><span class="string">%&gt;   </span></span><br><span class="line"><span class="string"> &lt;br&gt;You chose the file &lt;%= filename %&gt;.   </span></span><br><span class="line"><span class="string"> &lt;br&gt;&lt;br&gt;It'</span>s contents are:    </span><br><span class="line">&lt;%   </span><br><span class="line">            <span class="keyword">try</span>  </span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// create a poi workbook from the excel spreadsheet file  </span></span><br><span class="line">                POIFSFileSystem fs =  </span><br><span class="line">                    <span class="keyword">new</span> POIFSFileSystem(<span class="keyword">new</span> FileInputStream(filename));  </span><br><span class="line">                HSSFWorkbook wb = <span class="keyword">new</span> HSSFWorkbook(fs);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; wb.getNumberOfSheets(); k++)  </span><br><span class="line">                &#123;  </span><br><span class="line">%&gt;      </span><br><span class="line">                    &lt;br&gt;&lt;br&gt;Sheet  &lt;%= k %&gt; &lt;br&gt;  </span><br><span class="line">                    &lt;table&gt;  </span><br><span class="line">&lt;%       </span><br><span class="line">       </span><br><span class="line">                    HSSFSheet sheet = wb.getSheetAt(k);  </span><br><span class="line">                    <span class="keyword">int</span>       rows  = sheet.getPhysicalNumberOfRows();</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> r = <span class="number">0</span>; r &lt; rows; r++)  </span><br><span class="line">                    &#123;  </span><br><span class="line">                        HSSFRow row   = sheet.getRow(r);  </span><br><span class="line">                        <span class="keyword">if</span> (row != <span class="keyword">null</span>) &#123;   </span><br><span class="line">                            <span class="keyword">int</span>     cells = row.getPhysicalNumberOfCells();  </span><br><span class="line">%&gt;  </span><br><span class="line">         &lt;%=<span class="string">"&lt;tr&gt;"</span>%&gt;   </span><br><span class="line">&lt;%  </span><br><span class="line">                            <span class="keyword">for</span> (<span class="keyword">short</span> c = <span class="number">0</span>; c &lt; cells; c++)   </span><br><span class="line">                            &#123;   </span><br><span class="line">                                HSSFCell cell  = row.getCell(c);  </span><br><span class="line">                                <span class="keyword">if</span> (cell != <span class="keyword">null</span>) &#123;   </span><br><span class="line">                                    String   value = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">                                    <span class="keyword">switch</span> (cell.getCellType())  </span><br><span class="line">                                    &#123;</span><br><span class="line"></span><br><span class="line">                                        <span class="keyword">case</span> HSSFCell.CELL_TYPE_FORMULA :  </span><br><span class="line">                                            value =<span class="string">""</span>; <span class="comment">//"FORMULA ";  </span></span><br><span class="line">                                            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">                                        <span class="keyword">case</span> HSSFCell.CELL_TYPE_NUMERIC :  </span><br><span class="line">                                            value =<span class="string">""</span> <span class="comment">//"NUMERIC value="  </span></span><br><span class="line">                                                    + cell.getNumericCellValue  </span><br><span class="line">();  </span><br><span class="line">                                            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">                                        <span class="keyword">case</span> HSSFCell.CELL_TYPE_STRING :  </span><br><span class="line">                                            value =<span class="string">""</span> <span class="comment">//"STRING value="  </span></span><br><span class="line">                                                    + cell.getStringCellValue();  </span><br><span class="line">                                            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">                                        <span class="keyword">default</span> :  </span><br><span class="line">                                    &#125;  </span><br><span class="line">%&gt;           </span><br><span class="line">                                    &lt;%= <span class="string">"&lt;td&gt;"</span>  + value +<span class="string">"&lt;/td&gt;"</span> %&gt;  </span><br><span class="line">&lt;%  </span><br><span class="line">                                &#125;   </span><br><span class="line">                            &#125;%&gt;&lt;%=<span class="string">"&lt;/tr&gt;"</span> %&gt;  </span><br><span class="line">                   &lt;%     &#125;  </span><br><span class="line">                    &#125;%&gt;&lt;%=<span class="string">"&lt;/table&gt;"</span> %&gt;  </span><br><span class="line">             &lt;%   &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">catch</span> (Exception e)  </span><br><span class="line">            &#123;  </span><br><span class="line">%&gt;  </span><br><span class="line"> Error occurred:  &lt;%= e.getMessage() %&gt;  </span><br><span class="line">&lt;%     </span><br><span class="line">                e.printStackTrace();  </span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"> &#125;   </span><br><span class="line">%&gt;   </span><br><span class="line">&lt;/body&gt;  </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+        <p>直接贴源码（jsp页面的）：<br><pre class="brush: java">
+<%@ page language="java"   pageencoding="gb18030" import="java.io.*,org.apache.poi.poifs.filesystem.poifsfilesystem,org.apache.poi.hssf.record.*,org.apache.poi.hssf.model.*,org.apache.poi.hssf.usermodel.*,org.apache.poi.hssf.util.*" %>  
+<html>  
+<head><title>Read Excel file </title>  
+</head>  
+<body>  
+An example of using Jakarta POI's HSSF package to read an excel spreadsheet: 
+
+  
+<form name="form1" method="get" action="hssf_excel.jsp">  
+Select an Excel file to read.   
+  <input type="file" name="xls_filename" onchange="form1.submit()">  
+
+
+<%  string filename =" request.getParameter("xls_filename"); "  if (filename !=" null && !filename.equals("")) {" %="">   
+ <br>You chose the file <%= filename %>.   
+ <br><br>It's contents are:    
+<%              try=""             {=""                 =""  create a poi workbook from the excel spreadsheet file=""                 poifsfilesystem fs ="                    new POIFSFileSystem(new FileInputStream(filename));"                 hssfworkbook wb =" new HSSFWorkbook(fs);"                 for (int k =" 0; k < wb.getNumberOfSheets(); k++)"                 {="" %="">      
+                    <br><br>Sheet  <%= k %> <br>  
+                    <table>  
+<%           =""                     hssfsheet sheet =" wb.getSheetAt(k);"                     int       rows  =" sheet.getPhysicalNumberOfRows();"                     for (int r =" 0; r < rows; r++)"                     {=""                         hssfrow row   =" sheet.getRow(r);"                         if (row !=" null) { "                             int     cells =" row.getPhysicalNumberOfCells();" %="">  
+         <%="<tr>"%>   
+<%                             for (short c =" 0; c < cells; c++) "                             { =""                                 hssfcell cell  =" row.getCell(c);"                                 if (cell !=" null) { "                                     string   value =" null;"                                     switch (cell.getcelltype())=""                                     {=""                                         case hssfcell.cell_type_formula :=""                                             value ="" ; ="" "formula ";=""                                             break;=""                                         case hssfcell.cell_type_numeric :=""  ="" "numeric value="  
+                                                    + cell.getNumericCellValue  
+();  
+                                            break;
+
+                                        case HSSFCell.CELL_TYPE_STRING :  
+                                            value =" " ="" "string value="  
+                                                    + cell.getStringCellValue();  
+                                            break;
+
+                                        default :  
+                                    }  
+%>           
+                                    <%= " <td="">"  + value +"" %>  
+<%                                 } =""                             }%=""><%="< tr="">" %>  
+                   <%     }                     }%=""><%="< table="">" %>  
+             <%   }             }=""             catch (exception e)=""             {="" %="">  
+ Error occurred:  <%= e.getmessage() %>  
+<%                    e.printstacktrace();=""             }=""  } ="" %="">   
+</%   ></%= e.getmessage() %></%   }></%="<></%     }></%="<></%></%></%="<tr></%     ></table></%= k %></% ></%= filename %></%></input type="file" name="xls_filename" onchange="form1.submit()"></form name="form1" method="get" action="hssf_excel.jsp"></body>  
+</html>
+</%@ page language="java"   pageencoding="gb18030" import="java.io.*,org.apache.poi.poifs.filesystem.poifsfilesystem,org.apache.poi.hssf.record.*,org.apache.poi.hssf.model.*,org.apache.poi.hssf.usermodel.*,org.apache.poi.hssf.util.*" %></pre></p>
 
       
     </div>
@@ -678,7 +716,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">306</span>
+                  <span class="site-state-item-count">307</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -700,7 +738,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">42</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -776,7 +814,6 @@ var ap = new APlayer({
         
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
@@ -793,7 +830,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">165.6k</span>
+    <span title="Site words total count">140.3k</span>
   
 </div>
 
@@ -838,7 +875,6 @@ var ap = new APlayer({
         
       </div>
     </footer>
-
     
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
@@ -847,11 +883,8 @@ var ap = new APlayer({
         
       </div>
     
-
     
-
   </div>
-
   
 
 <script type="text/javascript">
@@ -927,22 +960,17 @@ var ap = new APlayer({
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
-
   
   
-
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
-
 
 
   
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
 
   
@@ -1301,7 +1329,6 @@ var ap = new APlayer({
 
 
 
- 
   
 
   
@@ -1371,11 +1398,5 @@ var myapc=new APlayer_Controler({
 		timeout:30
 	});
 </script>
-  
-
-
-<!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
-
 </body>
 </html>
