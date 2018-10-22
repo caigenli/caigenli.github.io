@@ -126,18 +126,18 @@
 
 
 
-<meta name="description" content="自定义加解密字节数据的加密解密方法 /**  * 自定义加解密字节数据的加密方法  *   *  */ public class MyEncryptUtil {      private static String key = &quot;Crackers and the thief will suffer misfortune&quot;;     private static String encoding =">
+<meta name="description" content="自定义加解密字节数据的加密解密方法 package com;  import java.io.UnsupportedEncodingException;  /**  *  * String decrypt and encrypt  *  */ public class MyEncryptUtil {  	private static String key = &quot;Crackersandthethie">
 <meta name="keywords" content="加密与解密,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符加密与解密">
 <meta property="og:url" content="https://www.yf2017.top/2014/04/25/字符加密与解密/index.html">
 <meta property="og:site_name" content="蓝旗子">
-<meta property="og:description" content="自定义加解密字节数据的加密解密方法 /**  * 自定义加解密字节数据的加密方法  *   *  */ public class MyEncryptUtil {      private static String key = &quot;Crackers and the thief will suffer misfortune&quot;;     private static String encoding =">
+<meta property="og:description" content="自定义加解密字节数据的加密解密方法 package com;  import java.io.UnsupportedEncodingException;  /**  *  * String decrypt and encrypt  *  */ public class MyEncryptUtil {  	private static String key = &quot;Crackersandthethie">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-18T05:05:08.367Z">
+<meta property="og:updated_time" content="2018-10-22T03:46:09.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符加密与解密">
-<meta name="twitter:description" content="自定义加解密字节数据的加密解密方法 /**  * 自定义加解密字节数据的加密方法  *   *  */ public class MyEncryptUtil {      private static String key = &quot;Crackers and the thief will suffer misfortune&quot;;     private static String encoding =">
+<meta name="twitter:description" content="自定义加解密字节数据的加密解密方法 package com;  import java.io.UnsupportedEncodingException;  /**  *  * String decrypt and encrypt  *  */ public class MyEncryptUtil {  	private static String key = &quot;Crackersandthethie">
 
 
 
@@ -402,8 +402,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-18T13:05:08+08:00">
-                2018-10-18
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-22T11:46:09+08:00">
+                2018-10-22
               </time>
             
           </span>
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  138
+                  257
                 </span>
               
 
@@ -490,48 +490,126 @@
 
       
         <p>自定义加解密字节数据的加密解密方法<br><pre class="brush: java">
+package com;
+
+import java.io.UnsupportedEncodingException;
+
 /**
- * 自定义加解密字节数据的加密方法
- * 
- *
- */
-public class MyEncryptUtil {
+ *
+ * String decrypt and encrypt
+ *
+ */
+public class MyEncryptUtil {
 
-    private static String key = "Crackers and the thief will suffer misfortune";
-    private static String encoding = GlobalConstant.Encoding.UTF8;
+	private static String key = "Crackersandthethiefwillsuffermisfortune";
+	private static String encoding = "utf-8";
 
-    public static String getKey() {
-        return key;
-    }
+	public static String getKey() {
+		return key;
+	}
 
-    public static void setKey(String key) {
-        HuhuoEncryptUtil.key = key;
-    }
+	public static void setKey(String key) {
+		MyEncryptUtil.key = key;
+	}
 
-    public static String getEncoding() {
-        return encoding;
-    }
+	public static String getEncoding() {
+		return encoding;
+	}
 
-    public static void setEncoding(String encoding) {
-        HuhuoEncryptUtil.encoding = encoding;
-    }
+	public static void setEncoding(String encoding) {
+		MyEncryptUtil.encoding = encoding;
+	}
+	
+	public static String encrypt(String str) {
+		return getString(encrypt(getByteArray(str)));
+	}
+	
+	public static String decrypt(String str) {
+		return getString(decrypt(getByteArray(str)));
+	}
+	/**
+	 * encrypt
+	 * 
+	 * @param buffer
+	 *            to be encrypted
+	 * @return encrypt result
+	 */
+	public static byte[] encrypt(byte[] buffer) {
+		int pos, keylen;
+		pos = 0;
+		byte[] KEYVALUE = null;
+		try {
+			KEYVALUE = key.getBytes(encoding);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+		keylen = KEYVALUE.length;
 
-    /**
-     * 加密算法
-     * @param buffer 要加密的字节数组
-     * @return 加密后的字节数据
-     */
-    public static byte\[\] encrypt(byte\[\] buffer) {
-        int pos, keylen;
-        pos = 0;
-        byte\[\] KEYVALUE = null;
-        try {
-            KEYVALUE = key.getBytes(encoding);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        keylen = KEYVALUE.length;
-        for (int i = 0; i < buffer.length; i++) { buffer\[i\] ^=" KEYVALUE\[pos\];" pos++;="" if (pos ="= keylen)" pos =" 0;" }="" return buffer;="" **=""  * 解密算法=""  * @param buffer 解密的字节数组=""  * @return 解密后的字节数组=""  *="" public static byte\[\] decrypt(byte\[\] buffer) {="" return encrypt(buffer);=""  * 使用默认的编码格式（utf-8）将buffer转化成字符串=""  * @param buffer 要编码的字节数组=""  * @return 如果出现异常，则返回null="" public static string getstring(byte\[\] buffer) {="" try {="" return new string(buffer, encoding);="" } catch (unsupportedencodingexception e) {="" e.printstacktrace();="" return null;=""  * 使用默认的编码格式（utf-8）将str转化成字节数组=""  * @param str =""  * @return  如果出现异常，则返回null="" public static byte\[\] getbytearray(string str) {="" return str.getbytes(encoding);="" <="" pre=""></ buffer.length; i++) {></pre></p>
+		for (int i = 0; i < buffer.length; i++) {
+			buffer[i] ^= KEYVALUE[pos];
+
+			pos++;
+			if (pos == keylen)
+				pos = 0;
+		}
+		return buffer;
+	}
+
+	/**
+	 * decrypt
+	 * 
+	 * @param buffer
+	 *            to be decrypted
+	 * @return decrypt result
+	 */
+	public static byte[] decrypt(byte[] buffer) {
+		return encrypt(buffer);
+	}
+
+	/**
+	 * trans
+	 * 
+	 * @param buffer
+	 * @return if excption null
+	 */
+	public static String getString(byte[] buffer) {
+		try {
+			return new String(buffer, encoding);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	/**
+	 *
+	 * @param str
+	 * @return if excption null
+	 */
+	public static byte[] getByteArray(String str) {
+		try {
+			return str.getBytes(encoding);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		try {
+			MyEncryptUtil.setEncoding("gbk"); 
+			String ens= MyEncryptUtil.encrypt("id=12&idno=120020120210223&name=faasss中文" ) ;
+			System.out.println(ens);
+			String src= MyEncryptUtil.decrypt(ens);
+			System.out.println(src);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+	}
+}
+</pre></p>
 
       
     </div>
@@ -810,7 +888,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">146.7k</span>
+    <span title="Site words total count">146.8k</span>
   
 </div>
 
