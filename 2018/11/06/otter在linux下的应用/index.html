@@ -133,7 +133,7 @@
 <meta property="og:site_name" content="蓝旗子">
 <meta property="og:description" content="linux下 安装 zookeeper tar -xzvf zookeeper-3.4.13.tar.gz cd conf cp zoo_sample.cfg zoo.cfg cd ../bin sh zkServer.sh start 下载 otter-manager mkdir  otter-managertar -xzvf manager.deployer-4.2.16.tar.gz -C">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T03:43:13.071Z">
+<meta property="og:updated_time" content="2018-11-07T07:45:13.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="otter在linux下的应用">
 <meta name="twitter:description" content="linux下 安装 zookeeper tar -xzvf zookeeper-3.4.13.tar.gz cd conf cp zoo_sample.cfg zoo.cfg cd ../bin sh zkServer.sh start 下载 otter-manager mkdir  otter-managertar -xzvf manager.deployer-4.2.16.tar.gz -C">
@@ -401,7 +401,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-07T11:43:13+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-07T15:45:13+08:00">
                 2018-11-07
               </time>
             
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  248
+                  315
                 </span>
               
 
@@ -504,6 +504,10 @@
 <p>server.2 zoo.cfg 还需添加</p>
 <p>peerType=observer</p>
 <p>在cfg中指定的data目录增加 myid 文件<br>server.1写入 1<br>server.2写入 2<br>server.3写入 3</p>
+<p>mysql配置<br>修改默认字符集<br>vi /etc/my.cnf<br>增加<br>[mysqld]<br>default-character-set = utf8<br>character-set-server = utf8<br>collation-server = utf8_general_ci<br>lower_case_table_names = 1</p>
+<p>[client]<br>default-character-set=utf8</p>
+<p>[mysql]<br>default-character-set=utf8</p>
+<p>如果没有这个栏目可以自行添加,添加完成重启mysql<br>service mysqld restart<br>在centos 6中<br>cd /etc/init.d<br>sh mysqld restart</p>
 
       
     </div>
@@ -660,7 +664,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">312</span>
+                  <span class="site-state-item-count">313</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -671,7 +675,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -774,7 +778,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">147.3k</span>
+    <span title="Site words total count">148.1k</span>
   
 </div>
 
