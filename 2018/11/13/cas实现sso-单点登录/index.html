@@ -133,15 +133,15 @@
 <meta property="og:site_name" content="蓝旗子">
 <meta property="og:description" content="cas-server下载和打包从github下载cas 4.2.17github地址 https://github.com/apereo/cas-overlay-template/tree/4.1或从release下载 打包 4.2.17 mvn clean package --settings=e:/.m2/settings.xml (–settings指定配置文件，可以不指定，则默认在c盘用户">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-1.jpg">
-<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-2.jpg">
-<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-3.jpg">
-<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-4.jpg">
-<meta property="og:updated_time" content="2018-11-13T09:50:52.289Z">
+<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-1.png">
+<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-2.png">
+<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-3.png">
+<meta property="og:image" content="https://www.yf2017.top/files/cas/cas-4.png">
+<meta property="og:updated_time" content="2018-11-13T09:58:26.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cas实现sso-单点登录">
 <meta name="twitter:description" content="cas-server下载和打包从github下载cas 4.2.17github地址 https://github.com/apereo/cas-overlay-template/tree/4.1或从release下载 打包 4.2.17 mvn clean package --settings=e:/.m2/settings.xml (–settings指定配置文件，可以不指定，则默认在c盘用户">
-<meta name="twitter:image" content="https://www.yf2017.top/files/cas/cas-1.jpg">
+<meta name="twitter:image" content="https://www.yf2017.top/files/cas/cas-1.png">
 
 
 
@@ -406,7 +406,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-13T17:50:52+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-13T17:58:26+08:00">
                 2018-11-13
               </time>
             
@@ -512,7 +512,7 @@ keytool    -import     -alias    "tomcat7"    -keystore   "D:\Pro
 </pre><br>– 注意这个密码就是 changeit<br>是否信任? y</p>
 <p>tomcat server.xml配置<br><pre class="brush: xml">
   <connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol" maxthreads="150" sslenabled="true" scheme="https" secure="true" clientauth="false" sslprotocol="TLS" keystorefile="D:/keys/tomcat.keystore" keystorepass="123456" truststorefile="D:/keys/tomcat.keystore" truststorepass="123456">
-</connector></pre><br>启动tomcat, 访问 <a href="https://localhost:8443" target="_blank" rel="noopener">https://localhost:8443</a><br><img src="https://www.yf2017.top/files/cas/cas-1.jpg" alt=""><br>默认用户名 casuser 密码 Mellon<br><img src="https://www.yf2017.top/files/cas/cas-2.jpg" alt=""></p>
+</connector></pre><br>启动tomcat, 访问 <a href="https://localhost:8443" target="_blank" rel="noopener">https://localhost:8443</a><br><img src="https://www.yf2017.top/files/cas/cas-1.png" alt=""><br>默认用户名 casuser 密码 Mellon<br><img src="https://www.yf2017.top/files/cas/cas-2.png" alt=""></p>
 <h1 id="cas-client"><a href="#cas-client" class="headerlink" title="cas client"></a>cas client</h1><p>下载地址 <a href="https://www.yf2017.top/files/zip/casClient1.zip">https://www.yf2017.top/files/zip/casClient1.zip</a><br>配置 web.xml<br>修改cas server  WEB-INF\classes\services\HTTPSandIMAPS-10000001.json<br><pre class="brush: html">
 {
   "@class" : "org.jasig.cas.services.RegexRegisteredService",
@@ -634,7 +634,7 @@ INSERT INTO t_user(id,account,PASSWORD,valid) VALUES
     </loggers>
 
 </configuration>
-</pre><br>启动casClient1<br><img src="https://www.yf2017.top/files/cas/cas-3.jpg" alt=""><br>访问 <a href="http://localhost:8081/casClient1" target="_blank" rel="noopener">http://localhost:8081/casClient1</a> 会自动跳到cas-server的登录页，登录成功后返回<br><img src="https://www.yf2017.top/files/cas/cas-4.jpg" alt=""></p>
+</pre><br>启动casClient1<br><img src="https://www.yf2017.top/files/cas/cas-3.png" alt=""><br>访问 <a href="http://localhost:8081/casClient1" target="_blank" rel="noopener">http://localhost:8081/casClient1</a> 会自动跳到cas-server的登录页，登录成功后返回<br><img src="https://www.yf2017.top/files/cas/cas-4.png" alt=""></p>
 
       
     </div>
@@ -701,6 +701,10 @@ INSERT INTO t_user(id,account,PASSWORD,valid) VALUES
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/23/用itext使用pdf模板生成pdf文件/" rel="prev" title="用itext使用pdf模板生成pdf文件">
+                用itext使用pdf模板生成pdf文件 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -796,7 +800,7 @@ INSERT INTO t_user(id,account,PASSWORD,valid) VALUES
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">313</span>
+                  <span class="site-state-item-count">315</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -926,7 +930,7 @@ var ap = new APlayer({
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">148.1k</span>
+    <span title="Site words total count">148.8k</span>
   
 </div>
 
